@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istruzioni – Tracker Conversioni E-commerce | Easy Tag</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.65; color: #202124; }
+    h1 { font-size: 26px; margin-bottom: 8px; }
+    h2 { font-size: 18px; margin-top: 32px; margin-bottom: 10px; }
+    .badge { display: inline-block; background: #E8F3FC; color: #1182DE; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
+    ol, ul { margin: 12px 0 12px 22px; }
+    li { margin-bottom: 8px; }
+    code { background: #f1f3f4; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+    .note { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 14px 16px; margin: 24px 0; font-size: 14.5px; }
+    .footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e8eaed; font-size: 13px; color: #5f6368; }
+  </style>
+</head>
+<body>
+  <div class="badge">Easy Tag · Team ex-Google Cracovia</div>
+  <h1>Istruzioni di installazione</h1>
+  <p><strong>Prodotto:</strong> Tracker Completo Conversioni E-commerce con Google Tag Manager</p>
+
+  <h2>1. Cosa hai ricevuto</h2>
+  <ul>
+    <li><code>container.json</code> – esportazione del contenitore GTM già configurato</li>
+    <li>Queste istruzioni</li>
+  </ul>
+
+  <h2>2. Prerequisito importante</h2>
+  <p>Questo container si aspetta un <strong>data layer e-commerce</strong> già presente sul sito (o da implementare). Gli eventi standard supportati sono:</p>
+  <ul>
+    <li><code>view_item</code> / <code>view_item_list</code></li>
+    <li><code>add_to_cart</code> / <code>remove_from_cart</code></li>
+    <li><code>begin_checkout</code></li>
+    <li><code>add_shipping_info</code> / <code>add_payment_info</code></li>
+    <li><code>purchase</code></li>
+  </ul>
+
+  <h2>3. Come importare il container</h2>
+  <ol>
+    <li>Accedi a Google Tag Manager.</li>
+    <li>Admin → Container → Import Container → carica <code>container.json</code>.</li>
+    <li>Scegli l’opzione di merge più adatta.</li>
+    <li>Conferma.</li>
+  </ol>
+
+  <h2>4. Cosa personalizzare</h2>
+  <ul>
+    <li>Measurement ID di GA4</li>
+    <li>Eventuali Conversioni Google Ads collegate agli eventi di acquisto</li>
+    <li>Verifica che i nomi degli eventi del tuo data layer corrispondano a quelli previsti dal container</li>
+  </ul>
+
+  <h2>5. Test e pubblicazione</h2>
+  <ol>
+    <li>Usa la modalità Anteprima di GTM + GA4 DebugView.</li>
+    <li>Simula il percorso di acquisto (visualizzazione prodotto → carrello → checkout → purchase).</li>
+    <li>Verifica che tutti gli eventi e i parametri (value, currency, items, transaction_id) arrivino correttamente.</li>
+    <li>Pubblica.</li>
+  </ol>
+
+  <div class="note">
+    <strong>Nota:</strong> Se il tuo e-commerce non ha ancora un data layer standard, potremmo aver bisogno di un intervento aggiuntivo di implementazione. Scrivi a support@easytag.com per una valutazione.
+  </div>
+
+  <div class="footer">
+    Easy Tag Solutions · Spin-off del team italiano di Google Cracovia<br>
+    support@easytag.com
+  </div>
+</body>
+</html>
