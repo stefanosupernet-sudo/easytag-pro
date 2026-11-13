@@ -1,0 +1,11 @@
+PLACEHOLDER
+
+Sostituisci questo file con l’esportazione reale del container GTM.
+
+Come fare:
+1. Apri Google Tag Manager
+2. Admin → Container → Export
+3. Scarica il JSON
+4. Rinominalo in container.json e carica al posto di questo file
+
+Poi elimina questo file .placeholder.
