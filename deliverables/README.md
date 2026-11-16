@@ -2,48 +2,50 @@
 
 Questa cartella contiene i file che vengono consegnati automaticamente ai clienti dopo l’acquisto.
 
-## Struttura
+## Struttura attuale
 
 ```
 deliverables/
 ├── tracking-click-telefono/
-│   ├── container.json          ← da esportare da GTM
+│   ├── container.json          ✅ CARICATO (Tag Chiamate)
 │   └── istruzioni.html
 ├── tracking-social-6in1/
-│   ├── container.json
+│   ├── container.json          ✅ CARICATO (Pacchetto Social 6in1)
 │   └── istruzioni.html
+├── contatti-3in1/
+│   └── container.json          ✅ CARICATO (Telefono + Email + WhatsApp)
 ├── tracker-ecommerce/
-│   ├── container.json
-│   └── istruzioni.html
+│   └── istruzioni.html         ⏳ container.json mancante
 ├── dynamic-remarketing/
-│   ├── container.json
-│   └── istruzioni.html
-└── README.md                   ← questo file
+│   └── istruzioni.html         ⏳ container.json mancante
+└── README.md
 ```
 
 ## Prodotti collegati
 
-| Cartella | Prodotto | Prezzo |
-|----------|----------|--------|
-| `tracking-click-telefono` | Tracking Click sul Numero di Telefono con GTM | €150 |
-| `tracking-social-6in1` | Tracking Unificato Icone Social (6-in-1) | €450 |
-| `tracker-ecommerce` | Tracker Completo Conversioni E-commerce | €800 |
-| `dynamic-remarketing` | Dynamic Remarketing completo via GTM | €400 |
+| Cartella | Prodotto | Prezzo | Stato JSON |
+|----------|----------|--------|------------|
+| `tracking-click-telefono` | Tracking Click sul Numero di Telefono con GTM | €150 | ✅ Pronto |
+| `tracking-social-6in1` | Tracking Unificato Icone Social (6-in-1) | €450 | ✅ Pronto |
+| `contatti-3in1` | Pacchetto Contatti 3in1 (Tel + Mail + WhatsApp) | da definire | ✅ Pronto |
+| `tracker-ecommerce` | Tracker Completo Conversioni E-commerce | €800 | ⏳ Da esportare |
+| `dynamic-remarketing` | Dynamic Remarketing completo via GTM | €400 | ⏳ Da esportare |
 
 I pacchetti ore (5 / 10 / 20 ore) **non** hanno file in questa cartella. Dopo l’acquisto viene inviata solo un’email di benvenuto.
 
-## Come preparare un container
+## Variabile da personalizzare dal cliente
 
-1. Crea / finalizza il container di riferimento nel tuo account GTM.
-2. Vai in **Admin → Container → Export**.
-3. Scarica il file JSON.
-4. Rinominalo in `container.json` e mettilo nella cartella corrispondente.
-5. Aggiorna il file `istruzioni.html` con le indicazioni specifiche (variabili da modificare, ID da inserire, ecc.).
+In tutti i container è presente la variabile:
+
+**`ID Conversione - EasyTag`** (valore placeholder `0000000000`)
+
+Il cliente deve sostituirla con il proprio Conversion ID di Google Ads.
+
+Anche le **Conversion Label** sono impostate su `ETICHETTA_QUI` e vanno aggiornate.
 
 ## Note importanti
 
-- I file JSON non devono contenere dati sensibili del tuo account (se possibile).
-- Nelle istruzioni indica chiaramente cosa il cliente deve personalizzare (Measurement ID GA4, Conversion ID Google Ads, ecc.).
+- I file JSON contengono ancora riferimenti all’account di origine (accountId, containerId). In fase di import GTM li riassegna al container del cliente.
 - Dopo ogni aggiornamento di un container, riesporta il JSON e sostituisci il file.
 
 ## Flusso di consegna (Fase 1)
