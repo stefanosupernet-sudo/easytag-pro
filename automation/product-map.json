@@ -1,0 +1,50 @@
+{
+  "_comment": "Sostituisci i price_id con quelli reali di Stripe dopo aver creato i prodotti. Chiave = price ID Stripe.",
+  "products": {
+    "price_telefono": {
+      "slug": "tracking-click-telefono",
+      "name": "Tracking Click sul Numero di Telefono",
+      "type": "container",
+      "folder": "tracking-click-telefono",
+      "files": ["container.json", "istruzioni.html"],
+      "price_eur": 150
+    },
+    "price_social_6in1": {
+      "slug": "tracking-social-6in1",
+      "name": "Tracking Social 6-in-1",
+      "type": "container",
+      "folder": "tracking-social-6in1",
+      "files": ["container.json", "istruzioni.html"],
+      "price_eur": 450
+    },
+    "price_contatti_3in1": {
+      "slug": "contatti-3in1",
+      "name": "Pacchetto Contatti 3-in-1",
+      "type": "container",
+      "folder": "contatti-3in1",
+      "files": ["container.json", "istruzioni.html"],
+      "price_eur": 350
+    },
+    "price_supporto_5h": {
+      "slug": "supporto-5-ore",
+      "name": "Supporto Tecnico – 5 ore",
+      "type": "hours",
+      "hours": 5,
+      "price_eur": 500
+    },
+    "price_supporto_10h": {
+      "slug": "supporto-10-ore",
+      "name": "Supporto Tecnico – 10 ore",
+      "type": "hours",
+      "hours": 10,
+      "price_eur": 900
+    },
+    "price_supporto_20h": {
+      "slug": "supporto-20-ore",
+      "name": "Supporto Tecnico – 20 ore",
+      "type": "hours",
+      "hours": 20,
+      "price_eur": 1600
+    }
+  }
+}
