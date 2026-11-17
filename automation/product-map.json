@@ -1,50 +1,63 @@
 {
-  "_comment": "Sostituisci i price_id con quelli reali di Stripe dopo aver creato i prodotti. Chiave = price ID Stripe.",
+  "_comment": "Stripe TEST mode. Chiave = price ID reale. Aggiorna dopo il passaggio a live.",
+  "mode": "test",
   "products": {
-    "price_telefono": {
+    "price_1UciBdFVaAsOPXA76PiEj3tN": {
       "slug": "tracking-click-telefono",
       "name": "Tracking Click sul Numero di Telefono",
       "type": "container",
       "folder": "tracking-click-telefono",
       "files": ["container.json", "istruzioni.html"],
-      "price_eur": 150
+      "price_eur": 150,
+      "product_id": "prod_Ve0BfFQHEHCb0R",
+      "payment_link": "https://buy.stripe.com/test_5kQbJ13KL4Ld9yT01CbV600"
     },
-    "price_social_6in1": {
+    "price_1UciBeFVaAsOPXA7ssnlkCi7": {
       "slug": "tracking-social-6in1",
       "name": "Tracking Social 6-in-1",
       "type": "container",
       "folder": "tracking-social-6in1",
       "files": ["container.json", "istruzioni.html"],
-      "price_eur": 450
+      "price_eur": 450,
+      "product_id": "prod_Ve0CSCDHkunbi1",
+      "payment_link": "https://buy.stripe.com/test_dRm14ngxx6TldP929KbV601"
     },
-    "price_contatti_3in1": {
+    "price_1UciBfFVaAsOPXA7MKDPBnCl": {
       "slug": "contatti-3in1",
       "name": "Pacchetto Contatti 3-in-1",
       "type": "container",
       "folder": "contatti-3in1",
       "files": ["container.json", "istruzioni.html"],
-      "price_eur": 350
+      "price_eur": 350,
+      "product_id": "prod_Ve0C37d5iXf2Df",
+      "payment_link": "https://buy.stripe.com/test_28E6oHgxx4Ld5iDbKkbV602"
     },
-    "price_supporto_5h": {
+    "price_1UciBgFVaAsOPXA7QW3Gfilb": {
       "slug": "supporto-5-ore",
       "name": "Supporto Tecnico – 5 ore",
       "type": "hours",
       "hours": 5,
-      "price_eur": 500
+      "price_eur": 500,
+      "product_id": "prod_Ve0COeR9mMJ39K",
+      "payment_link": "https://buy.stripe.com/test_eVq6oHdll5PhaCX5lWbV603"
     },
-    "price_supporto_10h": {
+    "price_1UciBhFVaAsOPXA76qaSyaa7": {
       "slug": "supporto-10-ore",
       "name": "Supporto Tecnico – 10 ore",
       "type": "hours",
       "hours": 10,
-      "price_eur": 900
+      "price_eur": 900,
+      "product_id": "prod_Ve0CnGg5OEVUwM",
+      "payment_link": "https://buy.stripe.com/test_9B600jftt3H99yT29KbV604"
     },
-    "price_supporto_20h": {
+    "price_1UciBiFVaAsOPXA7JVjj8s4o": {
       "slug": "supporto-20-ore",
       "name": "Supporto Tecnico – 20 ore",
       "type": "hours",
       "hours": 20,
-      "price_eur": 1600
+      "price_eur": 1600,
+      "product_id": "prod_Ve0CHJiuOpQf2F",
+      "payment_link": "https://buy.stripe.com/test_bJedR9a99dhJh1l6q0bV605"
     }
   }
 }
