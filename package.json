@@ -1,0 +1,14 @@
+{
+  "name": "easytag-pro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Easy Tag – GTM containers e supporto tecnico",
+  "dependencies": {
+    "stripe": "^17.0.0",
+    "resend": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}
