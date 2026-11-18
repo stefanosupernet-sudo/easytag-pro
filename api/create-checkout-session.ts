@@ -54,8 +54,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     automatic_tax: { enabled: false },
     allow_promotion_codes: false,
     submit_type: 'auto',
-    integration_identifier: 'hosted_web_0001',
-    origin_context: 'web',
+   
 
     // sample_only – replace DOMAIN before production
     mode: 'payment',
