@@ -3,66 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Istruzioni – Dynamic Remarketing | Easy Tag</title>
+  <title>Guida – Dynamic Remarketing GTM | Easy Tag</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.65; color: #202124; }
-    h1 { font-size: 26px; margin-bottom: 8px; }
-    h2 { font-size: 18px; margin-top: 32px; margin-bottom: 10px; }
-    .badge { display: inline-block; background: #E8F3FC; color: #1182DE; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
-    ol, ul { margin: 12px 0 12px 22px; }
-    li { margin-bottom: 8px; }
-    code { background: #f1f3f4; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
-    .note { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 14px 16px; margin: 24px 0; font-size: 14.5px; }
-    .footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e8eaed; font-size: 13px; color: #5f6368; }
+    :root { --blue:#1182DE; --blue-dark:#0B5CAD; --blue-soft:#E8F3FC; --green:#137333; --green-bg:#E6F4EA; --amber-bg:#FEF7E0; --text:#202124; --muted:#5F6368; --line:#E8EAED; --bg:#F8F9FA; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.65; background: var(--bg); padding: 24px 16px 64px; }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px 28px 32px; box-shadow: 0 4px 24px rgba(17,130,222,0.06); }
+    .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .logo { width: 36px; height: 36px; background: var(--blue); color: #fff; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+    .brand-name { font-weight: 700; font-size: 18px; } .brand-name span { color: var(--blue); }
+    .badge { display: inline-block; background: #FEF7E0; color: #B06000; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-bottom: 14px; }
+    h1 { font-size: 26px; letter-spacing: -0.3px; margin-bottom: 8px; line-height: 1.25; }
+    .subtitle { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+    .toc { background: var(--blue-soft); border-radius: 12px; padding: 16px 18px; margin-bottom: 32px; }
+    .toc strong { display: block; font-size: 13px; color: var(--blue-dark); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .toc ol { margin: 0 0 0 18px; font-size: 14.5px; } .toc a { color: var(--blue-dark); text-decoration: none; }
+    h2 { font-size: 18px; margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-soft); display: flex; align-items: center; gap: 10px; }
+    .step-num { width: 28px; height: 28px; background: var(--blue); color: #fff; border-radius: 50%; font-size: 14px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    p { margin-bottom: 12px; color: var(--muted); } p strong { color: var(--text); }
+    ol.steps, ul.check { margin: 12px 0; padding: 0; list-style: none; }
+    ol.steps li { position: relative; padding: 12px 14px 12px 48px; margin-bottom: 10px; background: var(--bg); border-radius: 10px; border: 1px solid var(--line); font-size: 15px; }
+    ol.steps li::before { content: attr(data-n); position: absolute; left: 12px; top: 12px; width: 26px; height: 26px; background: var(--blue); color: #fff; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    ul.check li { padding: 10px 12px 10px 40px; margin-bottom: 8px; border: 1px solid var(--line); border-radius: 10px; position: relative; font-size: 15px; }
+    ul.check li::before { content: "✓"; position: absolute; left: 12px; top: 10px; color: var(--green); font-weight: 700; }
+    code { background: #F1F3F4; padding: 2px 7px; border-radius: 5px; font-size: 13.5px; font-family: ui-monospace, Menlo, monospace; color: #174ea6; }
+    .callout { border-radius: 12px; padding: 16px 18px; margin: 20px 0; font-size: 14.5px; }
+    .callout.warn { background: var(--amber-bg); border-left: 4px solid #F9AB00; color: #5F4B00; }
+    .callout.info { background: var(--blue-soft); border-left: 4px solid var(--blue); }
+    .callout strong { display: block; margin-bottom: 4px; }
+    a.btn { display: inline-flex; margin-top: 8px; background: var(--blue); color: #fff !important; text-decoration: none; font-weight: 600; font-size: 14px; padding: 10px 16px; border-radius: 8px; }
+    .footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--muted); } .footer a { color: var(--blue); }
   </style>
 </head>
 <body>
-  <div class="badge">Easy Tag · Team ex-Google Cracovia</div>
-  <h1>Istruzioni di installazione</h1>
-  <p><strong>Prodotto:</strong> Dynamic Remarketing completo via GTM</p>
+  <div class="wrap"><div class="card">
+    <div class="brand"><div class="logo">ET</div><div class="brand-name">Easy<span>Tag</span></div></div>
+    <span class="badge">Servizio su preventivo · Guida post-consegna</span>
+    <h1>Dynamic remarketing via GTM</h1>
+    <p class="subtitle">Da usare dopo la consegna del container e l’allineamento con feed e campagne.</p>
+    <div class="toc"><strong>Indice</strong>
+      <ol>
+        <li><a href="#prereq">Prerequisiti</a></li>
+        <li><a href="#import">Import in GTM</a></li>
+        <li><a href="#parametri">Parametri prodotto</a></li>
+        <li><a href="#test">Test e pubblicazione</a></li>
+        <li><a href="#aiuto">Supporto</a></li>
+      </ol>
+    </div>
 
-  <h2>1. Cosa hai ricevuto</h2>
-  <ul>
-    <li><code>container.json</code> – esportazione del contenitore GTM già configurato</li>
-    <li>Queste istruzioni</li>
-  </ul>
+    <h2 id="prereq"><span class="step-num">1</span> Prerequisiti</h2>
+    <ul class="check">
+      <li>Feed prodotti (Merchant Center o feed custom) collegato alle campagne Dynamic Remarketing</li>
+      <li>Campagne / asset Dynamic Remarketing su Google Ads (o pronti da creare)</li>
+      <li>Eventi sito che espongono gli ID prodotto allineati al feed</li>
+    </ul>
+    <div class="callout warn"><strong>Critico</strong>Se l’ID prodotto nel sito non coincide con quello del feed, il remarketing dinamico non mostra i prodotti giusti.</div>
 
-  <h2>2. Prerequisiti</h2>
-  <ul>
-    <li>Avere un feed prodotti (Google Merchant Center o feed custom) collegato alle campagne Dynamic Remarketing</li>
-    <li>Avere già (o essere pronti a creare) le campagne Dynamic Remarketing su Google Ads</li>
-  </ul>
+    <h2 id="import"><span class="step-num">2</span> Import in GTM</h2>
+    <ol class="steps">
+      <li data-n="1">Apri Tag Manager e seleziona il container.</li>
+      <li data-n="2">Admin → Container → Import Container → carica il file ricevuto.</li>
+      <li data-n="3">Usa <strong>Merge</strong> se hai già altri tag.</li>
+      <li data-n="4">Conferma dopo l’anteprima.</li>
+    </ol>
 
-  <h2>3. Come importare il container</h2>
-  <ol>
-    <li>Accedi a Google Tag Manager.</li>
-    <li>Admin → Container → Import Container → carica <code>container.json</code>.</li>
-    <li>Scegli Merge o Overwrite.</li>
-    <li>Conferma l’importazione.</li>
-  </ol>
+    <h2 id="parametri"><span class="step-num">3</span> Parametri da verificare</h2>
+    <ul class="check">
+      <li>ID prodotto, nome, prezzo (e altri campi richiesti dal formato remarketing)</li>
+      <li>Eventi: view_item, add_to_cart, purchase, ecc.</li>
+      <li>Conversion ID / Label Ads se previsti nel progetto</li>
+    </ul>
+    <div class="callout info"><strong>Suggerimento</strong>Confronta un ID dal feed con lo stesso prodotto in pagina: devono essere identici (stesso formato, stessi zeri iniziali se presenti).</div>
 
-  <h2>4. Cosa personalizzare</h2>
-  <ul>
-    <li>Parametri prodotto richiesti dal Dynamic Remarketing (id, name, price, ecc.)</li>
-    <li>Conversion ID / Label di Google Ads se necessario</li>
-    <li>Verifica che gli eventi (view_item, add_to_cart, purchase, ecc.) passino i parametri corretti</li>
-  </ul>
+    <h2 id="test"><span class="step-num">4</span> Test e pubblicazione</h2>
+    <ol class="steps">
+      <li data-n="1">Anteprima GTM: naviga schede prodotto e carrello.</li>
+      <li data-n="2">Verifica che i parametri prodotto partano su ogni evento rilevante.</li>
+      <li data-n="3">Controlla con gli strumenti di debug Ads / Tag Assistant se disponibili.</li>
+      <li data-n="4">Pubblica il container.</li>
+    </ol>
 
-  <h2>5. Test e pubblicazione</h2>
-  <ol>
-    <li>Usa la modalità Anteprima di GTM.</li>
-    <li>Naviga il sito e verifica che i parametri prodotto vengano inviati correttamente.</li>
-    <li>Controlla anche in Google Ads (se hai già la campagna attiva) o con gli strumenti di debug.</li>
-    <li>Pubblica il container.</li>
-  </ol>
-
-  <div class="note">
-    <strong>Nota:</strong> Il Dynamic Remarketing funziona bene solo se il feed prodotti e i parametri passati dal sito sono allineati. Se hai dubbi sull’allineamento feed ↔ eventi, scrivici a support@easytag.com.
-  </div>
-
-  <div class="footer">
-    Easy Tag Solutions · Spin-off del team italiano di Google Cracovia<br>
-    support@easytag.com
-  </div>
+    <h2 id="aiuto"><span class="step-num">5</span> Supporto</h2>
+    <p>Dubbi su allineamento feed ↔ eventi o su campagne Ads? Scrivici con account e esempi di ID prodotto.</p>
+    <a class="btn" href="mailto:support@easytag.com?subject=Supporto%20Dynamic%20Remarketing">Scrivi a support@easytag.com</a>
+    <div class="footer">Easy Tag Solutions · <a href="https://easytag.pro">easytag.pro</a></div>
+  </div></div>
 </body>
 </html>
