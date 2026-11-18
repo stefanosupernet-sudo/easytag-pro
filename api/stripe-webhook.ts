@@ -59,7 +59,7 @@ async function buffer(req: VercelRequest): Promise<Buffer> {
   for await (const chunk of req as any) {
     chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
   }
-  return Buffer.concat(chunks);
+  Buffer.concat(chunks.map((chunk) => new Uint8Array(chunk)));
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
