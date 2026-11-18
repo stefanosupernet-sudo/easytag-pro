@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/chi-siamo", "destination": "/chi-siamo.html" },
+    { "source": "/contatti", "destination": "/contatti.html" },
+    { "source": "/datalayer-architettura", "destination": "/datalayer-architettura.html" },
+    { "source": "/tag-nativo-google-ads", "destination": "/tag-nativo-google-ads.html" },
+    { "source": "/tag-google-analytics-4", "destination": "/tag-google-analytics-4.html" }
+  ]
+}
