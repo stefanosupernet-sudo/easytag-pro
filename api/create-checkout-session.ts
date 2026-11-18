@@ -48,15 +48,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // payment_method_collection is only for subscription mode (omitted here)
   const session = await stripe.checkout.sessions.create({
     // fixed_by_ui (Checkout Studio)
-    ui_mode: 'hosted_page',
+    ui_mode: 'hosted',
     billing_address_collection: 'auto',
     phone_number_collection: { enabled: false },
     automatic_tax: { enabled: false },
     allow_promotion_codes: false,
     submit_type: 'auto',
-    // @ts-expect-error Stripe may type these as experimental / version-dependent
     integration_identifier: 'hosted_web_0001',
-    // @ts-expect-error origin_context from Checkout Studio
     origin_context: 'web',
 
     // sample_only – replace DOMAIN before production
