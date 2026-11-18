@@ -2,6 +2,39 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <!-- Font Google e Stili CSS globali presi dalla Home -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #1182DE; --blue-dark: #0B5CAD; --blue-light: #E8F3FC; --blue-soft: #D0E8F9;
+            --black: #1A1A1A; --gray-900: #202124; --gray-700: #5F6368; --gray-500: #9AA0A6;
+            --gray-200: #E8EAED; --gray-100: #F8F9FA; --white: #FFFFFF;
+            --radius: 12px; --shadow: 0 4px 24px rgba(17,130,222,0.12); --shadow-hover: 0 12px 40px rgba(17,130,222,0.18);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--gray-900); line-height: 1.65; background: var(--white); -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4 { font-weight: 500; line-height: 1.25; color: var(--gray-900); }
+        a { text-decoration: none; color: inherit; }
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--gray-200); padding: 0 24px; }
+        .header-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; }
+        .logo-mark { width: 38px; height: 38px; background: var(--blue); border-radius: 9px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 14px; }
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a { font-size: 14.5px; font-weight: 500; color: var(--gray-700); transition: color 0.2s; }
+        .nav a:hover, .nav a.active { color: var(--blue); }
+        /* Stili aggiuntivi per il corpo pagina Chi Siamo */
+        main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        article section { margin-bottom: 40px; }
+        article h1 { font-size: 32px; margin-bottom: 16px; }
+        article h2 { font-size: 24px; margin-top: 32px; margin-bottom: 12px; border-bottom: 2px solid var(--blue-light); padding-bottom: 6px; }
+        article h3 { font-size: 18px; margin-top: 20px; margin-bottom: 8px; }
+        article p { margin-bottom: 16px; color: var(--gray-700); }
+        article ul { margin-bottom: 16px; padding-left: 20px; color: var(--gray-700); }
+        article li { margin-bottom: 8px; }
+        article pre { background: var(--gray-100); padding: 16px; border-radius: var(--radius); overflow-x: auto; margin-bottom: 16px; border: 1px solid var(--gray-200); }
+        article code { font-family: monospace; font-size: 13px; color: var(--blue-dark); }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi Siamo | EasyTag Pro - Ingegneria del Tracciamento e DataLayer</title>
     <meta name="description" content="Scopri chi c'è dietro EasyTag Pro: specialisti in tracciamento server-side, Google Tag Manager, Tag nativo Google Ads, GA4 e architettura DataLayer per aziende e web agency.">
