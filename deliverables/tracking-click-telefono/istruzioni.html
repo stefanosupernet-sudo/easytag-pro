@@ -3,62 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Istruzioni – Tracking Click sul Numero di Telefono | Easy Tag</title>
+  <title>Istruzioni installazione – Tracking Click Telefono | Easy Tag</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.65; color: #202124; }
-    h1 { font-size: 26px; margin-bottom: 8px; }
-    h2 { font-size: 18px; margin-top: 32px; margin-bottom: 10px; }
-    .badge { display: inline-block; background: #E8F3FC; color: #1182DE; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
-    ol, ul { margin: 12px 0 12px 22px; }
-    li { margin-bottom: 8px; }
-    code { background: #f1f3f4; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
-    .note { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 14px 16px; margin: 24px 0; font-size: 14.5px; }
-    .footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e8eaed; font-size: 13px; color: #5f6368; }
+    :root {
+      --blue: #1182DE;
+      --blue-dark: #0B5CAD;
+      --blue-soft: #E8F3FC;
+      --green: #137333;
+      --green-bg: #E6F4EA;
+      --amber: #B06000;
+      --amber-bg: #FEF7E0;
+      --text: #202124;
+      --muted: #5F6368;
+      --line: #E8EAED;
+      --bg: #F8F9FA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background: var(--bg);
+      padding: 24px 16px 64px;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 28px 32px;
+      box-shadow: 0 4px 24px rgba(17, 130, 222, 0.06);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 36px; height: 36px;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 13px;
+    }
+    .brand-name { font-weight: 700; font-size: 18px; }
+    .brand-name span { color: var(--blue); }
+    .badge {
+      display: inline-block;
+      background: var(--green-bg);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: 26px; letter-spacing: -0.3px; margin-bottom: 8px; line-height: 1.25; }
+    .subtitle { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+    .toc {
+      background: var(--blue-soft);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 32px;
+    }
+    .toc strong { display: block; font-size: 13px; color: var(--blue-dark); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .toc ol { margin: 0 0 0 18px; font-size: 14.5px; }
+    .toc li { margin-bottom: 4px; }
+    .toc a { color: var(--blue-dark); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 18px;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--blue-soft);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .step-num {
+      width: 28px; height: 28px;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    p { margin-bottom: 12px; color: var(--muted); }
+    p strong { color: var(--text); }
+    ol.steps, ul.check { margin: 12px 0 12px 0; padding: 0; list-style: none; }
+    ol.steps li {
+      position: relative;
+      padding: 12px 14px 12px 48px;
+      margin-bottom: 10px;
+      background: var(--bg);
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 15px;
+    }
+    ol.steps li::before {
+      content: attr(data-n);
+      position: absolute;
+      left: 12px; top: 12px;
+      width: 26px; height: 26px;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ul.check li {
+      padding: 10px 12px 10px 40px;
+      margin-bottom: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      position: relative;
+      font-size: 15px;
+    }
+    ul.check li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px; top: 10px;
+      color: var(--green);
+      font-weight: 700;
+    }
+    code, .file {
+      background: #F1F3F4;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: 13.5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #174ea6;
+    }
+    .path {
+      display: inline-block;
+      background: #fff;
+      border: 1px dashed var(--blue);
+      color: var(--blue-dark);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin: 4px 0;
+    }
+    .callout {
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 20px 0;
+      font-size: 14.5px;
+    }
+    .callout.info { background: var(--blue-soft); border-left: 4px solid var(--blue); }
+    .callout.warn { background: var(--amber-bg); border-left: 4px solid #F9AB00; color: #5F4B00; }
+    .callout strong { display: block; margin-bottom: 4px; color: inherit; }
+    .files {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .file-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: var(--bg);
+    }
+    .file-icon {
+      width: 40px; height: 40px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .file-card h3 { font-size: 15px; margin-bottom: 2px; }
+    .file-card p { font-size: 13.5px; margin: 0; }
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      background: var(--blue);
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+    a.btn:hover { background: var(--blue-dark); }
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer a { color: var(--blue); }
+    @media (max-width: 520px) {
+      .card { padding: 20px 16px 24px; }
+      h1 { font-size: 22px; }
+      ol.steps li { padding-left: 44px; }
+    }
   </style>
 </head>
 <body>
-  <div class="badge">Easy Tag · Team ex-Google Cracovia</div>
-  <h1>Istruzioni di installazione</h1>
-  <p><strong>Prodotto:</strong> Tracking Click sul Numero di Telefono con Google Tag Manager</p>
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">
+        <div class="logo">ET</div>
+        <div class="brand-name">Easy<span>Tag</span></div>
+      </div>
 
-  <h2>1. Cosa hai ricevuto</h2>
-  <ul>
-    <li><code>container.json</code> – esportazione del contenitore GTM già configurato</li>
-    <li>Queste istruzioni</li>
-  </ul>
+      <span class="badge">Guida di installazione</span>
+      <h1>Tracking click sul numero di telefono</h1>
+      <p class="subtitle">Segui i passaggi in ordine. Tempo stimato: 10–15 minuti.</p>
 
-  <h2>2. Come importare il container</h2>
-  <ol>
-    <li>Accedi al tuo account <a href="https://tagmanager.google.com" target="_blank">Google Tag Manager</a>.</li>
-    <li>Seleziona (o crea) il container del sito su cui vuoi installare il tracking.</li>
-    <li>Vai in <strong>Admin → Container → Import Container</strong>.</li>
-    <li>Carica il file <code>container.json</code> che hai scaricato.</li>
-    <li>Scegli l’opzione di merge più adatta (di solito “Overwrite” se è un container nuovo, oppure “Merge” se ne hai già uno attivo).</li>
-    <li>Controlla l’anteprima e conferma l’importazione.</li>
-  </ol>
+      <div class="toc">
+        <strong>Indice</strong>
+        <ol>
+          <li><a href="#ricevuto">Cosa hai ricevuto</a></li>
+          <li><a href="#import">Importare il container in GTM</a></li>
+          <li><a href="#personalizza">Cosa personalizzare</a></li>
+          <li><a href="#test">Test e pubblicazione</a></li>
+          <li><a href="#aiuto">Serve aiuto?</a></li>
+        </ol>
+      </div>
 
-  <h2>3. Cosa personalizzare dopo l’import</h2>
-  <p>Dopo l’importazione verifica e, se necessario, modifica:</p>
-  <ul>
-    <li>Evento GA4 (nome evento e parametri)</li>
-    <li>Eventuale Conversion ID / Label di Google Ads</li>
-    <li>Trigger sui selettori CSS o sui link <code>tel:</code> (adatta al tuo HTML se diverso)</li>
-  </ul>
+      <h2 id="ricevuto"><span class="step-num">1</span> Cosa hai ricevuto</h2>
+      <div class="files">
+        <div class="file-card">
+          <div class="file-icon">{ }</div>
+          <div>
+            <h3><span class="file">container.json</span></h3>
+            <p>Il contenitore Google Tag Manager già configurato per i click sui link <code>tel:</code>.</p>
+          </div>
+        </div>
+        <div class="file-card">
+          <div class="file-icon">📄</div>
+          <div>
+            <h3>Questa guida</h3>
+            <p>Istruzioni passo-passo per importare, personalizzare e pubblicare.</p>
+          </div>
+        </div>
+      </div>
 
-  <h2>4. Pubblicazione</h2>
-  <ol>
-    <li>Usa la modalità <strong>Anteprima</strong> di GTM e testa un click sul numero di telefono.</li>
-    <li>Verifica che l’evento arrivi correttamente in GA4 (DebugView) e, se configurato, in Google Ads.</li>
-    <li>Quando tutto è ok, pubblica il container.</li>
-  </ol>
+      <h2 id="import"><span class="step-num">2</span> Importare il container in GTM</h2>
+      <p>Apri <a href="https://tagmanager.google.com" target="_blank" rel="noopener">tagmanager.google.com</a> e accedi con l’account che gestisce il sito.</p>
+      <ol class="steps">
+        <li data-n="1">Seleziona (o crea) il <strong>container</strong> del sito su cui vuoi attivare il tracking.</li>
+        <li data-n="2">Vai in <span class="path">Admin → Container → Import Container</span></li>
+        <li data-n="3">Carica il file <code>container.json</code> ricevuto via email.</li>
+        <li data-n="4">Scegli l’area di lavoro (Workspace) in cui importare.</li>
+        <li data-n="5">Opzione di import:
+          <br>• <strong>Merge</strong> — se hai già tag attivi (consigliato nella maggior parte dei casi)
+          <br>• <strong>Overwrite</strong> — solo se il container è nuovo o vuoto</li>
+        <li data-n="6">Controlla l’anteprima delle modifiche e conferma l’importazione.</li>
+      </ol>
 
-  <div class="note">
-    <strong>Nota:</strong> Questo è un template di riferimento. Se il tuo sito ha una struttura particolare dei link telefono, potrebbe essere necessario un piccolo adattamento dei trigger. In caso di dubbi scrivi a support@easytag.com.
-  </div>
+      <div class="callout info">
+        <strong>Suggerimento</strong>
+        Se non sei sicuro, usa sempre <strong>Merge</strong>. Eviti di cancellare tag già presenti nel container.
+      </div>
 
-  <div class="footer">
-    Easy Tag Solutions · Spin-off del team italiano di Google Cracovia<br>
-    support@easytag.com
+      <h2 id="personalizza"><span class="step-num">3</span> Cosa personalizzare dopo l’import</h2>
+      <p>Il container è un modello pronto. Prima di pubblicare verifica questi punti:</p>
+      <ul class="check">
+        <li><strong>Conversion ID / Label Google Ads</strong> — se usi conversioni Ads, inserisci i tuoi valori nelle variabili dedicate.</li>
+        <li><strong>Evento GA4</strong> — controlla nome evento e parametri (es. <code>phone_click</code>).</li>
+        <li><strong>Trigger sui link telefono</strong> — devono intercettare i link <code>tel:</code> del tuo sito. Se usi bottoni custom senza <code>tel:</code>, va adattato il trigger.</li>
+      </ul>
+
+      <div class="callout warn">
+        <strong>Attenzione</strong>
+        Se i numeri di telefono non sono link cliccabili (<code><a href="tel:+39..."></code>), il tracking non partirà finché non allinei HTML o trigger.
+      </div>
+
+      <h2 id="test"><span class="step-num">4</span> Test e pubblicazione</h2>
+      <ol class="steps">
+        <li data-n="1">In GTM clicca <strong>Anteprima</strong> (Preview) e collega il tuo sito.</li>
+        <li data-n="2">Clicca un numero di telefono sulla pagina.</li>
+        <li data-n="3">Nella console di debug GTM verifica che tag e trigger si attivino.</li>
+        <li data-n="4">Controlla anche <strong>GA4 → DebugView</strong> (e Google Ads, se configurato).</li>
+        <li data-n="5">Quando tutto è ok, clicca <strong>Invia → Pubblica</strong> sul container.</li>
+      </ol>
+
+      <h2 id="aiuto"><span class="step-num">5</span> Serve aiuto?</h2>
+      <p>Se il sito ha una struttura particolare dei link telefono, potrebbe servire un piccolo adattamento dei trigger.</p>
+      <a class="btn" href="mailto:support@easytag.com?subject=Supporto%20Tracking%20Click%20Telefono">Scrivi a support@easytag.com</a>
+
+      <div class="footer">
+        Easy Tag Solutions · Spin-off del team italiano di Google Cracovia<br>
+        <a href="https://easytag.pro">easytag.pro</a> · <a href="mailto:support@easytag.com">support@easytag.com</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
