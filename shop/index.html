@@ -42,12 +42,8 @@
     .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; margin-bottom: 56px; }
     .product-card { background: white; border-radius: 14px; overflow: hidden; border: 1px solid var(--gray-200); display: flex; flex-direction: column; transition: all 0.3s; }
     .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
-    .product-visual { height: 140px; background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%); display: flex; align-items: center; justify-content: center; }
-    .product-box { width: 90px; height: 110px; background: #111; border-radius: 6px; border: 1px solid #333; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; }
-    .product-box .box-logo { font-size: 11px; font-weight: 700; margin-bottom: 6px; }
-    .product-box .box-logo span { color: var(--blue); }
-    .product-box .box-icon { font-size: 24px; margin-bottom: 4px; }
-    .product-box .box-label { font-size: 8px; letter-spacing: 1px; color: #aaa; text-transform: uppercase; }
+    .product-visual { height: 220px; background: linear-gradient(180deg, #e8eef5 0%, #f5f7fa 100%); display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .product-visual img { max-width: 100%; max-height: 190px; object-fit: contain; border-radius: 6px; }
     .product-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
     .product-body h3 { font-size: 15.5px; margin-bottom: 8px; min-height: 42px; }
     .product-body p { font-size: 13.5px; color: var(--gray-700); margin-bottom: 14px; flex: 1; }
@@ -86,7 +82,7 @@
       <p class="section-sub">Checkout Stripe → email con JSON e istruzioni.</p>
       <div class="products-grid">
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">📞</div><div class="box-label">Phone</div></div></div>
+          <div class="product-visual"><img data-product="tracking-click-telefono" alt="Tracking Click Telefono" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-ready">Acquistabile online</span>
             <h3>Tracking Click Telefono</h3>
@@ -101,7 +97,7 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">📱</div><div class="box-label">Social 6in1</div></div></div>
+          <div class="product-visual"><img data-product="tracking-social-6in1" alt="Social 6-in-1" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-ready">Acquistabile online</span>
             <h3>Tracking Social 6-in-1</h3>
@@ -116,7 +112,7 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">📬</div><div class="box-label">Contatti 3in1</div></div></div>
+          <div class="product-visual"><img data-product="contatti-3in1" alt="Contatti 3-in-1" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-ready">Acquistabile online</span>
             <h3>Contatti 3-in-1</h3>
@@ -137,7 +133,7 @@
       <p class="section-sub">Dopo il pagamento ti contattiamo per partire entro 1 giorno lavorativo.</p>
       <div class="products-grid">
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">🎧</div><div class="box-label">5 ore</div></div></div>
+          <div class="product-visual"><img data-product="supporto-5-ore" alt="Supporto 5 ore" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-ready">Acquistabile online</span>
             <h3>Supporto 5 ore</h3>
@@ -152,7 +148,7 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">🎧</div><div class="box-label">10 ore</div></div></div>
+          <div class="product-visual"><img data-product="supporto-10-ore" alt="Supporto 10 ore" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-ready">Acquistabile online</span>
             <h3>Supporto 10 ore</h3>
@@ -167,7 +163,7 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">🎧</div><div class="box-label">20 ore</div></div></div>
+          <div class="product-visual"><img data-product="supporto-20-ore" alt="Supporto 20 ore" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-ready">Acquistabile online</span>
             <h3>Supporto 20 ore</h3>
@@ -188,7 +184,7 @@
       <p class="section-sub">Non passano dal carrello: richiedono analisi CMS / data layer.</p>
       <div class="products-grid">
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">🛒</div><div class="box-label">E-commerce</div></div></div>
+          <div class="product-visual"><img data-product="tracker-ecommerce" alt="Tracker E-commerce" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-custom">Preventivo</span>
             <h3>Tracker E-commerce</h3>
@@ -200,7 +196,7 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-visual"><div class="product-box"><div class="box-logo">Easy<span>Tag</span></div><div class="box-icon">🔄</div><div class="box-label">Remarketing</div></div></div>
+          <div class="product-visual"><img data-product="dynamic-remarketing" alt="Dynamic Remarketing" width="400" height="400" loading="lazy"></div>
           <div class="product-body">
             <span class="badge-custom">Preventivo</span>
             <h3>Dynamic Remarketing</h3>
@@ -215,5 +211,6 @@
     </div>
   </section>
   <footer class="footer">© 2026 Easy Tag Solutions · Checkout in modalità test Stripe</footer>
+  <script src="/assets/js/product-images.js"></script>
 </body>
 </html>
