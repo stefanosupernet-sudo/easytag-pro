@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracker Conversioni E-commerce | Easy Tag – Preventivo</title>
+  <meta name="description" content="Implementazione data layer e eventi e-commerce su GTM e GA4. Preventivo su misura.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/tracker-ecommerce">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1182DE;--gray-900:#202124;--gray-700:#5F6368;--gray-200:#E8EAED;--gray-100:#F8F9FA}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--gray-900);line-height:1.65}
+    a{color:inherit;text-decoration:none}.header{border-bottom:1px solid var(--gray-200);padding:0 20px}
+    .header-inner{max-width:900px;margin:auto;min-height:64px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;font-size:20px}.logo span{color:var(--blue)}
+    .btn{display:inline-flex;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;background:var(--blue);color:#fff}
+    main{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+    .breadcrumb{font-size:13px;color:var(--gray-700);margin-bottom:20px}.breadcrumb a{color:var(--blue)}
+    .badge{display:inline-block;background:#FEF7E0;color:#B06000;font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;margin-bottom:12px}
+    h1{font-size:clamp(26px,4vw,36px);margin:0 0 12px}p,li{color:var(--gray-700)}
+    .form-box{background:var(--gray-100);border:1px solid var(--gray-200);border-radius:14px;padding:24px;margin-top:24px}
+    .form-group{margin-bottom:14px}.form-group label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 13px;border:1.5px solid var(--gray-200);border-radius:8px;font-size:15px;font-family:inherit}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+    .footer{text-align:center;padding:24px;border-top:1px solid var(--gray-200);font-size:13px}
+  </style>
+</head>
+<body>
+  <header class="header"><div class="header-inner"><a href="/" class="logo">Easy<span>Tag</span></a><a href="/contatti" class="btn">Richiedi preventivo</a></div></header>
+  <main>
+    <div class="breadcrumb"><a href="/">Home</a> → <a href="/shop/">Shop</a> → Tracker E-commerce</div>
+    <div class="badge">Preventivo su richiesta</div>
+    <h1>Tracker Conversioni E-commerce</h1>
+    <p>Data layer e eventi completi in GTM e GA4 (view_item, cart, checkout, purchase). Il prezzo dipende dal CMS e dalla struttura del sito.</p>
+    <ul>
+      <li>view_item / view_item_list</li>
+      <li>add_to_cart / remove_from_cart</li>
+      <li>begin_checkout / add_shipping_info / add_payment_info</li>
+      <li>purchase con transaction_id, value, currency, items</li>
+    </ul>
+    <div class="form-box">
+      <p><strong>Compila il form contatti</strong> indicando CMS, URL e se serve data layer personalizzato.</p>
+      <a class="btn" href="/contatti?prodotto=tracker-ecommerce">Vai al form contatti</a>
+    </div>
+  </main>
+  <footer class="footer"><a href="/shop/">← Torna allo Shop</a></footer>
+</body>
+</html>
