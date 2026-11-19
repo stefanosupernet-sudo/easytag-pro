@@ -6,6 +6,25 @@
     { "source": "/contatti", "destination": "/contatti.html" },
     { "source": "/datalayer-architettura", "destination": "/datalayer-architettura.html" },
     { "source": "/tag-nativo-google-ads", "destination": "/tag-nativo-google-ads.html" },
-    { "source": "/tag-google-analytics-4", "destination": "/tag-google-analytics-4.html" }
+    { "source": "/tag-google-analytics-4", "destination": "/tag-google-analytics-4.html" },
+    { "source": "/success", "destination": "/success.html" },
+
+    { "source": "/tracking-click-telefono", "destination": "/shop/tracking-click-telefono.html" },
+    { "source": "/tracking-social-6in1", "destination": "/shop/tracking-social-6in1.html" },
+    { "source": "/contatti-3in1", "destination": "/shop/contatti-3in1.html" },
+    { "source": "/supporto-5-ore", "destination": "/shop/supporto-5-ore.html" },
+    { "source": "/supporto-10-ore", "destination": "/shop/supporto-10-ore.html" },
+    { "source": "/supporto-20-ore", "destination": "/shop/supporto-20-ore.html" },
+    { "source": "/tracker-ecommerce", "destination": "/shop/tracker-ecommerce.html" },
+    { "source": "/dynamic-remarketing", "destination": "/shop/dynamic-remarketing.html" },
+
+    { "source": "/shop/tracking-click-telefono", "destination": "/shop/tracking-click-telefono.html" },
+    { "source": "/shop/tracking-social-6in1", "destination": "/shop/tracking-social-6in1.html" },
+    { "source": "/shop/contatti-3in1", "destination": "/shop/contatti-3in1.html" },
+    { "source": "/shop/supporto-5-ore", "destination": "/shop/supporto-5-ore.html" },
+    { "source": "/shop/supporto-10-ore", "destination": "/shop/supporto-10-ore.html" },
+    { "source": "/shop/supporto-20-ore", "destination": "/shop/supporto-20-ore.html" },
+    { "source": "/shop/tracker-ecommerce", "destination": "/shop/tracker-ecommerce.html" },
+    { "source": "/shop/dynamic-remarketing", "destination": "/shop/dynamic-remarketing.html" }
   ]
 }
