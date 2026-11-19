@@ -3,36 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supporto Tecnico 5 ore | Easy Tag – €500</title>
-  <meta name="description" content="5 ore di supporto GTM, GA4 e Google Ads dal team spin-off di Cracovia.">
+  <title>Supporto Tecnico – 5 ore | Easy Tag</title>
+  <meta name="description" content="Supporto Tecnico – 5 ore. 5 ore di lavoro tecnico dal team spin-off di Google Cracovia. Ideale per interventi puntuali o per iniziare una collaborazione.">
   <link rel="canonical" href="https://easytag-pro.vercel.app/supporto-5-ore">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--blue:#1182DE;--gray-900:#202124;--gray-700:#5F6368;--gray-200:#E8EAED}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--gray-900);line-height:1.65}
-    a{color:inherit;text-decoration:none}.header{border-bottom:1px solid var(--gray-200);padding:0 20px}
-    .header-inner{max-width:900px;margin:auto;min-height:64px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-weight:700;font-size:20px}.logo span{color:var(--blue)}
-    .btn{display:inline-flex;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;background:var(--blue);color:#fff}
-    main{max-width:900px;margin:0 auto;padding:32px 20px 60px}
-    .breadcrumb{font-size:13px;color:var(--gray-700);margin-bottom:20px}.breadcrumb a{color:var(--blue)}
-    .badge{display:inline-block;background:#E6F4EA;color:#137333;font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;margin-bottom:12px}
-    h1{font-size:clamp(26px,4vw,36px);margin:0 0 12px}p,li{color:var(--gray-700)}
-    .price{font-size:28px;font-weight:700;margin:16px 0}.price small{font-size:14px;color:#9AA0A6;font-weight:500}
-    .note{font-size:13px;color:#9AA0A6;margin-top:10px}.footer{text-align:center;padding:24px;border-top:1px solid var(--gray-200);font-size:13px}
+    :root { --blue: #1182DE; --blue-dark: #0B5CAD; --blue-light: #E8F3FC; --black: #1A1A1A; --gray-900: #202124; --gray-700: #5F6368; --gray-200: #E8EAED; --gray-100: #F8F9FA; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Inter, -apple-system, sans-serif; color: var(--gray-900); line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; }
+    .btn-primary { background: var(--blue); color: white; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .breadcrumb { font-size: 14px; color: var(--gray-700); margin-bottom: 24px; } .breadcrumb a { color: var(--blue); }
+    h1 { font-size: clamp(26px,4vw,34px); margin-bottom: 12px; }
+    .price { font-size: 28px; font-weight: 700; margin: 16px 0 24px; } .price small { font-size: 15px; font-weight: 500; color: var(--gray-700); }
+    .badge { display: inline-block; background: #E6F4EA; color: #137333; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .product-hero { display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: start; margin-bottom: 32px; }
+    @media(max-width:700px){ .product-hero { grid-template-columns: 1fr; } }
+    .product-hero img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--gray-200); }
+    .content h2 { font-size: 20px; margin: 32px 0 12px; }
+    .content p, .content li { color: var(--gray-700); margin-bottom: 10px; }
+    .content ul { margin: 12px 0 12px 20px; }
+    .cta-box { background: var(--gray-100); border-radius: 12px; padding: 28px; margin-top: 40px; text-align: center; }
+    .note { font-size: 13px; color: var(--gray-700); margin-top: 12px; }
+    .footer { background: var(--black); color: #aaa; padding: 30px 24px; text-align: center; font-size: 13px; }
+    .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--gray-200);padding:0 20px}
+    .header-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:700}
+    .logo-mark{width:38px;height:38px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px}
+    .nav{display:flex;align-items:center;gap:22px}.nav a{font-size:14.5px;font-weight:500;color:var(--gray-700)}.nav a:hover{color:var(--blue)}
+    .nav-group{position:relative}.nav-group summary{list-style:none;font-size:14.5px;font-weight:500;color:var(--gray-700);cursor:pointer}.nav-group summary::-webkit-details-marker{display:none}.nav-group summary::after{content:" ⌄";font-size:12px}
+    .submenu{position:absolute;top:calc(100% + 12px);left:-12px;min-width:240px;background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.08);z-index:20}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px 12px;border-radius:7px;font-size:14px;color:var(--gray-700)!important}.submenu a:hover{background:var(--blue-light);color:var(--blue)!important}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:var(--gray-900);border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible,.btn:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}@media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--gray-200);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav .btn{width:100%;margin-top:8px;justify-content:center}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0;background:transparent}
+    }
   </style>
 </head>
 <body>
-  <header class="header"><div class="header-inner"><a href="/" class="logo">Easy<span>Tag</span></a><a href="https://buy.stripe.com/test_eVq6oHdll5PhaCX5lWbV603" class="btn">Acquista – €500</a></div></header>
-  <main>
-    <div class="breadcrumb"><a href="/">Home</a> → <a href="/shop/">Shop</a> → Supporto 5 ore</div>
-    <div class="badge">Checkout Stripe attivo (test)</div>
-    <h1>Supporto Tecnico – 5 ore</h1>
-    <p>Interventi puntuali: fix GTM, audit container, Consent Mode, conversioni Ads, ottimizzazioni.</p>
-    <div class="price">€500 <small>+ IVA</small></div>
-    <a href="https://buy.stripe.com/test_eVq6oHdll5PhaCX5lWbV603" class="btn">Acquista ora – €500</a>
-    <p class="note">Dopo il pagamento ti contattiamo entro 1 giorno lavorativo</p>
-  </main>
-  <footer class="footer"><a href="/shop/">← Torna allo Shop</a></footer>
+<a class="skip-link" href="#main-content">Salta al contenuto</a>
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo"><div class="logo-mark">ET</div> Easy<span style="color:var(--blue)">Tag</span></a>
+    <button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+    <nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale">
+      <a href="/">Home</a>
+      <a href="/shop/">Shop</a>
+      <details class="nav-group"><summary>Chi siamo</summary>
+        <div class="submenu">
+          <a href="/chi-siamo">Panoramica</a>
+          <a href="/tag-nativo-google-ads">Tag nativo Google Ads</a>
+          <a href="/tag-google-analytics-4">Google Analytics 4</a>
+          <a href="/datalayer-architettura">Architettura DataLayer</a>
+        </div>
+      </details>
+      <a href="/contatti">Contatti</a>
+      <a href="/shop/" class="btn btn-primary">Vai allo Shop</a>
+    </nav>
+  </div>
+</header>
+<div class="container" id="main-content">
+  <div class="breadcrumb"><a href="/">Home</a> → <a href="/shop/">Shop</a> → Supporto Tecnico – 5 ore</div>
+  <div class="product-hero">
+    <img src="assets/products/supporto-5-ore.webp" alt="Supporto Tecnico – 5 ore">
+    <div>
+      <div class="badge">Ore tecniche · Checkout Stripe attivo (test)</div>
+      <h1>Supporto Tecnico – 5 ore</h1>
+      <div class="price">€500 <small>+ IVA</small></div>
+    </div>
+  </div>
+  <div class="content">
+    <p>5 ore di lavoro tecnico dal team spin-off di Google Cracovia. Ideale per interventi puntuali o per iniziare una collaborazione.</p>
+    <h2>Cosa include</h2>
+    <ul>
+      <li>Fix GTM e audit container</li>
+      <li>Configurazione conversioni</li>
+      <li>Consent Mode v2</li>
+      <li>Documentazione degli interventi</li>
+    </ul>
+    <h2>Dopo l’acquisto</h2>
+    <p>Paghi su Stripe Checkout. Ricevi via email il container.json e le istruzioni. Importi nel tuo GTM e pubblichi.</p>
+  </div>
+  <div class="cta-box">
+    <p style="margin-bottom:16px;font-size:16px;">Acquista ora – €500</p>
+    <a href="https://buy.stripe.com/test_eVq6oHdll5PhaCX5lWbV603" class="btn btn-primary">Acquista ora – €500</a>
+    <p class="note">Checkout sicuro Stripe · Modalità test</p>
+  </div>
+</div>
+<footer class="footer">© 2026 Easy Tag Solutions · Spin-off del team italiano di Google Cracovia</footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+  if(!btn||!nav)return;
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile())nav.setAttribute('aria-hidden','true');
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+  document.addEventListener('keydown',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+  });
+})();
+</script>
 </body>
 </html>
