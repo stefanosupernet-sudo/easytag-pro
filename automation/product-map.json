@@ -58,6 +58,42 @@
       "price_eur": 1600,
       "product_id": "prod_Ve0CHJiuOpQf2F",
       "payment_link": "https://buy.stripe.com/test_bJedR9a99dhJh1l6q0bV605"
+    },
+    "price_1UdVs4FVaAsOPXA7Ei2Vv1yA": {
+      "slug": "tag-email",
+      "name": "TAG Email",
+      "type": "container",
+      "folder": "tag-email",
+      "files": ["container.json", "istruzioni.html"],
+      "price_eur": 150,
+      "payment_link": null
+    },
+    "price_1UdVsfFVaAsOPXA7FkgKsj3N": {
+      "slug": "tag-facebook",
+      "name": "TAG Facebook",
+      "type": "container",
+      "folder": "tag-facebook",
+      "files": ["container.json", "istruzioni.html"],
+      "price_eur": 150,
+      "payment_link": null
+    },
+    "price_1UdVtIFVaAsOPXA7bWltM0i5": {
+      "slug": "tag-instagram",
+      "name": "TAG Instagram",
+      "type": "container",
+      "folder": "tag-instagram",
+      "files": ["container.json", "istruzioni.html"],
+      "price_eur": 150,
+      "payment_link": null
+    },
+    "price_1UdVtqFVaAsOPXA79ktKlFts": {
+      "slug": "tag-linkedin",
+      "name": "TAG LinkedIn",
+      "type": "container",
+      "folder": "tag-linkedin",
+      "files": ["container.json", "istruzioni.html"],
+      "price_eur": 150,
+      "payment_link": null
     }
   }
 }
