@@ -3,114 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tracker E-commerce GTM e GA4 | Preventivo su richiesta | Easy Tag</title>
+  <title>Tracker E-commerce GTM e GA4 | Preventivo | Easy Tag</title>
   <meta name="description" content="Implementazione personalizzata del tracking e-commerce con Google Tag Manager e GA4. Data layer, eventi purchase, enhanced e-commerce. Preventivo in base al tuo CMS.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://easytag.pro/shop/tracker-ecommerce.html">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/shop/tracker-ecommerce">
+  <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tracker-ecommerce">
+  <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tracker-ecommerce">
+  <link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tracker-ecommerce">
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Tracker E-commerce GTM e GA4 | Easy Tag">
+  <meta property="og:description" content="Implementazione personalizzata del tracking e-commerce con Google Tag Manager e GA4.">
+  <meta property="og:url" content="https://easytag-pro.vercel.app/shop/tracker-ecommerce">
+  <meta property="og:image" content="https://easytag-pro.vercel.app/assets/products/tracker-ecommerce.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://easytag-pro.vercel.app/assets/products/tracker-ecommerce.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Service","name":"Tracker Completo Conversioni E-commerce","description":"Implementazione personalizzata del data layer e degli eventi e-commerce in GTM e GA4. Preventivo su richiesta.","provider":{"@type":"Organization","name":"Easy Tag"},"areaServed":"IT","serviceType":"Google Tag Manager E-commerce Tracking"}
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --blue: #1182DE; --blue-dark: #0B5CAD; --blue-light: #E8F3FC; --black: #1A1A1A; --gray-900: #202124; --gray-700: #5F6368; --gray-500: #9AA0A6; --gray-200: #E8EAED; --gray-100: #F8F9FA; }
+    :root { --blue: #1182DE; --blue-dark: #0B5CAD; --blue-light: #E8F3FC; --black: #1A1A1A; --gray-900: #202124; --gray-700: #5F6368; --gray-200: #E8EAED; --gray-100: #F8F9FA; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--gray-900); line-height: 1.65; }
+    body { font-family: Inter, -apple-system, sans-serif; color: var(--gray-900); line-height: 1.65; }
     a { text-decoration: none; color: inherit; }
-    .header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); border-bottom: 1px solid var(--gray-200); padding: 0 24px; }
-    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .logo { font-weight: 700; font-size: 20px; } .logo span { color: var(--blue); }
-    .btn { display: inline-flex; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; }
-    .btn-primary { background: var(--blue); color: white; width: 100%; justify-content: center; } .btn-primary:hover { background: var(--blue-dark); }
+    .header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--gray-200); padding: 0 20px; }
+    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 12px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; }
+    .logo-mark { width: 36px; height: 36px; background: var(--blue); border-radius: 9px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 13px; }
+    .nav { display: flex; align-items: center; gap: 18px; }
+    .nav a, .nav summary { font-size: 14px; font-weight: 500; color: var(--gray-700); }
+    .nav a:hover, .nav a.active { color: var(--blue); }
+    .nav-group { position: relative; }
+    .nav-group summary { list-style: none; cursor: pointer; }
+    .nav-group summary::-webkit-details-marker { display: none; }
+    .nav-group summary::after { content: " ⌄"; font-size: 12px; }
+    .submenu { position: absolute; top: calc(100% + 12px); left: -12px; min-width: 220px; background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; padding: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.08); z-index: 20; }
+    .nav-group:not([open]) .submenu { display: none; }
+    .submenu a { display: block; padding: 9px 12px; border-radius: 7px; font-size: 14px; color: var(--gray-700) !important; }
+    .submenu a:hover { background: var(--blue-light); color: var(--blue) !important; }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; border-radius: 8px; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
+    .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--gray-900); border-radius: 2px; transition: transform .2s, opacity .2s; }
+    .menu-toggle[aria-expanded=true] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded=true] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded=true] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .menu-toggle:focus-visible, .nav a:focus-visible, .nav summary:focus-visible, .btn:focus-visible { outline: 3px solid #1182DE; outline-offset: 2px; }
+    .skip-link { position: absolute; left: -9999px; overflow: hidden; }
+    .skip-link:focus { position: fixed; left: 12px; top: 12px; padding: 12px 16px; background: #1182DE; color: #fff; border-radius: 8px; font-weight: 600; z-index: 200; text-decoration: none; }
+    body.nav-open { overflow: hidden; }
+    @media (prefers-reduced-motion: reduce) { .menu-toggle span { transition: none; } }
+    @media (max-width: 860px) {
+      .menu-toggle { display: inline-flex; }
+      .header-inner { position: relative; }
+      .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 4px; padding: 12px 16px 20px; background: #fff; border-bottom: 1px solid var(--gray-200); box-shadow: 0 12px 28px rgba(0,0,0,.08); z-index: 50; }
+      .nav.is-open { display: flex; }
+      .nav > a, .nav summary { display: block; padding: 12px 10px; font-size: 16px; border-radius: 8px; }
+      .nav .btn { width: 100%; margin-top: 8px; justify-content: center; }
+      .nav-group { width: 100%; }
+      .nav-group .submenu { position: static; box-shadow: none; border: 0; padding: 0 0 0 12px; min-width: 0; background: transparent; }
+    }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-primary:hover { background: var(--blue-dark); }
     .container { max-width: 960px; margin: 0 auto; padding: 40px 24px 80px; }
-    .breadcrumb { font-size: 14px; color: var(--gray-700); margin-bottom: 24px; } .breadcrumb a { color: var(--blue); }
-    h1 { font-size: 28px; margin-bottom: 10px; letter-spacing: -0.4px; }
-    .intro { color: var(--gray-700); margin-bottom: 28px; max-width: 640px; }
+    .breadcrumb { font-size: 14px; color: var(--gray-700); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--blue); }
+    .product-hero { display: grid; grid-template-columns: 1fr 280px; gap: 32px; align-items: start; margin-bottom: 32px; }
+    @media (max-width: 700px) { .product-hero { grid-template-columns: 1fr; } }
+    .product-image { border-radius: 12px; overflow: hidden; background: #1a1a1a; }
+    .product-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+    h1 { font-size: 30px; margin-bottom: 12px; letter-spacing: -0.4px; }
     .badge { display: inline-block; background: #FEF7E0; color: #B06000; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
-    .info h2 { font-size: 18px; margin: 24px 0 10px; }
-    .info p, .info li { color: var(--gray-700); font-size: 15px; margin-bottom: 8px; }
-    .info ul { margin: 8px 0 8px 18px; }
-    .form-box { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 14px; padding: 28px; }
-    .form-group { margin-bottom: 14px; }
-    .form-group label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 5px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 13px; border: 1.5px solid var(--gray-200); border-radius: 8px; font-size: 15px; font-family: inherit; background: white; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(17,130,222,0.15); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
-    .form-note { font-size: 12.5px; color: var(--gray-500); margin-top: 12px; text-align: center; }
-    .footer { background: var(--black); color: #aaa; padding: 28px 24px; text-align: center; font-size: 13px; }
+    .content h2 { font-size: 20px; margin: 32px 0 12px; }
+    .content p, .content li { color: var(--gray-700); margin-bottom: 10px; }
+    .content ul { margin: 12px 0 12px 20px; }
+    .cta-box { background: var(--gray-100); border-radius: 12px; padding: 28px; margin-top: 40px; text-align: center; }
+    .note { font-size: 13px; color: var(--gray-700); margin-top: 12px; }
+    .footer { background: var(--black); color: #aaa; padding: 30px 24px; text-align: center; font-size: 13px; }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Salta al contenuto</a>
   <header class="header">
     <div class="header-inner">
-      <a href="/" class="logo">Easy<span>Tag</span></a>
-      <a href="/shop/" style="font-size:14px;color:var(--gray-700);">← Torna allo Shop</a>
+      <a href="../index.html" class="logo"><div class="logo-mark">ET</div> Easy<span style="color:var(--blue)">Tag</span></a>
+      <button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active" aria-current="page">Shop</a>
+        <details class="nav-group"><summary>Chi siamo</summary><div class="submenu"><a href="../chi-siamo.html">Panoramica</a><a href="../tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="../tag-google-analytics-4.html">Google Analytics 4</a><a href="../datalayer-architettura.html">Architettura DataLayer</a></div></details>
+        <a href="../contatti.html">Contatti</a>
+        <a href="../contatti.html?prodotto=tracker-ecommerce" class="btn btn-primary">Richiedi preventivo</a>
+      </nav>
     </div>
   </header>
-  <div class="container">
-    <div class="breadcrumb"><a href="/">Home</a> → <a href="/shop/">Shop</a> → Tracker E-commerce</div>
-    <div class="badge">Preventivo su richiesta</div>
-    <h1>Tracker Completo Conversioni E-commerce con GTM</h1>
-    <p class="intro">L’implementazione dipende dal CMS, dalla struttura del data layer e dalle esigenze di reportistica. Compila il form: analizziamo il tuo caso e ti inviamo una proposta chiara di ambito, tempi e investimento.</p>
-    <div class="grid">
-      <div class="info">
-        <h2>Cosa implementiamo</h2>
-        <ul>
-          <li>view_item / view_item_list</li>
-          <li>add_to_cart / remove_from_cart</li>
-          <li>begin_checkout / add_shipping_info / add_payment_info</li>
-          <li>purchase (transaction_id, value, currency, items)</li>
-          <li>Enhanced e-commerce in GA4</li>
-          <li>Validazione e documentazione</li>
-        </ul>
-        <h2>Perché non è un prodotto standard</h2>
-        <p>Ogni piattaforma ha un data layer diverso. Per darti un prezzo e una timeline realistici abbiamo bisogno di alcune informazioni sul tuo sito.</p>
+  <div class="container" id="main-content">
+    <div class="breadcrumb"><a href="../index.html">Home</a> → <a href="index.html">Shop</a> → Tracker E-commerce</div>
+    <div class="product-hero">
+      <div>
+        <div class="badge">Preventivo su richiesta</div>
+        <h1>Tracker Completo Conversioni E-commerce con GTM</h1>
       </div>
-      <div class="form-box">
-        <form>
-          <div class="form-row">
-            <div class="form-group"><label>Nome *</label><input type="text" name="nome" required placeholder="Mario"></div>
-            <div class="form-group"><label>Cognome *</label><input type="text" name="cognome" required placeholder="Rossi"></div>
-          </div>
-          <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="mario@agenzia.it"></div>
-          <div class="form-group"><label>Telefono *</label><input type="tel" name="telefono" required placeholder="+39 333 1234567"></div>
-          <div class="form-group">
-            <label>CMS / Piattaforma *</label>
-            <select name="cms" required>
-              <option value="">Seleziona...</option>
-              <option>Shopify</option>
-              <option>WooCommerce (WordPress)</option>
-              <option>Magento / Adobe Commerce</option>
-              <option>PrestaShop</option>
-              <option>BigCommerce</option>
-              <option>Salesforce Commerce Cloud</option>
-              <option>VTEX</option>
-              <option>OpenCart</option>
-              <option>Wix</option>
-              <option>Squarespace</option>
-              <option>Custom / Sviluppato su misura</option>
-              <option>Altro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Hai bisogno di un data layer personalizzato? *</label>
-            <select name="datalayer" required>
-              <option value="">Seleziona...</option>
-              <option>Sì</option>
-              <option>No</option>
-              <option>Non so / da valutare</option>
-            </select>
-          </div>
-          <div class="form-group"><label>URL del sito (opzionale)</label><input type="url" name="url" placeholder="https://tuosito.it"></div>
-          <div class="form-group"><label>Note aggiuntive</label><textarea name="note" rows="3" placeholder="Es. numero di store, integrazioni particolari, scadenze..."></textarea></div>
-          <button type="submit" class="btn btn-primary">Invia richiesta di preventivo</button>
-          <p class="form-note">Rispondiamo entro 1 giorno lavorativo · IT & EN</p>
-        </form>
+      <div class="product-image">
+        <img src="../assets/products/tracker-ecommerce.webp" alt="Tracker E-commerce GTM" width="400" height="240" loading="eager">
       </div>
+    </div>
+    <div class="content">
+      <p>L’implementazione dipende dal CMS, dalla struttura del data layer e dalle esigenze di reportistica. Analizziamo il tuo caso e ti inviamo una proposta chiara di ambito, tempi e investimento.</p>
+      <h2>Cosa implementiamo</h2>
+      <ul>
+        <li>view_item / view_item_list</li>
+        <li>add_to_cart / remove_from_cart</li>
+        <li>begin_checkout / add_shipping_info / add_payment_info</li>
+        <li>purchase (transaction_id, value, currency, items)</li>
+        <li>Enhanced e-commerce in GA4</li>
+        <li>Validazione e documentazione</li>
+      </ul>
+      <h2>Perché non è un prodotto standard</h2>
+      <p>Ogni piattaforma ha un data layer diverso. Per darti un prezzo e una timeline realistici abbiamo bisogno di alcune informazioni sul tuo sito.</p>
+    </div>
+    <div class="cta-box">
+      <p style="margin-bottom:16px;font-size:16px;">Vuoi un preventivo personalizzato?</p>
+      <a href="../contatti.html?prodotto=tracker-ecommerce" class="btn btn-primary">Richiedi preventivo</a>
+      <p class="note">Rispondiamo entro 1 giorno lavorativo</p>
     </div>
   </div>
   <footer class="footer">© 2026 Easy Tag Solutions · Spin-off del team italiano di Google Cracovia</footer>
+  <script>
+  (function(){
+    var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+    if(!btn||!nav)return;
+    function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+    function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+    function setOpen(open){
+      nav.classList.toggle('is-open',open);
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+      if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+      else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+      if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+      else if(!open) btn.focus();
+    }
+    function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+    if(isMobile())nav.setAttribute('aria-hidden','true');
+    btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+    document.addEventListener('keydown',function(e){
+      if(!nav.classList.contains('is-open')||!isMobile())return;
+      if(e.key==='Escape'){e.preventDefault();close();return;}
+      if(e.key!=='Tab')return;
+      var items=focusable();if(!items.length)return;
+      var first=items[0],last=items[items.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    });
+    document.addEventListener('click',function(e){
+      if(!nav.classList.contains('is-open')||!isMobile())return;
+      if(nav.contains(e.target)||btn.contains(e.target))return;close();
+    });
+    window.addEventListener('resize',function(){
+      if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+      else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+    });
+  })();
+  </script>
 </body>
 </html>
