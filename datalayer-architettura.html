@@ -1,18 +1,262 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DataLayer | EasyTag Pro</title><meta name="description" content="Guida tecnica al DataLayer e integrazione con GTM."><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
-:root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA}*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.65;color:#202124}a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}.header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}.nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}.nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}.submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}.nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}.menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}.menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}.menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}.menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}.skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}body.nav-open{overflow:hidden}@media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}@media(max-width:860px){.menu-toggle{display:inline-flex}.header-inner{position:relative}.nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}.nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}.nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}}main{max-width:850px;margin:40px auto;padding:0 22px 60px}h1{font-size:clamp(28px,5vw,40px)}h2{font-size:24px;margin-top:28px}p,li{color:var(--gray)}code,pre{font-family:ui-monospace,Consolas,monospace}code{background:var(--pale);padding:1px 4px}pre{padding:16px;background:var(--pale);border:1px solid var(--line);border-radius:10px;overflow:auto}.breadcrumb{font-size:14px;color:var(--blue);margin-bottom:16px}.footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}
-</style></head><body>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataLayer: cos’è, perché serve e come installarlo | EasyTag Pro</title>
+  <meta name="description" content="Guida al DataLayer: cos’è il livello dati di Google Tag Manager, perché è importante, come costruirlo e installarlo sul sito, con esempi pratici e FAQ.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/datalayer-architettura.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA;--ink:#202124}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.7;color:var(--ink)}
+    a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}
+    .header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}
+    .nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}
+    .nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}
+    .submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}
+    @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}
+    }
+    main{max-width:820px;margin:36px auto;padding:0 22px 70px}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:0 0 18px}
+    h2{font-size:24px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+    h3{font-size:18px;margin:22px 0 8px}
+    p,li{color:var(--gray)}p{margin:0 0 14px}ul,ol{margin:0 0 16px;padding-left:1.25rem}li{margin:6px 0}
+    code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13.5px}
+    code{background:var(--pale);padding:1px 5px;border-radius:4px}
+    pre{padding:16px;background:var(--pale);border:1px solid var(--line);border-radius:10px;overflow:auto;margin:14px 0 18px;line-height:1.5}
+    .breadcrumb{font-size:14px;color:var(--blue);margin-bottom:18px}
+    .summary{background:var(--light);border:1px solid #cfe6f8;border-radius:12px;padding:18px 20px;margin:0 0 28px}
+    .summary h2{margin:0 0 10px;font-size:16px;border:0;padding:0;color:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+    .summary ol{margin:0;padding-left:1.2rem}.summary li{color:var(--ink);margin:6px 0;font-size:15px}
+    .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--ink)}
+    .faq p{margin-top:10px}
+    .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
+    .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
+  </style>
+</head>
+<body>
 <a class="skip-link" href="#main-content">Salta al contenuto</a>
 <header class="header"><div class="header-inner"><a class="logo" href="index.html"><span class="mark">ET</span>EasyTag Pro</a>
 <button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
-<nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="shop/index.html">Shop</a><details class="nav-group"><summary>Chi Siamo</summary><div class="submenu"><a href="chi-siamo.html">Panoramica</a><a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="tag-google-analytics-4.html">Google Analytics 4</a><a href="datalayer-architettura.html" aria-current="page">Architettura DataLayer</a></div></details><a href="contatti.html">Contatti</a></nav></div></header>
-<main id="main-content"><nav class="breadcrumb" aria-label="Percorso"><a href="chi-siamo.html">Chi Siamo</a> › Architettura DataLayer</nav>
-<article><h1>DataLayer: infrastruttura per il tracciamento</h1>
-<p><strong>Il DataLayer espone dati strutturati a Google Tag Manager senza dipendere dal DOM.</strong></p>
+<nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale">
+  <a href="index.html">Home</a><a href="shop/index.html">Shop</a>
+  <details class="nav-group"><summary>Chi Siamo</summary>
+    <div class="submenu">
+      <a href="chi-siamo.html">Panoramica</a>
+      <a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a>
+      <a href="tag-google-analytics-4.html">Google Analytics 4</a>
+      <a href="datalayer-architettura.html" aria-current="page">Architettura DataLayer</a>
+    </div>
+  </details>
+  <a href="contatti.html">Contatti</a>
+</nav></div></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Percorso"><a href="chi-siamo.html">Chi Siamo</a> › Architettura DataLayer</nav>
+
+  <article>
+    <h1>DataLayer: cos’è, perché è importante e come installarlo</h1>
+
+    <aside class="summary" aria-label="Sintesi della pagina">
+      <h2>In 230 secondi — cosa troverai qui</h2>
+      <ol>
+        <li>Una definizione chiara del DataLayer e del suo ruolo tra sito, GTM e strumenti di misurazione.</li>
+        <li>Perché separare i dati dalla grafica della pagina rende il tracking più stabile nel tempo.</li>
+        <li>Quali elementi compongono un messaggio tipico (evento, variabili, oggetti e-commerce).</li>
+        <li>Come costruire e installare il livello dati prima di Google Tag Manager, con esempi leggibili.</li>
+        <li>Errori frequenti da evitare e cinque FAQ operative per team marketing e tecnici.</li>
+      </ol>
+    </aside>
+
+    <section>
+      <h2>Cos’è il DataLayer</h2>
+      <p>Il <strong>DataLayer</strong> (in italiano spesso chiamato <em>livello dati</em>) è un oggetto JavaScript che il sito usa per trasmettere informazioni ordinate a Google Tag Manager e, in generale, alla piattaforma dei tag Google. Non è un report, non è un dashboard e non è un plugin: è un canale standard in cui il sito “mette” i dati che i tag devono leggere.</p>
+      <p>Secondo la documentazione ufficiale di Google Tag Platform, il livello dati è pensato proprio per far sì che eventi e variabili arrivino ai tag in modo organizzato e prevedibile, invece di farli ricostruire leggendo pezzi sparsi della pagina. In pratica, al posto di chiedere a uno script di “indovinare” il prezzo da un elemento HTML, il sito dichiara esplicitamente prezzo, valuta e identificativo ordine nel DataLayer.</p>
+      <p>Tecnicamente, sul browser, il DataLayer è un array globale, di solito chiamato <code>window.dataLayer</code>. Si inizializza una sola volta e poi si arricchisce con messaggi successivi tramite <code>push()</code>. Ogni messaggio è un oggetto: può contenere un nome di evento, variabili di contesto e strutture più ricche, come i dati di un acquisto.</p>
+    </section>
+
+    <section>
+      <h2>Perché è importante</h2>
+      <p>Senza un DataLayer, molti setup dipendono dalla struttura visiva del sito: classi CSS, testi dei pulsanti, posizione di un form. Quando il tema cambia, un plugin viene aggiornato o il checkout viene ridisegnato, quei riferimenti si rompono e i tag smettono di funzionare o inviano dati incompleti.</p>
+      <p>Con un DataLayer ben progettato accade il contrario: i dati restano legati al significato dell’azione (acquisto, iscrizione, click sul telefono), non al modo in cui quella azione è disegnata a schermo. Questo riduce i costi di manutenzione, facilita il lavoro tra sviluppatori e media buyer e rende più affidabili le conversioni in Google Ads e gli eventi in Google Analytics 4.</p>
+      <p>C’è anche un vantaggio di governance. Documentare “cosa entra nel DataLayer e quando” crea un contratto chiaro tra chi sviluppa il sito e chi gestisce i tag. Se un nuovo evento serve per una campagna, si aggiunge un messaggio standard invece di inventare un selettore fragile.</p>
+      <p>Infine, il DataLayer è utile quando più strumenti leggono le stesse informazioni. Un solo <code>purchase</code> ben strutturato può alimentare analytics, conversioni pubblicitarie e, dove previsto, altri sistemi, senza duplicare logiche diverse in ogni tag.</p>
+    </section>
+
+    <section>
+      <h2>Gli elementi di un messaggio DataLayer</h2>
+      <p>Un messaggio tipico combina pochi mattoni ricorrenti. Il più importante è la chiave <code>event</code>: una stringa che descrive l’azione, ad esempio <code>login</code>, <code>generate_lead</code> o <code>purchase</code>. In Google Tag Manager puoi ascoltare quel nome con un attivatore di tipo evento personalizzato.</p>
+      <p>Accanto all’evento compaiono le <strong>variabili</strong>: coppie nome-valore che descrivono il contesto. Possono indicare il tipo di visitatore, la categoria di pagina, un colore scelto nel configuratore o il valore di una conversione. Google sottolinea l’importanza di usare gli stessi nomi su tutte le pagine: se in home usi <code>visitorType</code>, non chiamarlo <code>visitor_type</code> in checkout.</p>
+      <p>Per l’e-commerce si usa spesso un oggetto dedicato, ad esempio <code>ecommerce</code>, con campi come importo, valuta, identificativo transazione e elenco prodotti. Prima di un nuovo push e-commerce è buona pratica “pulire” lo stato precedente, così non si mescolano dati di un ordine con quelli del successivo.</p>
+      <p>Ecco un esempio minimale di inizializzazione e di un evento semplice:</p>
 <pre><code>window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({ event: "purchase", ecommerce: { transaction_id: "ORD-1", value: 99, currency: "EUR" } });</code></pre>
-<p><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a></p>
-</article></main>
-<footer class="footer"><a href="chi-siamo.html">Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Google Ads</a> · <a href="tag-google-analytics-4.html">GA4</a></footer>
-<script>(function(){var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');if(!btn||!nav)return;function isMobile(){return window.matchMedia('(max-width:860px)').matches;}function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}function setOpen(open){nav.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}else if(!open)btn.focus();}function close(){if(nav.classList.contains('is-open'))setOpen(false);}if(isMobile())nav.setAttribute('aria-hidden','true');btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});document.addEventListener('keydown',function(e){if(!nav.classList.contains('is-open')||!isMobile())return;if(e.key==='Escape'){e.preventDefault();close();return;}if(e.key!=='Tab')return;var items=focusable();if(!items.length)return;var first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});document.addEventListener('click',function(e){if(!nav.classList.contains('is-open')||!isMobile())return;if(nav.contains(e.target)||btn.contains(e.target))return;close();});window.addEventListener('resize',function(){if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');});})();</script>
-</body></html>
+dataLayer.push({
+  event: 'login'
+});</code></pre>
+      <p>E un push con più informazioni insieme, come consigliato quando un’azione ha sia un evento sia attributi utili ai tag:</p>
+<pre><code>dataLayer.push({
+  event: 'customize',
+  color: 'red',
+  conversionValue: 50
+});</code></pre>
+      <p>Per un acquisto, la struttura diventa più ricca ma resta leggibile:</p>
+<pre><code>window.dataLayer = window.dataLayer || [];
+dataLayer.push({ ecommerce: null });
+dataLayer.push({
+  event: 'purchase',
+  ecommerce: {
+    transaction_id: 'ORD-2026-98451',
+    value: 249.00,
+    currency: 'EUR',
+    items: [{
+      item_id: 'SKU-7741',
+      item_name: 'Cronografo Automatico Acciaio',
+      price: 249.00,
+      quantity: 1
+    }]
+  }
+});</code></pre>
+      <p>In tutti i casi, i nomi delle chiavi vanno tra virgolette quando contengono caratteri speciali, e il nome dell’oggetto è <strong>dataLayer</strong> in camel case: <code>datalayer</code> in minuscolo non funziona.</p>
+    </section>
+
+    <section>
+      <h2>Come costruire il DataLayer</h2>
+      <p>Costruire il DataLayer significa prima di tutto decidere <em>quali azioni contano</em> per il business e quali dati devono accompagnarle. Si parte da un piano di misurazione: pagine viste rilevanti, lead, iscrizioni, aggiunte al carrello, acquisti, click su telefono o WhatsApp. Per ogni azione si definisce un nome evento stabile e un elenco di parametri.</p>
+      <p>Poi si stabilisce <em>chi scrive</em> nel DataLayer. Di solito è il codice del sito o del CMS: un template della thank-you page, un modulo dopo l’invio del form, un gestore del click su un pulsante. Il marketing non dovrebbe dover “raspizzare” il DOM se il dato può essere dichiarato all’origine.</p>
+      <p>Un buon disegno separa i dati di pagina (titolo, percorso, tipo contenuto) dai dati di interazione (click, invio form) e dai dati transazionali (ordine, prodotti, valore). Su ogni caricamento pagina puoi dichiarare le variabili di contesto subito dopo l’inizializzazione, così sono disponibili quando si carica il contenitore GTM:</p>
+<pre><code><script>
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+  event: 'Pageview',
+  pagePath: '/iscrizione-evento',
+  pageTitle: 'Iscrizione Evento',
+  visitorType: 'customer'
+});
+</script></code></pre>
+      <p>Le variabili restano valide mentre l’utente rimane su quella pagina. Se ti servono su più pagine (ad esempio lo stato “cliente” o “prospect”), vanno riproposte a ogni caricamento con la stessa convenzione di nomi.</p>
+      <p>Quando l’utente compie un’azione, non basta aggiornare una variabile: conviene includere sempre un <code>event</code> dedicato. Tag Manager elabora i messaggi in coda uno dopo l’altro; associare un nome evento rende prevedibile il momento in cui i tag devono attivarsi.</p>
+    </section>
+
+    <section>
+      <h2>Come installarlo sul sito</h2>
+      <p>L’installazione corretta segue un ordine preciso. Prima si crea (o si recupera) l’array <code>dataLayer</code>, poi si eventualmente spingono i dati necessari al page load, e solo dopo si carica lo snippet di Google Tag Manager. Google raccomanda di dichiarare il livello dati il più in alto possibile nel codice della pagina, sopra il contenitore.</p>
+      <p>Lo schema di base è questo:</p>
+<pre><code><script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+<!-- End Google Tag Manager --></code></pre>
+      <p>L’espressione <code>window.dataLayer = window.dataLayer || []</code> è fondamentale: evita di cancellare messaggi già in coda. Non assegnare mai un nuovo array con una scrittura del tipo <code>dataLayer = [{...}]</code> dopo che GTM è in ascolto: rischieresti di perdere dati e di interrompere il collegamento con il contenitore.</p>
+      <p>Per le interazioni successive (click, submit, completamento acquisto) usi solo <code>dataLayer.push(...)</code>. Puoi collegarlo a un gestore di evento del sito, ad esempio sul click di un pulsante, oppure eseguirlo nel codice che conferma l’ordine lato server-rendered o nell’callback del checkout.</p>
+      <p>In Google Tag Manager, il passo successivo è configurare variabili del livello dati (per leggere chiavi come <code>ecommerce.value</code>) e attivatori sull’evento personalizzato corrispondente. Solo a quel punto colleghi i tag di GA4, Google Ads o altri destinatari.</p>
+      <p>In fase di collaudo verifica la coda in anteprima GTM o nella console del browser, controlla maiuscole e minuscole dei nomi, e assicurati che valori numerici (prezzi, quantità) restino numeri e non stringhe, quando i report se lo aspettano.</p>
+    </section>
+
+    <section>
+      <h2>Buone pratiche in sintesi</h2>
+      <ul>
+        <li>Inizializza sempre con <code>window.dataLayer = window.dataLayer || []</code> prima dello snippet GTM.</li>
+        <li>Usa <code>push</code> per aggiungere dati; non sovrascrivere l’intero array.</li>
+        <li>Dai nomi stabili e coerenti a eventi e variabili su tutte le pagine.</li>
+        <li>Includi un <code>event</code> quando un’azione deve far scattare dei tag.</li>
+        <li>Non inserire dati personali non necessari o non consentiti dal contesto di consenso.</li>
+        <li>Documenta il piano di misurazione: è il manuale del tuo DataLayer.</li>
+      </ul>
+    </section>
+
+    <section class="faq" aria-label="Domande frequenti">
+      <h2>FAQ sul DataLayer</h2>
+
+      <details>
+        <summary>Il DataLayer sostituisce Google Tag Manager?</summary>
+        <p>No. Il DataLayer è il canale dati; Google Tag Manager è lo strumento che legge quei dati e decide quali tag attivare. Lavorano insieme: senza GTM (o gtag) i messaggi restano solo nel browser; senza DataLayer, GTM deve spesso affidarsi a selettori fragili.</p>
+      </details>
+
+      <details>
+        <summary>Devo avere un DataLayer su ogni pagina del sito?</summary>
+        <p>Sì, almeno l’inizializzazione dell’array e lo snippet del contenitore. Le variabili di contesto utili su più pagine vanno riproposte dove servono, con gli stessi nomi. Gli eventi di interazione si inviano solo quando l’azione avviene.</p>
+      </details>
+
+      <details>
+        <summary>Cosa succede se cambio il tema WordPress o il template del checkout?</summary>
+        <p>Se i tag dipendono dal layout, spesso si rompono. Se dipendono dal DataLayer, restano validi finché il sito continua a pubblicare gli stessi eventi e parametri. È uno dei motivi principali per investire in un livello dati.</p>
+      </details>
+
+      <details>
+        <summary>Posso usare un nome diverso da dataLayer?</summary>
+        <p>Sì, Google consente di rinominarlo, ma allora devi aggiornare in modo coerente lo snippet del contenitore e tutte le chiamate <code>push</code>. Nella maggior parte dei progetti conviene mantenere il nome predefinito <code>dataLayer</code> per ridurre errori.</p>
+      </details>
+
+      <details>
+        <summary>Chi dovrebbe occuparsi del DataLayer in azienda?</summary>
+        <p>Idealmente è un lavoro condiviso: il marketing definisce cosa misurare, lo sviluppo implementa i push nei punti giusti del sito, e chi gestisce GTM collega variabili, attivatori e tag. EasyTag Pro interviene proprio su questo raccordo, quando serve un’architettura chiara senza risorse interne dedicate.</p>
+      </details>
+    </section>
+
+    <p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a> · <a href="tag-nativo-google-ads.html">Tag Google Ads →</a></p>
+  </article>
+</main>
+
+<footer class="footer">EasyTag Pro · <a href="chi-siamo.html">Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Google Ads</a> · <a href="tag-google-analytics-4.html">GA4</a></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+  if(!btn||!nav)return;
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile())nav.setAttribute('aria-hidden','true');
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+  document.addEventListener('keydown',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+  });
+})();
+</script>
+</body>
+</html>
