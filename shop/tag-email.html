@@ -10,7 +10,6 @@
   <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-email">
   <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-email">
   <link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-email">
-  <!-- Open Graph -->
   <meta property="og:type" content="product">
   <meta property="og:title" content="TAG Email con GTM | Container pronto | Easy Tag">
   <meta property="og:description" content="Traccia i click sui link mailto: con Google Tag Manager. Container JSON pronto all’uso per conversioni Google Ads e GA4. Team ex-Google Cracovia.">
@@ -18,7 +17,6 @@
   <meta property="og:image" content="https://easytag-pro.vercel.app/assets/products/tag-email.webp">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="Easy Tag">
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TAG Email con GTM | Container pronto | Easy Tag">
   <meta name="twitter:description" content="Traccia i click sui link mailto: con Google Tag Manager. Container JSON pronto all’uso per conversioni Google Ads e GA4. Team ex-Google Cracovia.">
@@ -30,18 +28,9 @@
   "@type": "Product",
   "name": "TAG Email: Tracking Click sui Link mailto: con Google Tag Manager",
   "description": "Traccia i click sui link mailto: con Google Tag Manager. Container JSON pronto all’uso per conversioni Google Ads e GA4. Team ex-Google Cracovia.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Easy Tag"
-  },
+  "brand": {"@type": "Brand", "name": "Easy Tag"},
   "image": "https://easytag-pro.vercel.app/assets/products/tag-email.webp",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://easytag-pro.vercel.app/shop/tag-email",
-    "priceCurrency": "EUR",
-    "price": "150",
-    "availability": "https://schema.org/InStock"
-  }
+  "offers": {"@type": "Offer", "url": "https://easytag-pro.vercel.app/shop/tag-email", "priceCurrency": "EUR", "price": "150", "availability": "https://schema.org/InStock"}
 }
   </script>
   <style>
@@ -96,15 +85,14 @@
     .product-image img { width: 100%; height: auto; display: block; object-fit: cover; }
     h1 { font-size: 30px; margin-bottom: 12px; letter-spacing: -0.4px; }
     .price { font-size: 28px; font-weight: 700; margin: 16px 0 24px; }
-    .price small { font-size: 15px; font-weight: 500; color: var(--gray-700); }
     .badge { display: inline-block; background: #E6F4EA; color: #137333; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
-    .badge-quote { background: #FEF7E0; color: #B06000; }
     .content h2 { font-size: 20px; margin: 32px 0 12px; }
     .content p, .content li { color: var(--gray-700); margin-bottom: 10px; }
     .content ul { margin: 12px 0 12px 20px; }
     .cta-box { background: var(--gray-100); border-radius: 12px; padding: 28px; margin-top: 40px; text-align: center; }
     .note { font-size: 13px; color: var(--gray-700); margin-top: 12px; }
     .footer { background: var(--black); color: #aaa; padding: 30px 24px; text-align: center; font-size: 13px; }
+    form { display: inline; }
   </style>
 </head>
 <body>
@@ -118,7 +106,7 @@
         <a href="index.html" class="active" aria-current="page">Shop</a>
         <details class="nav-group"><summary>Chi siamo</summary><div class="submenu"><a href="../chi-siamo.html">Panoramica</a><a href="../tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="../tag-google-analytics-4.html">Google Analytics 4</a><a href="../datalayer-architettura.html">Architettura DataLayer</a></div></details>
         <a href="../contatti.html">Contatti</a>
-        <a href="../contatti.html?prodotto=tag-email" class="btn btn-primary">Richiedi – €150</a>
+        <form action="/api/create-checkout-session" method="POST"><input type="hidden" name="priceId" value="price_1UdVs4FVaAsOPXA7Ei2Vv1yA"><button type="submit" class="btn btn-primary">Acquista – €150</button></form>
       </nav>
     </div>
   </header>
@@ -126,16 +114,16 @@
     <div class="breadcrumb"><a href="../index.html">Home</a> → <a href="index.html">Shop</a> → Tag Email</div>
     <div class="product-hero">
       <div>
-        <div class="badge ">Container pronto · Checkout in arrivo</div>
+        <div class="badge">Container pronto · Checkout Stripe attivo</div>
         <h1>TAG Email: Tracking Click sui Link mailto: con Google Tag Manager</h1>
-        <div class="price">€150 <small>+ IVA</small></div>
+        <div class="price">€150</div>
       </div>
       <div class="product-image">
         <img src="../assets/products/tag-email.webp" alt="TAG Email GTM" width="400" height="240" loading="eager">
       </div>
     </div>
     <div class="content">
-      <p>Container GTM già configurato per tracciare ogni click sui link email (mailto:). Dopo l’acquisto ricevi il file JSON e le istruzioni di importazione via email.</p>
+      <p>Container GTM già configurato per tracciare ogni click sui link email (mailto:). Dopo l’acquisto ricevi il file JSON e le istruzioni di importazione via email. Prezzo IVA inclusa.</p>
       <h2>Cosa include</h2>
       <ul>
         <li>Tag di conversione Google Ads sui click mailto:</li>
@@ -149,8 +137,8 @@
     </div>
     <div class="cta-box">
       <p style="margin-bottom:16px;font-size:16px;">Pronto a tracciare le email?</p>
-      <a href="../contatti.html?prodotto=tag-email" class="btn btn-primary">Contattaci per acquistare – €150</a>
-      <p class="note">Contattaci per attivare il checkout o ricevere il preventivo personalizzato</p>
+      <form action="/api/create-checkout-session" method="POST"><input type="hidden" name="priceId" value="price_1UdVs4FVaAsOPXA7Ei2Vv1yA"><button type="submit" class="btn btn-primary">Acquista ora – €150</button></form>
+      <p class="note">Checkout sicuro Stripe · Prezzo IVA inclusa · Modalità test</p>
     </div>
   </div>
   <footer class="footer">© 2026 Easy Tag Solutions · Spin-off del team italiano di Google Cracovia</footer>
@@ -159,7 +147,7 @@
     var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
     if(!btn||!nav)return;
     function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
-    function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+    function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary,button')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
     function setOpen(open){
       nav.classList.toggle('is-open',open);
       btn.setAttribute('aria-expanded',open?'true':'false');
