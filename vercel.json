@@ -17,6 +17,11 @@
     { "source": "/supporto-20-ore", "destination": "/shop/supporto-20-ore.html" },
     { "source": "/tracker-ecommerce", "destination": "/shop/tracker-ecommerce.html" },
     { "source": "/dynamic-remarketing", "destination": "/shop/dynamic-remarketing.html" },
+    { "source": "/tag-email", "destination": "/shop/tag-email.html" },
+    { "source": "/tag-facebook", "destination": "/shop/tag-facebook.html" },
+    { "source": "/tag-instagram", "destination": "/shop/tag-instagram.html" },
+    { "source": "/tag-linkedin", "destination": "/shop/tag-linkedin.html" },
+    { "source": "/consent-mode-v2", "destination": "/shop/consent-mode-v2.html" },
 
     { "source": "/shop/tracking-click-telefono", "destination": "/shop/tracking-click-telefono.html" },
     { "source": "/shop/tracking-social-6in1", "destination": "/shop/tracking-social-6in1.html" },
@@ -25,6 +30,11 @@
     { "source": "/shop/supporto-10-ore", "destination": "/shop/supporto-10-ore.html" },
     { "source": "/shop/supporto-20-ore", "destination": "/shop/supporto-20-ore.html" },
     { "source": "/shop/tracker-ecommerce", "destination": "/shop/tracker-ecommerce.html" },
-    { "source": "/shop/dynamic-remarketing", "destination": "/shop/dynamic-remarketing.html" }
+    { "source": "/shop/dynamic-remarketing", "destination": "/shop/dynamic-remarketing.html" },
+    { "source": "/shop/tag-email", "destination": "/shop/tag-email.html" },
+    { "source": "/shop/tag-facebook", "destination": "/shop/tag-facebook.html" },
+    { "source": "/shop/tag-instagram", "destination": "/shop/tag-instagram.html" },
+    { "source": "/shop/tag-linkedin", "destination": "/shop/tag-linkedin.html" },
+    { "source": "/shop/consent-mode-v2", "destination": "/shop/consent-mode-v2.html" }
   ]
 }
