@@ -13,6 +13,11 @@
     .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
     .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible,.btn:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:200}
+    .skip-link:focus{position:fixed;left:12px;top:12px;width:auto;height:auto;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;outline:3px solid #0B5CAD;outline-offset:2px}
+    body.nav-open{overflow:hidden}
+    @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
     @media(max-width:860px){
       .menu-toggle{display:inline-flex}
       .header-inner{position:relative;min-height:64px;height:auto;padding:8px 0}
@@ -28,10 +33,11 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Salta al contenuto</a>
   <header class="header"><div class="header-inner"><a class="logo" href="index.html"><span class="mark">ET</span>EasyTag</a>
-      <button type="button" class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
-      <nav id="main-nav" class="nav" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="shop/index.html">Shop</a><details class="nav-group"><summary>Chi siamo</summary><div class="submenu"><a href="chi-siamo.html">Panoramica</a><a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="tag-google-analytics-4.html">Google Analytics 4</a><a href="datalayer-architettura.html">Architettura DataLayer</a></div></details><a href="contatti.html" class="active">Contatti</a></nav></div></header>
-  <section class="hero"><h1>Parliamone</h1><p>Scrivici per un progetto, un intervento tecnico o una collaborazione continuativa.</p></section>
+      <button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="shop/index.html">Shop</a><details class="nav-group"><summary>Chi siamo</summary><div class="submenu"><a href="chi-siamo.html">Panoramica</a><a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="tag-google-analytics-4.html">Google Analytics 4</a><a href="datalayer-architettura.html">Architettura DataLayer</a></div></details><a href="contatti.html" class="active" aria-current="page">Contatti</a></nav></div></header>
+  <section class="hero" id="main-content"><h1>Parliamone</h1><p>Scrivici per un progetto, un intervento tecnico o una collaborazione continuativa.</p></section>
   <main><div class="contact-grid"><div><h2>Informazioni</h2><p><strong>Email:</strong> support@easytag.com</p></div><div class="form"><form action="mailto:support@easytag.com" method="post" enctype="text/plain"><label>Nome e cognome</label><input type="text" name="nome" required><label>Email</label><input type="email" name="email" required><label>Messaggio</label><textarea name="messaggio" required rows="5"></textarea><button type="submit">Invia richiesta</button></form></div></div></main>
   <footer class="footer">© 2026 Easy Tag · <a href="chi-siamo.html">Chi siamo</a></footer>
 <script>
@@ -39,25 +45,38 @@
   var btn=document.querySelector('.menu-toggle');
   var nav=document.getElementById('main-nav');
   if(!btn||!nav) return;
-  btn.addEventListener('click',function(){
-    var open=nav.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.setAttribute('aria-label', open ? 'Chiudi menu' : 'Apri menu');
-  });
-  nav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){
-      nav.classList.remove('is-open');
-      btn.setAttribute('aria-expanded','false');
-      btn.setAttribute('aria-label','Apri menu');
-    });
-  });
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile()){nav.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
   document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'&&nav.classList.contains('is-open')){
-      nav.classList.remove('is-open');
-      btn.setAttribute('aria-expanded','false');
-      btn.setAttribute('aria-label','Apri menu');
-      btn.focus();
-    }
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;
+    close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
   });
 })();
 </script>
