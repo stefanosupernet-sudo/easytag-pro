@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <title>TAG LinkedIn con GTM | Container pronto | Easy Tag</title>
+  <meta name="description" content="Traccia i click verso LinkedIn per lead B2B con Google Tag Manager. Container JSON pronto.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/tag-linkedin">
+  <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/tag-linkedin">
+  <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/tag-linkedin">
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="TAG LinkedIn con GTM | Container pronto | Easy Tag">
+  <meta property="og:description" content="Traccia i click verso LinkedIn per lead B2B con Google Tag Manager. Container JSON pronto.">
+  <meta property="og:url" content="https://easytag-pro.vercel.app/tag-linkedin">
+  <meta property="og:image" content="https://easytag-pro.vercel.app/assets/products/tag-linkedin.webp">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Easy Tag">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TAG LinkedIn con GTM | Container pronto | Easy Tag">
+  <meta name="twitter:description" content="Traccia i click verso LinkedIn per lead B2B con Google Tag Manager. Container JSON pronto.">
+  <meta name="twitter:image" content="https://easytag-pro.vercel.app/assets/products/tag-linkedin.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Product","name":"TAG LinkedIn: Tracking Click per Lead B2B con GTM","description":"Traccia i click verso LinkedIn per lead B2B con Google Tag Manager. Container JSON pronto.","brand":{"@type":"Brand","name":"Easy Tag"},"image":"https://easytag-pro.vercel.app/assets/products/tag-linkedin.webp","offers":{"@type":"Offer","url":"https://easytag-pro.vercel.app/tag-linkedin","priceCurrency":"EUR","price":"150","availability":"https://schema.org/InStock"}}
+  </script>
+  <style>.logo img{height:40px;width:auto;display:block}
+    :root { --blue: #1182DE; --blue-dark: #0B5CAD; --blue-light: #E8F3FC; --black: #1A1A1A; --gray-900: #202124; --gray-700: #5F6368; --gray-200: #E8EAED; --gray-100: #F8F9FA; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Inter, -apple-system, sans-serif; color: var(--gray-900); line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+    .header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--gray-200); padding: 0 20px; }
+    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 12px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; }
+    .logo-mark { width: 36px; height: 36px; background: var(--blue); border-radius: 9px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 13px; }
+    .nav { display: flex; align-items: center; gap: 18px; }
+    .nav a, .nav summary { font-size: 14px; font-weight: 500; color: var(--gray-700); }
+    .nav a:hover, .nav a.active { color: var(--blue); }
+    .nav-group { position: relative; }
+    .nav-group summary { list-style: none; cursor: pointer; }
+    .nav-group summary::-webkit-details-marker { display: none; }
+    .nav-group summary::after { content: " ⌄"; font-size: 12px; }
+    .submenu { position: absolute; top: calc(100% + 12px); left: -12px; min-width: 220px; background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; padding: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.08); z-index: 20; }
+    .nav-group:not([open]) .submenu { display: none; }
+    .submenu a { display: block; padding: 9px 12px; border-radius: 7px; font-size: 14px; color: var(--gray-700) !important; }
+    .submenu a:hover { background: var(--blue-light); color: var(--blue) !important; }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; border-radius: 8px; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
+    .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--gray-900); border-radius: 2px; transition: transform .2s, opacity .2s; }
+    .menu-toggle[aria-expanded=true] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded=true] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded=true] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .menu-toggle:focus-visible, .nav a:focus-visible, .nav summary:focus-visible, .btn:focus-visible { outline: 3px solid #1182DE; outline-offset: 2px; }
+    .skip-link { position: absolute; left: -9999px; overflow: hidden; }
+    .skip-link:focus { position: fixed; left: 12px; top: 12px; padding: 12px 16px; background: #1182DE; color: #fff; border-radius: 8px; font-weight: 600; z-index: 200; text-decoration: none; }
+    body.nav-open { overflow: hidden; }
+    @media (prefers-reduced-motion: reduce) { .menu-toggle span { transition: none; } }
+    @media (max-width: 860px) {
+      .menu-toggle { display: inline-flex; }
+      .header-inner { position: relative; }
+      .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 4px; padding: 12px 16px 20px; background: #fff; border-bottom: 1px solid var(--gray-200); box-shadow: 0 12px 28px rgba(0,0,0,.08); z-index: 50; }
+      .nav.is-open { display: flex; }
+      .nav > a, .nav summary { display: block; padding: 12px 10px; font-size: 16px; border-radius: 8px; }
+      .nav .btn { width: 100%; margin-top: 8px; justify-content: center; }
+      .nav-group { width: 100%; }
+      .nav-group .submenu { position: static; box-shadow: none; border: 0; padding: 0 0 0 12px; min-width: 0; background: transparent; }
+    }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-primary:hover { background: var(--blue-dark); }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .breadcrumb { font-size: 14px; color: var(--gray-700); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--blue); }
+    .product-hero { display: grid; grid-template-columns: 1fr 280px; gap: 32px; align-items: start; margin-bottom: 32px; }
+    @media (max-width: 700px) { .product-hero { grid-template-columns: 1fr; } }
+    .product-image { border-radius: 12px; overflow: hidden; background: #1a1a1a; }
+    .product-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+    h1 { font-size: 30px; margin-bottom: 12px; letter-spacing: -0.4px; }
+    .price { font-size: 28px; font-weight: 700; margin: 16px 0 24px; }
+    .badge { display: inline-block; background: #E6F4EA; color: #137333; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .content h2 { font-size: 20px; margin: 32px 0 12px; }
+    .content p, .content li { color: var(--gray-700); margin-bottom: 10px; }
+    .content ul { margin: 12px 0 12px 20px; }
+    .cta-box { background: var(--gray-100); border-radius: 12px; padding: 28px; margin-top: 40px; text-align: center; }
+    .note { font-size: 13px; color: var(--gray-700); margin-top: 12px; }
+    .footer { background: var(--black); color: #aaa; padding: 30px 24px; text-align: center; font-size: 13px; }
+    form { display: inline; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Salta al contenuto</a>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="data:image/png;base64,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" alt="Easy Tag"></a>
+      <button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="shop/index.html" class="active" aria-current="page">Shop</a>
+        <details class="nav-group"><summary>Chi siamo</summary><div class="submenu"><a href="chi-siamo.html">Panoramica</a><a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="tag-google-analytics-4.html">Google Analytics 4</a><a href="datalayer-architettura.html">Architettura DataLayer</a></div></details>
+        <a href="contatti.html">Contatti</a>
+        <form action="/api/create-checkout-session" method="POST"><input type="hidden" name="priceId" value="price_1UdVtqFVaAsOPXA79ktKlFts"><button type="submit" class="btn btn-primary">Acquista – €150</button></form>
+      </nav>
+    </div>
+  </header>
+  <div class="container" id="main-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> → <a href="shop/index.html">Shop</a> → Tag Linkedin</div>
+    <div class="product-hero">
+      <div>
+        <div class="badge">Container pronto · Checkout Stripe attivo</div>
+        <h1>TAG LinkedIn: Tracking Click per Lead B2B con GTM</h1>
+        <div class="price">€150</div>
+      </div>
+      <div class="product-image">
+        <img src="assets/products/tag-linkedin.webp" alt="TAG LinkedIn GTM" width="400" height="240" loading="eager">
+      </div>
+    </div>
+    <div class="content">
+      <p>Container GTM dedicato ai click verso LinkedIn, ideale per campagne B2B e generazione di lead professionali. Prezzo IVA inclusa.</p>
+      <h2>Cosa include</h2>
+      <ul>
+        <li>Tracking click LinkedIn</li>
+        <li>Conversione Google Ads</li>
+        <li>Evento GA4</li>
+        <li>Istruzioni di installazione</li>
+      </ul>
+      <h2>Dopo l’acquisto</h2>
+      <p>Ricevi e importa il JSON, configura Conversion ID e pubblica.</p>
+    </div>
+    <div class="cta-box">
+      <p style="margin-bottom:16px;font-size:16px;">Vuoi tracciare i click LinkedIn?</p>
+      <form action="/api/create-checkout-session" method="POST"><input type="hidden" name="priceId" value="price_1UdVtqFVaAsOPXA79ktKlFts"><button type="submit" class="btn btn-primary">Acquista ora – €150</button></form>
+      <p class="note">Checkout sicuro Stripe · Prezzo IVA inclusa</p>
+    </div>
+  </div>
+  <footer class="footer">© 2026 Easy Tag Solutions · Spin-off del team italiano di Google Cracovia</footer>
+  <script>
+  (function(){
+    var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+    if(!btn||!nav)return;
+    function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+    function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary,button')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+    function setOpen(open){
+      nav.classList.toggle('is-open',open);
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+      if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+      else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+      if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+      else if(!open) btn.focus();
+    }
+    function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+    if(isMobile())nav.setAttribute('aria-hidden','true');
+    btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+    document.addEventListener('keydown',function(e){
+      if(!nav.classList.contains('is-open')||!isMobile())return;
+      if(e.key==='Escape'){e.preventDefault();close();return;}
+      if(e.key!=='Tab')return;
+      var items=focusable();if(!items.length)return;
+      var first=items[0],last=items[items.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    });
+    document.addEventListener('click',function(e){
+      if(!nav.classList.contains('is-open')||!isMobile())return;
+      if(nav.contains(e.target)||btn.contains(e.target))return;close();
+    });
+    window.addEventListener('resize',function(){
+      if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+      else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+    });
+  })();
+  </script>
+</body>
+</html>
