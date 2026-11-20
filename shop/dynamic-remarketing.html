@@ -87,6 +87,15 @@ nav.breadcrumb li+li::before{content:"›";margin:0 8px;color:#5F6368}
 nav.breadcrumb a{color:#1182DE;text-decoration:none;font-weight:600}
 nav.breadcrumb a:hover{text-decoration:underline}
 nav.breadcrumb [aria-current="page"]{color:#202124;font-weight:600}
+
+    .quote-form{text-align:left}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:500px){.form-row{grid-template-columns:1fr}}
+    .form-group{margin-bottom:14px}
+    .form-group label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px;text-align:left}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 13px;border:1.5px solid var(--gray-200);border-radius:8px;font-size:15px;font-family:inherit;background:#fff}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(17,130,222,.15)}
+    .quote-ok{background:#E6F4EA;color:#137333;border-radius:8px;padding:12px 14px;margin-bottom:14px;font-weight:600}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easytag-pro.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Shop", "item": "https://easytag-pro.vercel.app/shop"}, {"@type": "ListItem", "position": 3, "name": "Dynamic Remarketing", "item": "https://easytag-pro.vercel.app/shop/dynamic-remarketing"}]}</script>
 </head>
@@ -101,7 +110,7 @@ nav.breadcrumb [aria-current="page"]{color:#202124;font-weight:600}
         <a href="index.html" class="active" aria-current="page">Shop</a>
         <details class="nav-group"><summary>Chi siamo</summary><div class="submenu"><a href="../chi-siamo.html">Panoramica</a><a href="../tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="../tag-google-analytics-4.html">Google Analytics 4</a><a href="../datalayer-architettura.html">Architettura DataLayer</a><a href="../consent-mode.html">Consent Mode</a></div></details>
         <a href="../faq.html">FAQ</a><a href="../contatti.html">Contatti</a>
-        <a href="../contatti.html?prodotto=dynamic-remarketing" class="btn btn-primary">Richiedi preventivo</a>
+        <a href="#preventivo" class="btn btn-primary">Richiedi preventivo</a>
       </nav>
     </div>
   </header>
@@ -130,11 +139,58 @@ nav.breadcrumb [aria-current="page"]{color:#202124;font-weight:600}
       <p>Il Dynamic Remarketing funziona solo se eventi e feed sono allineati. Ogni sito ha esigenze diverse: per questo chiediamo alcune informazioni prima di proporti un preventivo.</p>
     </div>
     <div class="guide-box"><h2>Dove è spiegato</h2><p>Gli ID prodotto stanno nel <a href="../datalayer-architettura.html">DataLayer</a> e alimentano le campagne spiegate in <a href="../tag-nativo-google-ads.html">Tag nativo Google Ads</a>.</p></div>
-    <div class="cta-box">
-      <p style="margin-bottom:16px;font-size:16px;">Vuoi un preventivo personalizzato?</p>
-      <a href="../contatti.html?prodotto=dynamic-remarketing" class="btn btn-primary">Richiedi preventivo</a>
-      <p class="note">Rispondiamo entro 1 giorno lavorativo</p>
+    <div class="cta-box" id="preventivo">
+      <p class="quote-ok" id="quote-ok" hidden>Richiesta inviata. Ti rispondiamo entro 1 giorno lavorativo.</p>
+      <p style="margin-bottom:16px;font-size:16px;">Raccontaci il sito: il preventivo dipende dal CMS e dal data layer.</p>
+      <form class="quote-form" action="/api/quote" method="POST">
+        <input type="hidden" name="prodotto" value="dynamic-remarketing">
+        <div class="form-row">
+          <div class="form-group"><label for="nome">Nome *</label><input id="nome" type="text" name="nome" required autocomplete="given-name" placeholder="Mario"></div>
+          <div class="form-group"><label for="cognome">Cognome *</label><input id="cognome" type="text" name="cognome" required autocomplete="family-name" placeholder="Rossi"></div>
+        </div>
+        <div class="form-group"><label for="email">Email *</label><input id="email" type="email" name="email" required autocomplete="email" placeholder="mario@agenzia.it"></div>
+        <div class="form-group"><label for="telefono">Telefono *</label><input id="telefono" type="tel" name="telefono" required autocomplete="tel" placeholder="+39 333 1234567"></div>
+        <div class="form-group">
+          <label for="cms">CMS / Piattaforma *</label>
+          <select id="cms" name="cms" required>
+              <option value="">Seleziona...</option>
+              <option>Shopify</option>
+              <option>WooCommerce (WordPress)</option>
+              <option>Magento / Adobe Commerce</option>
+              <option>PrestaShop</option>
+              <option>BigCommerce</option>
+              <option>Salesforce Commerce Cloud</option>
+              <option>VTEX</option>
+              <option>OpenCart</option>
+              <option>Wix</option>
+              <option>Squarespace</option>
+              <option>Custom / Sviluppato su misura</option>
+              <option>Altro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="datalayer">Hai bisogno di un data layer personalizzato? *</label>
+          <select id="datalayer" name="datalayer" required>
+            <option value="">Seleziona...</option>
+            <option>Sì</option>
+            <option>No</option>
+            <option>Non so / da valutare</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="url">URL del sito (opzionale)</label><input id="url" type="url" name="url" placeholder="https://tuosito.it"></div>
+        <div class="form-group"><label for="note">Note aggiuntive (feed, campagne esistenti...)</label><textarea id="note" name="note" rows="3" placeholder="Es. hai già un feed Merchant Center? Campagne remarketing già attive?"></textarea></div>
+        <button type="submit" class="btn btn-primary">Invia richiesta di preventivo</button>
+        <p class="note">Rispondiamo entro 1 giorno lavorativo · IT & EN</p>
+      </form>
     </div>
+    <script>
+    if (location.search.indexOf("inviato=1") !== -1) {
+      var ok = document.getElementById("quote-ok");
+      var form = document.querySelector(".quote-form");
+      if (ok) ok.hidden = false;
+      if (form) form.hidden = true;
+    }
+    </script>
   </div>
   <footer class="footer">© 2026 Easy Tag Solutions · Spin-off del team italiano di Google Cracovia</footer>
   <script>
