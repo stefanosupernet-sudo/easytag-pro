@@ -104,6 +104,7 @@
     var collab = /collabor|agenzia|consulen|affianc|personalizz|audit|supporto|ore\b|insieme|intervento/.test(n);
     var products = matchProducts(query);
     var faq = bestFaq(query);
+    if (faq && products.length && faq.qHits < 3) faq = null;
     var guide = bestGuide(query);
     var parts = [];
     var cards = [];
