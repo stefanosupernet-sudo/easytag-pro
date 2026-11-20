@@ -93,7 +93,7 @@
     .note { font-size: 13px; color: var(--gray-700); margin-top: 12px; }
     .footer { background: var(--black); color: #aaa; padding: 30px 24px; text-align: center; font-size: 13px; }
     form { display: inline; }
-  </style>
+  .guide-box{background:#F8F9FA;border:1px solid #E8EAED;border-radius:12px;padding:18px 20px;margin:28px 0 8px}.guide-box h2{font-size:18px;margin:0 0 8px}.guide-box p{margin:0}.guide-box a{color:#1182DE;font-weight:600}</style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Salta al contenuto</a>
@@ -135,6 +135,7 @@
       <h2>Dopo l’acquisto</h2>
       <p>Paghi su Stripe Checkout. Ricevi via email il container.json e le istruzioni. Importi nel tuo GTM, inserisci Conversion ID / Label e pubblichi.</p>
     </div>
+    <div class="guide-box"><h2>Dove è spiegato</h2><p>Telefono, email e WhatsApp usano il tag di conversione descritto in <a href="../tag-nativo-google-ads.html">Tag nativo Google Ads</a>.</p></div>
     <div class="cta-box">
       <p style="margin-bottom:16px;font-size:16px;">Pronto a tracciare telefono, email e WhatsApp?</p>
       <form action="/api/create-checkout-session" method="POST"><input type="hidden" name="priceId" value="price_1UciBfFVaAsOPXA7MKDPBnCl"><button type="submit" class="btn btn-primary">Acquista ora – €350</button></form>

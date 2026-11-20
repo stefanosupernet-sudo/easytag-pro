@@ -51,7 +51,24 @@
     .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
     .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
 
-  </style>
+  
+.picks{margin:36px 0 10px}
+.picks h2{border:0;padding:0;margin-top:0}
+.picks h3{font-size:18px;margin:22px 0 10px}
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pick{border:1px solid #E8EAED;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pick-img{display:block;background:#1a1a1a;line-height:0}
+.pick-img img{width:100%;height:110px;object-fit:cover;display:block}
+.pick-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:16px;margin:0;border:0;padding:0}
+.pick-body p{font-size:13px;color:#5F6368;margin:0}
+.pick-badge{font-size:11px;font-weight:700;color:#137333;background:#E6F4EA;display:inline-block;padding:3px 8px;border-radius:99px;width:max-content}
+.pick-badge.quote{color:#0B5CAD;background:#E8F3FC}
+.pick-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;gap:8px}
+.pick-price{font-weight:700;font-size:15px}
+.pick-btn{background:#1182DE;color:#fff!important;text-decoration:none!important;font-weight:700;font-size:13px;padding:8px 12px;border-radius:8px}
+.inline{color:#1182DE;text-decoration:underline;text-underline-offset:2px}
+</style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Google Analytics 4: misurazione basata sugli eventi","author":{"@type":"Organization","name":"EasyTag Pro"},"inLanguage":"it"}</script>
 </head>
 <body>
@@ -119,8 +136,9 @@
     </section>
 
     <section>
+      <p>I click già presenti in pagina (telefono, email, social) diventano eventi GA4 con i container <a class="inline" href="shop/tracking-click-telefono">Tracking Click Telefono</a>, <a class="inline" href="shop/tag-email">TAG Email</a>, <a class="inline" href="shop/tag-facebook">TAG Facebook</a>, <a class="inline" href="shop/tag-instagram">TAG Instagram</a>, <a class="inline" href="shop/tag-linkedin">TAG LinkedIn</a> oppure, insieme, <a class="inline" href="shop/tracking-social-6in1">Tracking Social 6-in-1</a>.</p>
       <h2>Il funnel e-commerce</h2>
-      <p>Per un negozio, lo schema consigliato di GA4 copre i passaggi che il team commerciale già conosce. Collegali a un DataLayer coerente, non a selettori CSS del tema:</p>
+      <p>Per un negozio, lo schema consigliato di GA4 copre i passaggi che il team commerciale già conosce. Collegali a un DataLayer coerente, non a selettori CSS del tema: Il pacchetto che prepariamo su questo schema è il <a class="inline" href="shop/tracker-ecommerce">Tracker E-commerce</a>.</p>
       <ul>
         <li><code>view_item_list</code>: l’utente vede una lista o una categoria.</li>
         <li><code>select_item</code>: sceglie un prodotto dalla lista.</li>
@@ -136,7 +154,7 @@
 
     <section>
       <h2>Consenso e qualità del dato</h2>
-      <p>GA4 va letto insieme al consenso. In Consent Mode i tag possono adattare il comportamento alle scelte dell’utente; la configurazione va verificata sul tuo banner, non data per scontata perché “il plugin è installato”. Controlla che, al rifiuto, la misurazione rispetti quello che hai dichiarato in informativa.</p>
+      <p>GA4 va letto insieme al consenso. In Consent Mode i tag possono adattare il comportamento alle scelte dell’utente; la configurazione va verificata sul tuo banner, non data per scontata perché “il plugin è installato”. Se il banner non parla con i tag, si parte da <a class="inline" href="shop/consent-mode-v2">Consent Mode v2</a>. Controlla che, al rifiuto, la misurazione rispetti quello che hai dichiarato in informativa.</p>
       <p>Altri fattori cambiano i numeri che vedi: Google Signals, soglie sui report quando i volumi sono bassi, filtri della proprietà, fusi orari. Un calo improvviso non è sempre un bug del tag. Prima confronta periodo, flusso di dati e stato del contenitore pubblicato.</p>
       <p>La qualità si gioca anche sui tipi. Una stringa <code>"249,00"</code> non è il numero <code>249</code>. Un <code>transaction_id</code> vuoto su metà degli ordini rende inutile la deduplica. Questi controlli si fanno in anteprima, non tre mesi dopo, quando le campagne sono già state ottimizzate su dati storti.</p>
     </section>
@@ -188,7 +206,8 @@
       </details>
     </section>
 
-    <p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Tag Google Ads →</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
+    <section class="picks"><h2>Prodotti che inviano questi eventi</h2><p>Dalla lettura alla scheda: stessi eventi della guida, pronti da importare o da preventivare.</p><div class="pick-grid"><article class="pick"><a class="pick-img" href="shop/tracking-click-telefono"><img src="assets/products/tracking-click-telefono.webp" alt="Tracking Click Telefono" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>Tracking Click Telefono</h3><p>Click sui link tel: verso Google Ads e GA4.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="shop/tracking-click-telefono">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tag-email"><img src="assets/products/tag-email.webp" alt="TAG Email" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>TAG Email</h3><p>Click mailto: e conversioni correlate.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="shop/tag-email">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tag-facebook"><img src="assets/products/tag-facebook.webp" alt="TAG Facebook" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>TAG Facebook</h3><p>Uscite verso Facebook / Meta per conversioni e analitica.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="shop/tag-facebook">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tag-instagram"><img src="assets/products/tag-instagram.webp" alt="TAG Instagram" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>TAG Instagram</h3><p>Click verso Instagram da CTA e link in pagina.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="shop/tag-instagram">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tag-linkedin"><img src="assets/products/tag-linkedin.webp" alt="TAG LinkedIn" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>TAG LinkedIn</h3><p>Click verso LinkedIn per lead B2B.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="shop/tag-linkedin">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tracking-social-6in1"><img src="assets/products/tracking-social-6in1.webp" alt="Tracking Social 6-in-1" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>Tracking Social 6-in-1</h3><p>Facebook, Instagram, LinkedIn, X, YouTube e Telegram.</p><div class="pick-foot"><span class="pick-price">€450</span><a class="pick-btn" href="shop/tracking-social-6in1">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tracker-ecommerce"><img src="assets/products/tracker-ecommerce.webp" alt="Tracker E-commerce" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Preventivo</span><h3>Tracker E-commerce</h3><p>Data layer e eventi view_item, cart, checkout, purchase.</p><div class="pick-foot"><span class="pick-price">Preventivo</span><a class="pick-btn" href="shop/tracker-ecommerce">Richiedi preventivo</a></div></div></article><article class="pick"><a class="pick-img" href="shop/consent-mode-v2"><img src="assets/products/consent-mode-v2.webp" alt="Consent Mode v2" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Preventivo</span><h3>Consent Mode v2</h3><p>Banner cookie collegato ai tag Google.</p><div class="pick-foot"><span class="pick-price">Preventivo</span><a class="pick-btn" href="shop/consent-mode-v2">Richiedi preventivo</a></div></div></article></div></section>
+<p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Tag Google Ads →</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
 
   </article>
 </main>

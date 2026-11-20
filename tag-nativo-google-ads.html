@@ -51,7 +51,24 @@
     .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
     .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
 
-  </style>
+  
+.picks{margin:36px 0 10px}
+.picks h2{border:0;padding:0;margin-top:0}
+.picks h3{font-size:18px;margin:22px 0 10px}
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pick{border:1px solid #E8EAED;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pick-img{display:block;background:#1a1a1a;line-height:0}
+.pick-img img{width:100%;height:110px;object-fit:cover;display:block}
+.pick-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:16px;margin:0;border:0;padding:0}
+.pick-body p{font-size:13px;color:#5F6368;margin:0}
+.pick-badge{font-size:11px;font-weight:700;color:#137333;background:#E6F4EA;display:inline-block;padding:3px 8px;border-radius:99px;width:max-content}
+.pick-badge.quote{color:#0B5CAD;background:#E8F3FC}
+.pick-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;gap:8px}
+.pick-price{font-weight:700;font-size:15px}
+.pick-btn{background:#1182DE;color:#fff!important;text-decoration:none!important;font-weight:700;font-size:13px;padding:8px 12px;border-radius:8px}
+.inline{color:#1182DE;text-decoration:underline;text-underline-offset:2px}
+</style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Tag nativo Google Ads: misurazione delle conversioni","author":{"@type":"Organization","name":"EasyTag Pro"},"inLanguage":"it"}</script>
 </head>
 <body>
@@ -151,7 +168,7 @@
 
     <section>
       <h2>Come implementarlo in Google Tag Manager</h2>
-      <p>La sequenza che usiamo nei progetti EasyTag Pro è ripetibile. Prima si sistema il piano di misurazione, poi il contenitore.</p>
+      <p>La sequenza che usiamo nei progetti EasyTag Pro è ripetibile. Prima si sistema il piano di misurazione, poi il contenitore. Se la conversione è un click già in pagina, parti da <a class="inline" href="shop/tracking-click-telefono">Tracking Click Telefono</a>, <a class="inline" href="shop/tag-email">TAG Email</a> o <a class="inline" href="shop/contatti-3in1">Contatti 3-in-1</a>. Per valori prodotto e feed, <a class="inline" href="shop/tracker-ecommerce">Tracker E-commerce</a> e <a class="inline" href="shop/dynamic-remarketing">Dynamic Remarketing</a>.</p>
       <ol>
         <li>Nell’account Google Ads crea (o rivedi) l’azione: nome, categoria, valore, conteggio, finestra, inclusione nelle azioni primarie.</li>
         <li>Sul sito fai pubblicare dal DataLayer un evento solo a conversione confermata, con i campi necessari.</li>
@@ -197,7 +214,8 @@
       </details>
     </section>
 
-    <p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
+    <section class="picks"><h2>Prodotti che usano questo tag</h2><p>Schede acquistabili (o su preventivo) collegate alla misurazione Google Ads descritta sopra.</p><div class="pick-grid"><article class="pick"><a class="pick-img" href="shop/tracking-click-telefono"><img src="assets/products/tracking-click-telefono.webp" alt="Tracking Click Telefono" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>Tracking Click Telefono</h3><p>Click sui link tel: verso Google Ads e GA4.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="shop/tracking-click-telefono">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tag-email"><img src="assets/products/tag-email.webp" alt="TAG Email" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>TAG Email</h3><p>Click mailto: e conversioni correlate.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="shop/tag-email">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/contatti-3in1"><img src="assets/products/contatti-3in1.webp" alt="Contatti 3-in-1" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Container pronto</span><h3>Contatti 3-in-1</h3><p>Telefono, email e WhatsApp in un unico container.</p><div class="pick-foot"><span class="pick-price">€350</span><a class="pick-btn" href="shop/contatti-3in1">Vedi e acquista</a></div></div></article><article class="pick"><a class="pick-img" href="shop/dynamic-remarketing"><img src="assets/products/dynamic-remarketing.webp" alt="Dynamic Remarketing" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Preventivo</span><h3>Dynamic Remarketing</h3><p>Eventi prodotto e allineamento feed per Google Ads.</p><div class="pick-foot"><span class="pick-price">Preventivo</span><a class="pick-btn" href="shop/dynamic-remarketing">Richiedi preventivo</a></div></div></article><article class="pick"><a class="pick-img" href="shop/tracker-ecommerce"><img src="assets/products/tracker-ecommerce.webp" alt="Tracker E-commerce" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Preventivo</span><h3>Tracker E-commerce</h3><p>Data layer e eventi view_item, cart, checkout, purchase.</p><div class="pick-foot"><span class="pick-price">Preventivo</span><a class="pick-btn" href="shop/tracker-ecommerce">Richiedi preventivo</a></div></div></article></div></section>
+<p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
 
   </article>
 </main>
