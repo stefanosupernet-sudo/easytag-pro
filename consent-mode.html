@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <title>Consent Mode v2: default, update e CMP | EasyTag Pro</title>
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Consent Mode, Consent Mode v2, CMP, ad_storage, analytics_storage, ad_user_data, ad_personalization, Google Tag Manager consenso">
+  <meta name="description" content="Modalità di consenso Google: ad_storage, analytics_storage, ad_user_data e ad_personalization. Differenza tra default e update, CMP e verifica in Tag Assistant.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/consent-mode">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>.logo img{height:40px;width:auto;display:block}
+    :root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA;--ink:#202124}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.7;color:var(--ink)}
+    a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}
+    .header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}
+    .nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}
+    .nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}
+    .submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}
+    @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}
+    }
+    main{max-width:820px;margin:36px auto;padding:0 22px 70px}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:0 0 18px}
+    h2{font-size:24px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+    h3{font-size:18px;margin:22px 0 8px}
+    p,li{color:var(--gray)}p{margin:0 0 14px}ul,ol{margin:0 0 16px;padding-left:1.25rem}li{margin:6px 0}
+    code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13.5px}
+    code{background:var(--pale);padding:1px 5px;border-radius:4px}
+    pre{padding:16px;background:var(--pale);border:1px solid var(--line);border-radius:10px;overflow:auto;margin:14px 0 18px;line-height:1.5}
+    .breadcrumb{font-size:14px;color:var(--blue);margin-bottom:18px}
+    .summary{background:var(--light);border:1px solid #cfe6f8;border-radius:12px;padding:18px 20px;margin:0 0 28px}
+    .summary h2{margin:0 0 10px;font-size:16px;border:0;padding:0;color:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+    .summary ol{margin:0;padding-left:1.2rem}.summary li{color:var(--ink);margin:6px 0;font-size:15px}
+    .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--ink)}
+    .faq p{margin-top:10px}
+    .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
+    .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
+  
+.picks{margin:36px 0 10px}
+.picks h2{border:0;padding:0;margin-top:0}
+.picks h3{font-size:18px;margin:22px 0 10px}
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pick{border:1px solid #E8EAED;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pick-img{display:block;background:#1a1a1a;line-height:0}
+.pick-img img{width:100%;height:110px;object-fit:cover;display:block}
+.pick-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:16px;margin:0;border:0;padding:0}
+.pick-body p{font-size:13px;color:#5F6368;margin:0}
+.pick-badge{font-size:11px;font-weight:700;color:#137333;background:#E6F4EA;display:inline-block;padding:3px 8px;border-radius:99px;width:max-content}
+.pick-badge.quote{color:#0B5CAD;background:#E8F3FC}
+.pick-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;gap:8px}
+.pick-price{font-weight:700;font-size:15px}
+.pick-btn{background:#1182DE;color:#fff!important;text-decoration:none!important;font-weight:700;font-size:13px;padding:8px 12px;border-radius:8px}
+.inline{color:#1182DE;text-decoration:underline;text-underline-offset:2px}
+
+nav.breadcrumb{margin:0 0 18px}
+nav.breadcrumb ol{display:flex;flex-wrap:wrap;align-items:center;gap:0;list-style:none;margin:0;padding:0;font-size:14px;color:#5F6368}
+nav.breadcrumb li{display:flex;align-items:center}
+nav.breadcrumb li+li::before{content:"›";margin:0 8px;color:#5F6368}
+nav.breadcrumb a{color:#1182DE;text-decoration:none;font-weight:600}
+nav.breadcrumb a:hover{text-decoration:underline}
+nav.breadcrumb [aria-current="page"]{color:#202124;font-weight:600}
+
+.faq h3{font-size:17px;line-height:1.35;margin:18px 0 8px;border:0;padding:0}
+.faq-item{padding-bottom:2px}
+.faq ul{margin:8px 0 14px 1.2rem}
+.faq li{margin:5px 0}
+.faq code{font-size:.92em;background:#F8F9FA;padding:0 4px;border-radius:4px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easytag-pro.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Chi siamo", "item": "https://easytag-pro.vercel.app/chi-siamo"}, {"@type": "ListItem", "position": 3, "name": "Consent Mode", "item": "https://easytag-pro.vercel.app/consent-mode"}]}</script>
+<meta property="og:type" content="article">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Consent Mode v2: default, update e CMP | EasyTag Pro">
+  <meta property="og:description" content="Modalità di consenso Google: ad_storage, analytics_storage, ad_user_data e ad_personalization. Differenza tra default e update, CMP e verifica in Tag Assistant.">
+  <meta property="og:url" content="https://easytag-pro.vercel.app/consent-mode">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cos'è il Consent Mode nella Tag Platform di Google?", "acceptedAnswer": {"@type": "Answer", "text": "È il modo in cui i tag Google ricevono lo stato del consenso e adattano cookie, identificativi e ping. Non sostituisce il banner: legge la scelta che il banner ha raccolto. Il pacchetto di implementazione è Consent Mode v2 ."}}, {"@type": "Question", "name": "Quali parametri di consenso gestisce il Consent Mode?", "acceptedAnswer": {"@type": "Answer", "text": "ad_storage : storage pubblicitario. analytics_storage : storage di analisi. ad_user_data : dati utente per finalità pubblicitarie. ad_personalization : personalizzazione degli annunci e remarketing. Dove servono: functionality_storage , personalization_storage , security_storage ."}}, {"@type": "Question", "name": "Qual è la differenza tra default e update?", "acceptedAnswer": {"@type": "Answer", "text": "default è lo stato iniziale, prima che i tag partano. Nelle aree a consenso preventivo è spesso denied . update arriva quando la persona accetta o rifiuta nel CMP e sostituisce quello stato."}}, {"@type": "Question", "name": "Perché il default va impostato prima che partano i tag?", "acceptedAnswer": {"@type": "Answer", "text": "Perché un tag partito prima del default può scrivere cookie in contrasto con la scelta iniziale. I tag dello stesso evento devono leggere un solo stato, coerente. L'ordine rispetto alla coda è quello del DataLayer ."}}, {"@type": "Question", "name": "Perché il Consent Mode non si configura con un tag HTML personalizzato?", "acceptedAnswer": {"@type": "Answer", "text": "Un HTML personalizzato scatta in un momento non allineato alla coda e alla valutazione dei tag. Si usano le API di consenso di GTM o gtag('consent', ...) e l'integrazione del CMP."}}, {"@type": "Question", "name": "Come fa GTM a far vedere lo stesso aggiornamento a tutti i tag?", "acceptedAnswer": {"@type": "Answer", "text": "Con le API di consenso e con i controlli già presenti nei modelli di tag nativi. L'update viene elaborato nell'ordine corretto rispetto ai messaggi in coda, non \"quando capita\"."}}, {"@type": "Question", "name": "Cosa succede se analytics_storage è denied?", "acceptedAnswer": {"@type": "Answer", "text": "I tag di Google Analytics 4 non possono leggere o scrivere i cookie di analisi usati per riconoscere utente e sessione. Possono restare ping senza cookie, secondo la configurazione del Consent Mode."}}, {"@type": "Question", "name": "Cosa succede se ad_storage, ad_user_data o ad_personalization sono denied?", "acceptedAnswer": {"@type": "Answer", "text": "Si limita lo storage pubblicitario, l'invio di dati utente a fini ads o la personalizzazione, remarketing incluso. I tag di Google Ads restano conformi alla scelta. La modellazione, dove prevista, non equivale a ignorare il rifiuto."}}, {"@type": "Question", "name": "Cos'è una CMP e come si collega alla Tag Platform?", "acceptedAnswer": {"@type": "Answer", "text": "È il sistema che raccoglie e conserva la scelta. Si integra con GTM o gtag.js emettendo default e update , ed eventualmente il TCF v2.2. Senza questo ponte, il banner e i tag non si parlano: è il problema che chiude Consent Mode v2 ."}}, {"@type": "Question", "name": "Quali problemi capitano con le implementazioni IAB TCF?", "acceptedAnswer": {"@type": "Answer", "text": "Stringhe o purpose non allineate, CMP che arriva dopo i tag, supporto TCF acceso a metà nei tag Google. Tag Assistant mostra lo stato letto davvero, non quello promesso dal plugin."}}, {"@type": "Question", "name": "Come si verifica il Consent Mode in Tag Assistant?", "acceptedAnswer": {"@type": "Answer", "text": "Nella timeline, per ogni evento, si leggono Default e Update di ciascun parametro. Un tag non deve partire con uno stato diverso dalle regole impostate per quel momento."}}, {"@type": "Question", "name": "Che ruolo ha il Consent Mode nel tagging lato server?", "acceptedAnswer": {"@type": "Answer", "text": "Lo stato viaggia anche verso il server container. I tag che partono dal server devono rispettare la stessa scelta, non una seconda policy."}}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Salta al contenuto</a>
+<header class="header"><div class="header-inner"><a class="logo" href="index.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAHkklEQVR42u2cf2gTZxjHpYQiMsQ5ESdjjG4wJ1KKiPiHyHBuE+lEiri6leK6rlbnuvxqmsbarpbYxjbTIWUMkeKKrXPUImEMHftjbEXEDam1G6VNYy1SQqlVq0it9d3zxjf1crm73L13Sa7x+cIXJD3v3vf53N3743nfW7AAhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVCoF1EvHx5eCF4N3pBkrwOvBGepLZvVarWA14DzwVvAy5IUgyzwKnAxuBn8M/gP8FXwP+Ae8AXwCXA5eC3YYnQhaAHOgKfAJIUeAFeAsxVALLQ+UwhMBJ4BB8BrDYJAb5RW8AhHPcLgU+BNWm4yucIUgR+mGITYl+kTIwEjB3xVBELsabALnMVRdwt4F7v7jaoLfYp2cIGB/7QdPJNmGFFfAy8WwFgFvp0AhtB+LVDgWu+y4CWrPvQ1l6cFxmLwbZPAiNqnAsasHiis3j+k6EZ8BK5R1cbAQWUmg0E9udvZvF4GBv1tD3gFOBd8WisUOP8acH8a6vUbeHkiID+ZEAj5uPLbhxJBDtP2RKKN8amFAufeAp5IY91oB+YtJSBXzAjko6qTUgG2KvTAwnJQBHXdZoKOC/Uo7dFmApD1Ct3igFKbsvRwcKNJYERNu9Wvz5tX1u5Kv1RgdygAuaLU+/rQ3QYNa9Bs9ewV9iijQErMBuPV+n/JAVulVGB/lWqo4bd1CXpdEb/vPk2Wmg/K92IgL7F3mmkK+V51p1Jgj4EXCWDkgYNqxykmhDINzhFD2cr+kPYCvl17mXwl/XQIPQbuZq+pGQ2DRgblR7NBcUq1JYVpmMOK8Tu1f5Fyu4doDTCPTQbljNLkYmeqwbxZ9zfJrzpFKqyOlMCIesPBC1pH23SKpZvN/F42ME4XEg0WF7HR7EY2cxn1BzoK0RU9z0ZPl323s4UUOX1kr/0Q+dpqSymIqIsdXrUDuVLwEpnplzIDpp5O6smTTHJe9DtBQ1yaDgBilzi+USrvLNirlBIQxGWJzuFDES+QbIOAHDADkD2Ow3JlpROOxRzxcTGQWuIyHjcWSRGQYwIg+80A5DNHvVxZPTrySvs1QinTk8TK1jEx5xcAKTcxkCt6U7Fsqj0RFPp3v67Mok4gzQIgZSZuQ7YalA7fCQ4qzGMVGZHmtegA4psHjfqgkQsV2A1Me5ZOcCNrYzbTzpFRF7CwRigjgHzuqBOXsXW+LQ/K0gGkUQCkxBRA7BRI0JgGFoHIOxQKkSdPnsR4YGBAAkitePqkYD4uogtzAvEKgOxJJpD29nYyOztLhJqeno47rjQeSKHGm5Mu8svldI4h7ZVBQIqTCeTIkSNkamqKB4hLZQxKWAdA7xxWUPdTCScY47x4vQBIUbJgNDU1kbt37xKxpIB8YT8kBhJQUf98jtG4kumsQP68A+L3+0lvby/p6OiQPebo0aPk3r17MSDGxsYiry+VQB4mWqbD1nIlI5WbxQuEd2azVgDkEy0wWlpayIMHDyIBfvr0KQkEAsRmi50hbm5uJvfv34+BMTg4SKqqqsjZs2fJrVu34s5bZq+Ryol4E9S/LUlpiCW8QHjTvTUCIIVqYfh8vrj2gEK5dOnSHBQKTHzM0NAQcbvdc+cRA1QAQp+SXIX6VyQJyIpUA/FoBdLY2Bj3ChKqp6eHnDt3bu7piSoYDJLq6uqE5y+zHwQgQ3I5kJUy9V+uY4I1KUBGDACyK1GwvF4vmZycJFo1PDwc82Qoea88kCiUNTIxKDcTkBDnBd1qgTQ0NJA7d+7EBPrGjRuktbWVXLx4MfLKkhIdEKp5Mp4D8SgBib6+aqTyFfCb1eBUNzeQIOcFXQIgO+WCVF9fT8bHx2MCff36deJ0OueOOX/+fByUmzdvaoJBTRdUvKIMZG7xN2vMS9ja4M0srftLpgApkApQXV0dCYfDMYHu6+uLgRF1d3f3HJSRkRHi8WhfraIBSCrMDWRA79ojKSAOh4OMjo7GvaYqK+XXaB0/fpy0tbVFurY8g8h9tuoXGohdAGSHODgulysyeIuqv79fEYYRzhQg/3Fe0KoEhLqzs5M8fvw48mRQQMmeft9ncyMQBiRfLkj09WO321OSD9lvq8oIIH2cF6xQAySVfgZkEIFAMLaZAciXNldGALnGecFyAZCtZgBSbs+MRp13MLRdAGStGYB86mwy05YEbiAezk0pK1Ru0kyZN1d3TGUCkDc4Nk92SWxDa0gzkIkC1wma125I8mZQmhH8XcVxfOt7GZRaDQWaiNuy9QzIokQbNZNouuuqUHSTnTQYzAz7WtA6tmBuMEFuXdeSUgv76o2aSblNCjtnl4J7UgzjEV31IlMvuorEzVKqvHnzEPuc02rRufMUsq2uBXrFlsGUyuRHaGUCil8seA4lm21P6E8BiC66SVRl3XLY7C7Nof/J6jklAPWIrS+gu6ra2XR8ntLSHvjbMgYrxM4zwRZcG/edLfa0rGcf+qKJmwLwa1rPQ7c7s++X0C3OGwx2rnDnro4b0MJeP9ns31k6zpVt+AfPUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFMrP+Bx+tDr/w5WdaAAAAAElFTkSuQmCC" alt="Easy Tag"></a>
+<button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+<nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale">
+  <a href="index.html">Home</a><a href="shop/index.html">Shop</a>
+  <details class="nav-group"><summary>Chi Siamo</summary>
+    <div class="submenu">
+      <a href="chi-siamo.html">Panoramica</a>
+      <a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a>
+      <a href="tag-google-analytics-4.html">Google Analytics 4</a>
+      <a href="datalayer-architettura.html">Architettura DataLayer</a><a href="consent-mode.html" aria-current="page">Consent Mode</a>
+    </div>
+  </details>
+  <a href="contatti.html">Contatti</a>
+</nav></div></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Percorso di navigazione"><ol><li><a href="/">Home</a></li><li><a href="/chi-siamo">Chi siamo</a></li><li><span aria-current="page">Consent Mode</span></li></ol></nav>
+
+  <article>
+    <h1>Consent Mode v2: default, update e integrazione CMP</h1>
+    <aside class="summary" aria-label="Sintesi della pagina">
+      <h2>In breve</h2>
+      <ol>
+        <li>Il Consent Mode comunica ai tag Google lo stato del consenso. Non sostituisce il banner.</li>
+        <li><code>default</code> va impostato prima dei tag; <code>update</code> arriva dalla scelta nel CMP.</li>
+        <li>I parametri che contano in UE sono ad_storage, analytics_storage, ad_user_data e ad_personalization.</li>
+      </ol>
+    </aside>
+    <section>
+      <h2>Perché è una guida a sé</h2>
+      <p>Il consenso condiziona sia <a class="inline" href="tag-google-analytics-4.html">Google Analytics 4</a> sia il <a class="inline" href="tag-nativo-google-ads.html">tag nativo Google Ads</a>, e viaggia sulla stessa coda del <a class="inline" href="datalayer-architettura.html">DataLayer</a>. Va configurato con le API native, non con un tag HTML personalizzato.</p>
+    </section>
+    <section class="faq" aria-label="Domande frequenti">
+      <h2>FAQ sul Consent Mode</h2>
+      <h2>Comandi default e update</h2>
+<article class="faq-item"><h3>Cos'è il Consent Mode nella Tag Platform di Google?</h3><p>È il modo in cui i tag Google ricevono lo stato del consenso e adattano cookie, identificativi e ping. Non sostituisce il banner: legge la scelta che il banner ha raccolto. Il pacchetto di implementazione è <a class="inline" href="shop/consent-mode-v2">Consent Mode v2</a>.</p></article>
+<article class="faq-item"><h3>Quali parametri di consenso gestisce il Consent Mode?</h3><ul><li><code>ad_storage</code>: storage pubblicitario.</li><li><code>analytics_storage</code>: storage di analisi.</li><li><code>ad_user_data</code>: dati utente per finalità pubblicitarie.</li><li><code>ad_personalization</code>: personalizzazione degli annunci e remarketing.</li><li>Dove servono: <code>functionality_storage</code>, <code>personalization_storage</code>, <code>security_storage</code>.</li></ul></article>
+<article class="faq-item"><h3>Qual è la differenza tra default e update?</h3><p><code>default</code> è lo stato iniziale, prima che i tag partano. Nelle aree a consenso preventivo è spesso <code>denied</code>. <code>update</code> arriva quando la persona accetta o rifiuta nel CMP e sostituisce quello stato.</p></article>
+<article class="faq-item"><h3>Perché il default va impostato prima che partano i tag?</h3><p>Perché un tag partito prima del default può scrivere cookie in contrasto con la scelta iniziale. I tag dello stesso evento devono leggere un solo stato, coerente. L'ordine rispetto alla coda è quello del <a class="inline" href="datalayer-architettura.html">DataLayer</a>.</p></article>
+<article class="faq-item"><h3>Perché il Consent Mode non si configura con un tag HTML personalizzato?</h3><p>Un HTML personalizzato scatta in un momento non allineato alla coda e alla valutazione dei tag. Si usano le API di consenso di GTM o <code>gtag('consent', ...)</code> e l'integrazione del CMP.</p></article>
+<article class="faq-item"><h3>Come fa GTM a far vedere lo stesso aggiornamento a tutti i tag?</h3><p>Con le API di consenso e con i controlli già presenti nei modelli di tag nativi. L'update viene elaborato nell'ordine corretto rispetto ai messaggi in coda, non "quando capita".</p></article>
+<h2>Effetti del rifiuto, CMP e verifica</h2>
+<article class="faq-item"><h3>Cosa succede se analytics_storage è denied?</h3><p>I tag di <a class="inline" href="tag-google-analytics-4.html">Google Analytics 4</a> non possono leggere o scrivere i cookie di analisi usati per riconoscere utente e sessione. Possono restare ping senza cookie, secondo la configurazione del Consent Mode.</p></article>
+<article class="faq-item"><h3>Cosa succede se ad_storage, ad_user_data o ad_personalization sono denied?</h3><p>Si limita lo storage pubblicitario, l'invio di dati utente a fini ads o la personalizzazione, remarketing incluso. I tag di <a class="inline" href="tag-nativo-google-ads.html">Google Ads</a> restano conformi alla scelta. La modellazione, dove prevista, non equivale a ignorare il rifiuto.</p></article>
+<article class="faq-item"><h3>Cos'è una CMP e come si collega alla Tag Platform?</h3><p>È il sistema che raccoglie e conserva la scelta. Si integra con GTM o <code>gtag.js</code> emettendo <code>default</code> e <code>update</code>, ed eventualmente il TCF v2.2. Senza questo ponte, il banner e i tag non si parlano: è il problema che chiude <a class="inline" href="shop/consent-mode-v2">Consent Mode v2</a>.</p></article>
+<article class="faq-item"><h3>Quali problemi capitano con le implementazioni IAB TCF?</h3><p>Stringhe o purpose non allineate, CMP che arriva dopo i tag, supporto TCF acceso a metà nei tag Google. Tag Assistant mostra lo stato letto davvero, non quello promesso dal plugin.</p></article>
+<article class="faq-item"><h3>Come si verifica il Consent Mode in Tag Assistant?</h3><p>Nella timeline, per ogni evento, si leggono Default e Update di ciascun parametro. Un tag non deve partire con uno stato diverso dalle regole impostate per quel momento.</p></article>
+<article class="faq-item"><h3>Che ruolo ha il Consent Mode nel tagging lato server?</h3><p>Lo stato viaggia anche verso il server container. I tag che partono dal server devono rispettare la stessa scelta, non una seconda policy.</p></article>
+    </section>
+    <section class="picks"><h2>Da questa guida al prodotto</h2><p>Se il banner non parla con i tag, si parte da una scheda. Se serve un intervento sul sito, dalle ore.</p><div class="pick-grid"><article class="pick"><a class="pick-img" href="shop/consent-mode-v2"><img src="assets/products/consent-mode-v2.webp" alt="Consent Mode v2" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Preventivo</span><h3>Consent Mode v2</h3><p>Banner cookie collegato ai tag Google.</p><div class="pick-foot"><span class="pick-price">Preventivo</span><a class="pick-btn" href="shop/consent-mode-v2">Richiedi preventivo</a></div></div></article><article class="pick"><a class="pick-img" href="shop/supporto-5-ore"><img src="assets/products/supporto-5-ore.webp" alt="Supporto 5 ore" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ore tecniche</span><h3>Supporto 5 ore</h3><p>Verifica di default, update e tag che partono troppo presto.</p><div class="pick-foot"><span class="pick-price">€500</span><a class="pick-btn" href="shop/supporto-5-ore">Vedi e acquista</a></div></div></article></div></section>
+    <p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a> · <a href="tag-nativo-google-ads.html">Guida Google Ads →</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
+  </article><article class="pick"><a class="pick-img" href="shop/dynamic-remarketing"><img src="assets/products/dynamic-remarketing.webp" alt="Dynamic Remarketing" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Preventivo</span><h3>Dynamic Remarketing</h3><p>Eventi prodotto e allineamento feed per Google Ads.</p><div class="pick-foot"><span class="pick-price">Preventivo</span><a class="pick-btn" href="shop/dynamic-remarketing">Richiedi preventivo</a></div></div></article><article class="pick"><a class="pick-img" href="shop/consent-mode-v2"><img src="assets/products/consent-mode-v2.webp" alt="Consent Mode v2" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Preventivo</span><h3>Consent Mode v2</h3><p>Banner cookie collegato ai tag Google.</p><div class="pick-foot"><span class="pick-price">Preventivo</span><a class="pick-btn" href="shop/consent-mode-v2">Richiedi preventivo</a></div></div></article><article class="pick"><a class="pick-img" href="shop/supporto-10-ore"><img src="assets/products/supporto-10-ore.webp" alt="Supporto 10 ore" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ore tecniche</span><h3>Supporto 10 ore</h3><p>Progetti medi o più clienti della stessa agenzia.</p><div class="pick-foot"><span class="pick-price">€900</span><a class="pick-btn" href="shop/supporto-10-ore">Vedi e acquista</a></div></div></article></div></section>
+<p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a> · <a href="tag-nativo-google-ads.html">Tag Google Ads →</a></p>
+  </article>
+</main>
+
+<footer class="footer">EasyTag Pro · <a href="chi-siamo.html">Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Google Ads</a> · <a href="tag-google-analytics-4.html">GA4</a></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+  if(!btn||!nav)return;
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile())nav.setAttribute('aria-hidden','true');
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+  document.addEventListener('keydown',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+  });
+})();
+</script>
+</body>
+</html>
