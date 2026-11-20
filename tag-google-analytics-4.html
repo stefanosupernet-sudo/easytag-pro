@@ -1,17 +1,235 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Google Analytics 4 | EasyTag Pro</title><meta name="description" content="Guida a GA4: eventi, parametri e tracciamento e-commerce."><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
-:root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA}*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.65;color:#202124}a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}.header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}.nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}.nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}.submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}.nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}.menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}.menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}.menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}.menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}.skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}body.nav-open{overflow:hidden}@media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}@media(max-width:860px){.menu-toggle{display:inline-flex}.header-inner{position:relative}.nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}.nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}.nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}}main{max-width:850px;margin:40px auto;padding:0 22px 60px}h1{font-size:clamp(28px,5vw,40px)}h2{font-size:24px;margin-top:28px}p,li{color:var(--gray)}code{background:var(--pale);padding:1px 4px}.breadcrumb{font-size:14px;color:var(--blue);margin-bottom:16px}.footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}
-</style></head><body>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Analytics 4: eventi, e-commerce e validazione | EasyTag Pro</title>
+  <meta name="description" content="Guida a Google Analytics 4: modello a eventi, parametri, funnel e-commerce, consenso e validazione del setup in DebugView.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/tag-google-analytics-4.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA;--ink:#202124}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.7;color:var(--ink)}
+    a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}
+    .header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}
+    .nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}
+    .nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}
+    .submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}
+    @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}
+    }
+    main{max-width:820px;margin:36px auto;padding:0 22px 70px}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:0 0 18px}
+    h2{font-size:24px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+    h3{font-size:18px;margin:22px 0 8px}
+    p,li{color:var(--gray)}p{margin:0 0 14px}ul,ol{margin:0 0 16px;padding-left:1.25rem}li{margin:6px 0}
+    code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13.5px}
+    code{background:var(--pale);padding:1px 5px;border-radius:4px}
+    pre{padding:16px;background:var(--pale);border:1px solid var(--line);border-radius:10px;overflow:auto;margin:14px 0 18px;line-height:1.5}
+    .breadcrumb{font-size:14px;color:var(--blue);margin-bottom:18px}
+    .summary{background:var(--light);border:1px solid #cfe6f8;border-radius:12px;padding:18px 20px;margin:0 0 28px}
+    .summary h2{margin:0 0 10px;font-size:16px;border:0;padding:0;color:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+    .summary ol{margin:0;padding-left:1.2rem}.summary li{color:var(--ink);margin:6px 0;font-size:15px}
+    .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--ink)}
+    .faq p{margin-top:10px}
+    .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
+    .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
+
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Google Analytics 4: misurazione basata sugli eventi","author":{"@type":"Organization","name":"EasyTag Pro"},"inLanguage":"it"}</script>
+</head>
+<body>
 <a class="skip-link" href="#main-content">Salta al contenuto</a>
 <header class="header"><div class="header-inner"><a class="logo" href="index.html"><span class="mark">ET</span>EasyTag Pro</a>
 <button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
-<nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="shop/index.html">Shop</a><details class="nav-group"><summary>Chi Siamo</summary><div class="submenu"><a href="chi-siamo.html">Panoramica</a><a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a><a href="tag-google-analytics-4.html" aria-current="page">Google Analytics 4</a><a href="datalayer-architettura.html">Architettura DataLayer</a></div></details><a href="contatti.html">Contatti</a></nav></div></header>
-<main id="main-content"><nav class="breadcrumb" aria-label="Percorso"><a href="chi-siamo.html">Chi Siamo</a> › Google Analytics 4</nav>
-<article><h1>Google Analytics 4: misurazione basata sugli eventi</h1>
-<p><strong>GA4 registra interazioni come eventi con parametri collegati agli obiettivi di business.</strong></p>
-<section><h2>Eventi e-commerce</h2><ul><li><code>view_item</code>, <code>add_to_cart</code>, <code>begin_checkout</code>, <code>purchase</code></li></ul></section>
-<p><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
-</article></main>
-<footer class="footer"><a href="chi-siamo.html">Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Google Ads</a> · <a href="datalayer-architettura.html">DataLayer</a></footer>
-<script>(function(){var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');if(!btn||!nav)return;function isMobile(){return window.matchMedia('(max-width:860px)').matches;}function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}function setOpen(open){nav.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}else if(!open)btn.focus();}function close(){if(nav.classList.contains('is-open'))setOpen(false);}if(isMobile())nav.setAttribute('aria-hidden','true');btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});document.addEventListener('keydown',function(e){if(!nav.classList.contains('is-open')||!isMobile())return;if(e.key==='Escape'){e.preventDefault();close();return;}if(e.key!=='Tab')return;var items=focusable();if(!items.length)return;var first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});document.addEventListener('click',function(e){if(!nav.classList.contains('is-open')||!isMobile())return;if(nav.contains(e.target)||btn.contains(e.target))return;close();});window.addEventListener('resize',function(){if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');});})();</script>
-</body></html>
+<nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale">
+  <a href="index.html">Home</a><a href="shop/index.html">Shop</a>
+  <details class="nav-group"><summary>Chi Siamo</summary>
+    <div class="submenu">
+      <a href="chi-siamo.html">Panoramica</a>
+      <a href="tag-nativo-google-ads.html">Tag nativo Google Ads</a>
+      <a href="tag-google-analytics-4.html" aria-current="page">Google Analytics 4</a>
+      <a href="datalayer-architettura.html">Architettura DataLayer</a>
+    </div>
+  </details>
+  <a href="contatti.html">Contatti</a>
+</nav></div></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Percorso"><a href="chi-siamo.html">Chi Siamo</a> › Google Analytics 4</nav>
+  <article>
+    <h1>Google Analytics 4: misurazione basata sugli eventi</h1>
+    
+    <aside class="summary" aria-label="Sintesi della pagina">
+      <h2>In 230 secondi — cosa troverai qui</h2>
+      <ol>
+        <li>Come GA4 registra le interazioni: eventi, parametri e obiettivi di business.</li>
+        <li>Differenza tra Google tag, misurazione avanzata ed eventi progettati in GTM.</li>
+        <li>Quali eventi descrivono un funnel e-commerce, dal prodotto all’acquisto.</li>
+        <li>Come validare il setup in DebugView prima di fidarsi dei report.</li>
+        <li>Errori tipici — referral, cross-domain, doppi conteggi — e cinque FAQ operative.</li>
+      </ol>
+    </aside>
+
+    <section>
+      <h2>GA4 misura eventi, non solo pagine</h2>
+      <p><strong>Google Analytics 4</strong> descrive quello che le persone fanno sul sito o nell’app come una sequenza di eventi, ciascuno con dei parametri. Una visualizzazione di pagina è un evento. Un click su “aggiungi al carrello” è un evento. Un acquisto è un evento con valore, valuta e elenco prodotti. Il vecchio modello centrato sulla sessione e sulla pagina vista non basta più a spiegare un funnel.</p>
+      <p>Questo cambio è utile solo se gli eventi sono progettati. Un flusso pieno di hit automatici e povero di nomi stabili produce report rumorosi: tanti numeri, poche decisioni. Una configurazione ben fatta collega ogni evento a una domanda di business. Quante persone vedono il prodotto? Quante lo mettono nel carrello? Quante arrivano al pagamento? Quante completano l’ordine, e con quale valore?</p>
+      <p>GA4 non sostituisce Google Ads e non sostituisce il DataLayer. È il luogo in cui gli eventi, una volta raccolti in modo pulito, diventano esplorabili: percorsi, confronti tra canali, pubblici. La qualità di quelle viste dipende da ciò che il sito dichiara, non da ciò che la piattaforma immagina.</p>
+    </section>
+
+    <section>
+      <h2>Google tag, misurazione avanzata e GTM</h2>
+      <p>Il <strong>Google tag</strong> collega il sito allo stream della proprietà GA4. Può essere installato direttamente nella pagina oppure tramite Google Tag Manager. In un progetto con più strumenti — Ads, remarketing, eventi personalizzati — GTM è quasi sempre la scelta più mantenibile: un solo contenitore, anteprima, versioni, consenso.</p>
+      <p>La misurazione avanzata dello stream può registrare da sola alcune interazioni, come scroll, click in uscita, ricerche sul sito o download di file. È un punto di partenza, non il piano di misurazione. Controlla le opzioni attive: un evento automatico che non rappresenta un obiettivo aggiunge rumore. Quando l’interazione conta per il business — invio di un form qualificato, click sul telefono, scelta di una variante — conviene un evento esplicito, con nome e parametri decisi da te.</p>
+      <p>La raccolta effettiva dipende anche dal consenso e dalle impostazioni dello stream. Un tag che parte prima della scelta dell’utente, o che ignora il rifiuto della misurazione, non è un setup “più completo”. È un setup da rivedere.</p>
+    </section>
+
+    <section>
+      <h2>Gerarchia degli eventi</h2>
+      <h3>Eventi raccolti in automatico</h3>
+      <p>Alcuni eventi arrivano con il Google tag, senza configurazione extra. Vanno conosciuti per non duplicarli. Se la misurazione avanzata registra già un certo click, un secondo tag con lo stesso significato gonfia i conteggi. Prima di crearne uno nuovo, verifica cosa lo stream sta già inviando.</p>
+      <h3>Eventi consigliati</h3>
+      <p>Google propone nomi per azioni ricorrenti, così i report e le integrazioni li riconoscono. Per i lead sono utili, quando descrivono davvero l’azione, eventi come <code>generate_lead</code>, <code>sign_up</code> e <code>contact</code>. Il nome da solo non basta: servono parametri che distinguono un modulo informativo da una richiesta di preventivo, o un’iscrizione alla newsletter da un account creato.</p>
+      <h3>Eventi personalizzati</h3>
+      <p>Quando nessun nome consigliato calza, puoi usarne uno tuo, stabile e documentato: <code>click_telefono</code>, <code>avvio_configuratore</code>, <code>prenotazione_showroom</code>. Scrivilo in minuscolo, senza spazi, e non cambiarlo a ogni campagna. I report storici si leggono solo se il nome resta lo stesso.</p>
+    </section>
+
+    <section>
+      <h2>Parametri e definizioni personalizzate</h2>
+      <p>I parametri sono le informazioni attaccate all’evento. <code>value</code> e <code>currency</code> dicono quanto vale l’azione. <code>method</code> può dire se il login è avvenuto con email o con un altro sistema. Un parametro di business, ad esempio la linea di prodotto o la sede scelta, permette di filtrare i report senza moltiplicare gli eventi.</p>
+      <p>In GA4 non tutti i parametri diventano subito dimensioni nei report standard. Quelli che ti servono in esplorazione vanno registrati come definizioni personalizzate, entro i limiti della proprietà, e con nomi coerenti con il DataLayer. Documenta l’elenco: nome evento, parametri, tipo (testo o numero), dove viene inviato, a cosa serve.</p>
+      <p>Attenzione ai dati personali. Un parametro non è il posto per un’email in chiaro, un nome o un numero di telefono. Se un identificativo tecnico è necessario, valuta se è davvero indispensabile e se rispetta consenso e informativa. La regola pratica è semplice: nel DataLayer e in GA4 mandi ciò che serve a misurare, non l’anagrafica del cliente.</p>
+    </section>
+
+    <section>
+      <h2>Il funnel e-commerce</h2>
+      <p>Per un negozio, lo schema consigliato di GA4 copre i passaggi che il team commerciale già conosce. Collegali a un DataLayer coerente, non a selettori CSS del tema:</p>
+      <ul>
+        <li><code>view_item_list</code>: l’utente vede una lista o una categoria.</li>
+        <li><code>select_item</code>: sceglie un prodotto dalla lista.</li>
+        <li><code>view_item</code>: apre la scheda prodotto.</li>
+        <li><code>add_to_cart</code> e <code>remove_from_cart</code>: modifica il carrello.</li>
+        <li><code>begin_checkout</code>: avvia il pagamento.</li>
+        <li><code>add_shipping_info</code> e <code>add_payment_info</code>: inserisce spedizione e pagamento, se questi passaggi esistono davvero nel tuo checkout.</li>
+        <li><code>purchase</code>: ordine completato, con <code>transaction_id</code>, <code>value</code>, <code>currency</code> e un array <code>items</code> coerente.</li>
+      </ul>
+      <p>Ogni articolo nell’array dovrebbe avere almeno identificativo, nome, prezzo e quantità. Prezzi e quantità vanno inviati come numeri, non come testo con il simbolo dell’euro. Prima di un nuovo push e-commerce conviene azzerare l’oggetto precedente, così i dati di un ordine non restano attaccati al successivo.</p>
+      <p>Non implementare passaggi che il sito non ha. Se non esiste una pagina di spedizione separata, un finto <code>add_shipping_info</code> sporca il funnel. Meglio cinque eventi veri che nove eventi di copione.</p>
+    </section>
+
+    <section>
+      <h2>Consenso e qualità del dato</h2>
+      <p>GA4 va letto insieme al consenso. In Consent Mode i tag possono adattare il comportamento alle scelte dell’utente; la configurazione va verificata sul tuo banner, non data per scontata perché “il plugin è installato”. Controlla che, al rifiuto, la misurazione rispetti quello che hai dichiarato in informativa.</p>
+      <p>Altri fattori cambiano i numeri che vedi: Google Signals, soglie sui report quando i volumi sono bassi, filtri della proprietà, fusi orari. Un calo improvviso non è sempre un bug del tag. Prima confronta periodo, flusso di dati e stato del contenitore pubblicato.</p>
+      <p>La qualità si gioca anche sui tipi. Una stringa <code>"249,00"</code> non è il numero <code>249</code>. Un <code>transaction_id</code> vuoto su metà degli ordini rende inutile la deduplica. Questi controlli si fanno in anteprima, non tre mesi dopo, quando le campagne sono già state ottimizzate su dati storti.</p>
+    </section>
+
+    <section>
+      <h2>Come validare il setup</h2>
+      <p>La sequenza che usiamo è corta e va ripetuta a ogni rilascio importante del sito.</p>
+      <ol>
+        <li>Apri l’anteprima di Google Tag Manager e percorri il funnel vero: lista, scheda, carrello, checkout, grazie.</li>
+        <li>Controlla che ogni evento parta una sola volta, con i parametri attesi e i tipi giusti.</li>
+        <li>In GA4 usa DebugView per vedere gli stessi eventi arrivare allo stream, non solo “nel contenitore”.</li>
+        <li>Verifica la thank-you page ricaricata: <code>purchase</code> non deve ripetersi se l’ordine è lo stesso.</li>
+        <li>Solo dopo pubblica la versione del contenitore e annota data, autore e cosa è cambiato.</li>
+      </ol>
+      <p>DebugView è il banco di prova. I report standard possono impiegare tempo e applicano soglie. Se l’evento non compare in debug, non comparirà in modo affidabile nei report.</p>
+    </section>
+
+    <section>
+      <h2>Problemi tipici</h2>
+      <ul>
+        <li><strong>Referral di pagamento:</strong> il gateway (PayPal, carta, bonifico ospitato) può comparire come sorgente dell’acquisto. Verifica i domini da escludere nelle impostazioni di referral, altrimenti il canale pagato “perde” conversioni a favore di un referral tecnico.</li>
+        <li><strong>Cross-domain:</strong> se il percorso passa da un dominio all’altro, senza linker l’utente sembra nuovo a metà strada e l’attribuzione si spezza. Configura i domini nello stream e controlla un acquisto reale.</li>
+        <li><strong>Doppio page_view o doppio purchase:</strong> spesso nascono da due tag GA4 nello stesso contenitore, o da un tag nel tema più uno in GTM. Uno stream, un tag di configurazione.</li>
+        <li><strong>Eventi consigliati con payload vuoto:</strong> il nome c’è, <code>items</code> no. I report e-commerce restano a zero anche se “il tag spara”.</li>
+      </ul>
+    </section>
+
+    <section class="faq" aria-label="Domande frequenti">
+      <h2>FAQ su Google Analytics 4</h2>
+      <details>
+        <summary>Basta la misurazione avanzata per un e-commerce?</summary>
+        <p>No. Copre interazioni generiche. Un negozio ha bisogno degli eventi del funnel, con prodotti, valore e identificativo ordine, pubblicati dal DataLayer.</p>
+      </details>
+      <details>
+        <summary>Meglio il Google tag nel tema o in Google Tag Manager?</summary>
+        <p>Se gestisci anche Ads, consenso e eventi custom, GTM è più ordinato. Evita di avere lo stesso tag sia nel tema sia nel contenitore: è la causa più comune dei doppi conteggi.</p>
+      </details>
+      <details>
+        <summary>Perché il numero di acquisti non coincide con il gestionale?</summary>
+        <p>Perché GA4 conta eventi nel browser, con consenso, filtri e possibili reload della pagina di grazie. Il gestionale conta ordini. Avvicinare i due numeri è l’obiettivo; farli identici al centesimo, senza un controllo server-side, non è realistico.</p>
+      </details>
+      <details>
+        <summary>Devo creare una definizione personalizzata per ogni parametro?</summary>
+        <p>No. Solo per quelli che vuoi usare come dimensioni o metriche nei report. Tieni l’elenco corto e allineato alle domande che il team fa davvero.</p>
+      </details>
+      <details>
+        <summary>Chi tiene aggiornato GA4 quando cambia il sito?</summary>
+        <p>Chi cambia il checkout o i form deve avvisare chi gestisce i tag, e il DataLayer deve restare il contratto tra i due. EasyTag Pro interviene su questo raccordo: eventi, parametri, contenitore e verifica, senza chiedere all’azienda di assumere un reparto analytics.</p>
+      </details>
+    </section>
+
+    <p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Tag Google Ads →</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
+
+  </article>
+</main>
+
+<footer class="footer">EasyTag Pro · <a href="chi-siamo.html">Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Google Ads</a> · <a href="tag-google-analytics-4.html">GA4</a> · <a href="datalayer-architettura.html">DataLayer</a></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+  if(!btn||!nav)return;
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile())nav.setAttribute('aria-hidden','true');
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+  document.addEventListener('keydown',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+  });
+})();
+</script>
+</body>
+</html>
