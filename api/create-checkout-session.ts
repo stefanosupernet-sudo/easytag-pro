@@ -20,6 +20,10 @@ const ALLOWED_PRICES = new Set([
   'price_1UciBgFVaAsOPXA7QW3Gfilb', // Supporto 5 ore €500
   'price_1UciBhFVaAsOPXA76qaSyaa7', // Supporto 10 ore €900
   'price_1UciBiFVaAsOPXA7JVjj8s4o', // Supporto 20 ore €1600
+  'price_1UdVs4FVaAsOPXA7Ei2Vv1yA', // TAG Email €150
+  'price_1UdVsfFVaAsOPXA7FkgKsj3N', // TAG Facebook €150
+  'price_1UdVtIFVaAsOPXA7bWltM0i5', // TAG Instagram €150
+  'price_1UdVtqFVaAsOPXA79ktKlFts', // TAG LinkedIn €150
 ]);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
