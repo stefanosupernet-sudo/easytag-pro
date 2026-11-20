@@ -1,17 +1,244 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tag Nativo Google Ads | EasyTag Pro</title><meta name="description" content="Guida al tag Google Ads, Conversion Linker e conversioni."><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
-:root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED}*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.65;color:#202124}a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}.header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}.nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}.nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}.submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}.nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}.menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}.menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}.menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}.menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}.skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}body.nav-open{overflow:hidden}@media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}@media(max-width:860px){.menu-toggle{display:inline-flex}.header-inner{position:relative}.nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}.nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}.nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}}main{max-width:850px;margin:40px auto;padding:0 22px 60px}h1{font-size:clamp(28px,5vw,40px)}h2{font-size:24px;margin-top:28px}p,li{color:var(--gray)}.breadcrumb{font-size:14px;color:var(--blue);margin-bottom:16px}.footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}
-</style></head><body>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag nativo Google Ads: conversioni, linker e valori | EasyTag Pro</title>
+  <meta name="description" content="Guida al tag nativo Google Ads: Conversion Linker, azioni di conversione, valori dinamici, conversioni avanzate e verifica in Google Tag Manager.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/tag-nativo-google-ads.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA;--ink:#202124}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.7;color:var(--ink)}
+    a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}
+    .header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}
+    .nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}
+    .nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}
+    .submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}
+    @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}
+    }
+    main{max-width:820px;margin:36px auto;padding:0 22px 70px}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:0 0 18px}
+    h2{font-size:24px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+    h3{font-size:18px;margin:22px 0 8px}
+    p,li{color:var(--gray)}p{margin:0 0 14px}ul,ol{margin:0 0 16px;padding-left:1.25rem}li{margin:6px 0}
+    code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13.5px}
+    code{background:var(--pale);padding:1px 5px;border-radius:4px}
+    pre{padding:16px;background:var(--pale);border:1px solid var(--line);border-radius:10px;overflow:auto;margin:14px 0 18px;line-height:1.5}
+    .breadcrumb{font-size:14px;color:var(--blue);margin-bottom:18px}
+    .summary{background:var(--light);border:1px solid #cfe6f8;border-radius:12px;padding:18px 20px;margin:0 0 28px}
+    .summary h2{margin:0 0 10px;font-size:16px;border:0;padding:0;color:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+    .summary ol{margin:0;padding-left:1.2rem}.summary li{color:var(--ink);margin:6px 0;font-size:15px}
+    .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--ink)}
+    .faq p{margin-top:10px}
+    .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
+    .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
+
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Tag nativo Google Ads: misurazione delle conversioni","author":{"@type":"Organization","name":"EasyTag Pro"},"inLanguage":"it"}</script>
+</head>
+<body>
 <a class="skip-link" href="#main-content">Salta al contenuto</a>
 <header class="header"><div class="header-inner"><a class="logo" href="index.html"><span class="mark">ET</span>EasyTag Pro</a>
 <button type="button" class="menu-toggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
-<nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale"><a href="index.html">Home</a><a href="shop/index.html">Shop</a><details class="nav-group"><summary>Chi Siamo</summary><div class="submenu"><a href="chi-siamo.html">Panoramica</a><a href="tag-nativo-google-ads.html" aria-current="page">Tag nativo Google Ads</a><a href="tag-google-analytics-4.html">Google Analytics 4</a><a href="datalayer-architettura.html">Architettura DataLayer</a></div></details><a href="contatti.html">Contatti</a></nav></div></header>
-<main id="main-content"><nav class="breadcrumb" aria-label="Percorso"><a href="chi-siamo.html">Chi Siamo</a> › Tag nativo Google Ads</nav>
-<article><h1>Tag nativo Google Ads: misurazione delle conversioni</h1>
-<p><strong>Il tag di conversione Google Ads misura le azioni configurate nell’account.</strong></p>
-<section><h2>Conversion Linker e valori dinamici</h2><p>Definisci azioni e trigger affidabili. Per l’e-commerce passa valore, valuta e transaction ID dal DataLayer.</p></section>
-<p><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a></p>
-</article></main>
-<footer class="footer"><a href="chi-siamo.html">Chi Siamo</a> · <a href="tag-google-analytics-4.html">GA4</a> · <a href="datalayer-architettura.html">DataLayer</a></footer>
-<script>(function(){var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');if(!btn||!nav)return;function isMobile(){return window.matchMedia('(max-width:860px)').matches;}function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}function setOpen(open){nav.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}else if(!open)btn.focus();}function close(){if(nav.classList.contains('is-open'))setOpen(false);}if(isMobile())nav.setAttribute('aria-hidden','true');btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});document.addEventListener('keydown',function(e){if(!nav.classList.contains('is-open')||!isMobile())return;if(e.key==='Escape'){e.preventDefault();close();return;}if(e.key!=='Tab')return;var items=focusable();if(!items.length)return;var first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});document.addEventListener('click',function(e){if(!nav.classList.contains('is-open')||!isMobile())return;if(nav.contains(e.target)||btn.contains(e.target))return;close();});window.addEventListener('resize',function(){if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');});})();</script>
-</body></html>
+<nav id="main-nav" class="nav" role="navigation" aria-label="Navigazione principale">
+  <a href="index.html">Home</a><a href="shop/index.html">Shop</a>
+  <details class="nav-group"><summary>Chi Siamo</summary>
+    <div class="submenu">
+      <a href="chi-siamo.html">Panoramica</a>
+      <a href="tag-nativo-google-ads.html" aria-current="page">Tag nativo Google Ads</a>
+      <a href="tag-google-analytics-4.html">Google Analytics 4</a>
+      <a href="datalayer-architettura.html">Architettura DataLayer</a>
+    </div>
+  </details>
+  <a href="contatti.html">Contatti</a>
+</nav></div></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Percorso"><a href="chi-siamo.html">Chi Siamo</a> › Tag nativo Google Ads</nav>
+  <article>
+    <h1>Tag nativo Google Ads: misurazione delle conversioni</h1>
+    
+    <aside class="summary" aria-label="Sintesi della pagina">
+      <h2>In 230 secondi — cosa troverai qui</h2>
+      <ol>
+        <li>Che cos’è il tag nativo di Google Ads e che ruolo ha rispetto a GA4.</li>
+        <li>Perché Conversion Linker, identificativi di clic e consenso vanno progettati insieme.</li>
+        <li>Come passare valore, valuta e identificativo ordine senza duplicare le conversioni.</li>
+        <li>Quando ha senso valutare le conversioni avanzate e quali controlli servono prima.</li>
+        <li>Una sequenza pratica di implementazione in Google Tag Manager e cinque FAQ operative.</li>
+      </ol>
+    </aside>
+
+    <section>
+      <h2>Cos’è il tag nativo Google Ads</h2>
+      <p>Il <strong>tag nativo Google Ads</strong> è il tag di conversione che misura, direttamente nell’account pubblicitario, le azioni che hai configurato come conversioni: un acquisto, l’invio di un modulo, una chiamata, un click su WhatsApp. Non è un report e non è un plugin del CMS. È uno script, di solito pubblicato tramite Google Tag Manager, che si attiva solo quando l’azione è realmente avvenuta e invia a Google Ads i parametri previsti da quell’azione.</p>
+      <p>Si chiama “nativo” per distinguerlo dall’importazione delle conversioni da Google Analytics 4. Nel primo caso l’evento nasce per Ads. Nel secondo caso l’evento nasce in GA4 e viene poi collegato all’account pubblicitario. Sono due strade legittime, con finestre, modelli di attribuzione e tempi di elaborazione diversi. Sceglierne una, o usarle insieme senza un piano, cambia il modo in cui le campagne leggono i risultati.</p>
+      <p>Un’implementazione seria non si limita a incollare uno snippet. Serve un’azione di conversione definita nell’account, un trigger affidabile sul sito, i parametri giusti (valore, valuta, identificativo) e una verifica che la stessa azione non venga contata due volte da configurazioni sovrapposte.</p>
+    </section>
+
+    <section>
+      <h2>Perché conta per le campagne</h2>
+      <p>Le strategie automatiche di Google Ads usano le conversioni come segnale. Se il segnale è in ritardo, incompleto o doppio, l’account ottimizza su una fotografia sbagliata del business. Non è un dettaglio da “sistemare dopo”: è la base con cui si decide se una campagna sta funzionando.</p>
+      <p>Il tag nativo è spesso utile quando l’azione da ottimizzare è vicina alla pubblicità e va osservata con le impostazioni dell’account Ads: azione primaria o secondaria, finestra di conversione, conteggio “una” oppure “ogni”, valore fisso o dinamico. GA4 resta lo strumento per capire i percorsi. Ads è lo strumento per dire alle campagne quale esito conta.</p>
+      <p>C’è anche un tema di tempi. L’elaborazione può variare tra piattaforme e tipi di conversione. Prima di confrontare un report Ads con un report GA4 nello stesso giorno, controlla diagnostica, stato dell’azione e finestre. Due numeri diversi non significano automaticamente un errore: possono descrivere regole diverse applicate agli stessi click.</p>
+      <ul>
+        <li><strong>Azione primaria:</strong> è quella che le strategie di offerta possono usare. Tienila pochi e pulita.</li>
+        <li><strong>Conteggio:</strong> un lead di solito si conta una volta; un acquisto spesso ogni volta, con un identificativo ordine.</li>
+        <li><strong>Valore:</strong> se il margine cambia da ordine a ordine, un valore fisso appiattisce il segnale.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conversion Linker e identificativi di clic</h2>
+      <p>Il <strong>Conversion Linker</strong> aiuta a conservare le informazioni dell’interazione pubblicitaria nel contesto consentito dal browser e dalle impostazioni di consenso. I parametri di clic possono includere identificativi come <code>gclid</code>, e in alcuni percorsi <code>wbraid</code> o <code>gbraid</code>. Senza questo collegamento, una conversione avvenuta ore dopo il click può arrivare “orfana” e non attribuirsi alla campagna giusta.</p>
+      <p>Il linker va pubblicato su tutte le pagine del sito, non solo sulla thank-you page, e va allineato al consenso. Se l’utente non ha accettato la misurazione pubblicitaria, non ha senso forzare cookie o identificativi. Configura il tag secondo le indicazioni aggiornate di Google, verifica i domini coinvolti e, se il percorso attraversa più domini (sito, checkout esterno, sottodominio), controlla che il collegamento non si spezzi a metà.</p>
+      <p>In Google Tag Manager il Conversion Linker è un tag dedicato, con attivazione su tutte le pagine e rispetto del consenso. Non sostituisce il tag di conversione: lo prepara. I due pezzi lavorano in sequenza.</p>
+    </section>
+
+    <section>
+      <h2>Azioni di conversione e valori dinamici</h2>
+      <p>Ogni conversione utile deve avere un nome chiaro nell’account e un trigger altrettanto chiaro sul sito. “Tutti i click sul pulsante Invia” è fragile: il pulsante cambia classe, il form viene ricaricato, un utente clicca due volte. Meglio un evento del DataLayer che il sito pubblica solo quando l’azione è confermata, per esempio <code>generate_lead</code> dopo la risposta del server o <code>purchase</code> sulla pagina di ordine completato.</p>
+      <p>Per un e-commerce i campi che fanno la differenza sono pochi e vanno letti dal DataLayer, non indovinati dal testo della pagina:</p>
+      <ul>
+        <li><strong>Valore:</strong> importo coerente con il criterio scelto (totale ordine, al netto di IVA o di spedizione: decidilo una volta e non cambiarlo a metà anno).</li>
+        <li><strong>Valuta:</strong> codice ISO, ad esempio <code>EUR</code>.</li>
+        <li><strong>Transaction ID:</strong> identificativo univoco dell’ordine, utile per limitare i doppi conteggi se la thank-you page viene ricaricata.</li>
+        <li><strong>Articoli:</strong> quando la configurazione li richiede, elenco prodotti con id, nome, prezzo e quantità.</li>
+      </ul>
+      <p>Un esempio di messaggio che il tag può leggere, dopo che lo sviluppatore lo ha pubblicato a ordine confermato:</p>
+<pre><code>dataLayer.push({
+  event: 'purchase',
+  ecommerce: {
+    transaction_id: 'ORD-2026-98451',
+    value: 249.00,
+    currency: 'EUR'
+  }
+});</code></pre>
+      <p>Il tag di conversione non deve attivarsi sul semplice caricamento di ogni pagina. Si attiva sull’evento. In GTM crei una variabile del livello dati per <code>ecommerce.value</code>, <code>ecommerce.currency</code> e <code>ecommerce.transaction_id</code>, e le mappi nei campi del tag Ads.</p>
+    </section>
+
+    <section>
+      <h2>Conversioni avanzate, con i controlli giusti</h2>
+      <p>Le <strong>conversioni avanzate</strong> usano dati forniti dall’utente — di solito un’email o un numero di telefono lasciati nel form o nel checkout — normalizzati e sottoposti a hashing secondo le specifiche di Google. Servono a recuperare conversioni che il browser, da solo, non riuscirebbe più a collegare al click, entro i limiti tecnici e di consenso del momento.</p>
+      <p>Non sono un interruttore da accendere “perché lo fanno tutti”. Prima di inviare qualsiasi dato personale verifica quattro cose: che l’azione di conversione supporti la funzione, che la base giuridica e l’informativa del sito lo consentano, che il consenso pubblicitario sia rispettato, e che i campi arrivino puliti (minuscolo, senza spazi, formato telefono coerente). Un’email scritta male o inviata senza consenso non migliora le campagne: crea un problema di conformità.</p>
+      <p>In GTM i dati si leggono da variabili dedicate, non si scrivono in chiaro nei commenti del contenitore. Documenta quali campi usi e su quali form. Se un modulo non raccoglie email, non inventare un valore.</p>
+    </section>
+
+    <section>
+      <h2>Tag nativo oppure importazione da GA4</h2>
+      <p>Google Ads e GA4 hanno finalità diverse. GA4 descrive il comportamento. Ads ottimizza la spesa. Importare una conversione da GA4 è comodo quando l’evento è già solido e vuoi una sola definizione. Il tag nativo è preferibile quando ti serve il controllo diretto sull’azione usata per le offerte, sui valori e sull’identificativo ordine, senza passare dal modello di GA4.</p>
+      <p>L’errore più frequente è averli entrambi come azioni primarie sulla stessa vendita. Le campagne vedono due conversioni per un solo ordine, il costo per acquisizione si dimezza sulla carta e le offerte si spostano. Scegli una fonte primaria per ciascun obiettivo e tieni l’altra, se ti serve, come secondaria di controllo.</p>
+      <p>Prima di decidere, controlla nell’account: quali azioni sono primarie, la finestra di conversione, il modello di attribuzione e se esistono già importazioni attive da GA4 o da un altro contenitore. Non esiste una regola universale che renda sempre migliore una delle due strade.</p>
+    </section>
+
+    <section>
+      <h2>Come implementarlo in Google Tag Manager</h2>
+      <p>La sequenza che usiamo nei progetti EasyTag Pro è ripetibile. Prima si sistema il piano di misurazione, poi il contenitore.</p>
+      <ol>
+        <li>Nell’account Google Ads crea (o rivedi) l’azione: nome, categoria, valore, conteggio, finestra, inclusione nelle azioni primarie.</li>
+        <li>Sul sito fai pubblicare dal DataLayer un evento solo a conversione confermata, con i campi necessari.</li>
+        <li>In GTM pubblica il Conversion Linker su tutte le pagine, subordinato al consenso.</li>
+        <li>Crea il tag di conversione Google Ads con ID e etichetta dell’azione, variabili dinamiche e trigger sull’evento, non su “tutte le pagine”.</li>
+        <li>Se usi le conversioni avanzate, aggiungi solo i campi verificati e documentati.</li>
+        <li>Anteprima: un solo sparo per ordine, parametri presenti, nessun secondo tag gemello.</li>
+      </ol>
+      <p>Dopo la pubblicazione controlla la diagnostica dell’azione in Google Ads e Tag Assistant. I primi dati possono impiegare tempo a comparire nei report: la diagnostica del tag è il segnale più rapido che l’invio è partito.</p>
+    </section>
+
+    <section>
+      <h2>Verifica e manutenzione</h2>
+      <ul>
+        <li>Controlla che la thank-you page, ricaricata, non generi una seconda conversione: l’identificativo ordine è lì per questo.</li>
+        <li>Allinea consenso e linker. Un tag che parte prima della scelta dell’utente sporca sia la privacy sia i numeri.</li>
+        <li>Quando cambi tema, checkout o form, riesegui l’anteprima. Il DataLayer protegge dai cambi grafici solo se gli eventi restano quelli concordati.</li>
+        <li>Tieni un registro: quale azione è primaria, da dove arriva il valore, chi ha pubblicato l’ultima versione del contenitore.</li>
+      </ul>
+    </section>
+
+    <section class="faq" aria-label="Domande frequenti">
+      <h2>FAQ sul tag Google Ads</h2>
+      <details>
+        <summary>Il tag di conversione sostituisce Google Analytics 4?</summary>
+        <p>No. Il tag Ads dice alle campagne quale azione è avvenuta. GA4 serve ad analizzare i percorsi. Possono convivere, a patto di non contare due volte la stessa azione come conversione primaria.</p>
+      </details>
+      <details>
+        <summary>Devo mettere il tag su tutte le pagine?</summary>
+        <p>Il Conversion Linker sì, su tutto il sito, nel rispetto del consenso. Il tag di conversione no: solo quando l’azione è confermata, tramite un trigger preciso.</p>
+      </details>
+      <details>
+        <summary>Perché Ads e GA4 non mostrano lo stesso numero?</summary>
+        <p>Perché applicano modelli, finestre e filtri diversi, e perché uno può includere conversioni che l’altro non importa. Confronta le definizioni prima di concludere che un tag è rotto.</p>
+      </details>
+      <details>
+        <summary>Le conversioni avanzate sono obbligatorie?</summary>
+        <p>No. Sono un’opzione utile in alcuni account, dopo aver verificato consenso, informativa e qualità dei dati. Senza questi controlli è meglio non attivarle.</p>
+      </details>
+      <details>
+        <summary>Chi dovrebbe configurarlo?</summary>
+        <p>Marketing e sviluppo insieme: il primo sceglie l’azione e il valore, il secondo pubblica l’evento nel DataLayer, chi gestisce GTM collega tag e trigger. EasyTag Pro fa questo raccordo quando in azienda non c’è una persona dedicata solo al tracking.</p>
+      </details>
+    </section>
+
+    <p class="nav-links"><a href="chi-siamo.html">← Torna a Chi Siamo</a> · <a href="tag-google-analytics-4.html">Guida GA4 →</a> · <a href="datalayer-architettura.html">Guida DataLayer →</a></p>
+
+  </article>
+</main>
+
+<footer class="footer">EasyTag Pro · <a href="chi-siamo.html">Chi Siamo</a> · <a href="tag-nativo-google-ads.html">Google Ads</a> · <a href="tag-google-analytics-4.html">GA4</a> · <a href="datalayer-architettura.html">DataLayer</a></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+  if(!btn||!nav)return;
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Chiudi menu di navigazione':'Apri menu di navigazione');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile())nav.setAttribute('aria-hidden','true');
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+  document.addEventListener('keydown',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Apri menu di navigazione');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+  });
+})();
+</script>
+</body>
+</html>
