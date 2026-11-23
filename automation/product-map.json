@@ -1,99 +1,105 @@
 {
-  "_comment": "Stripe TEST mode. Chiave = price ID reale. Aggiorna dopo il passaggio a live.",
-  "mode": "test",
+  "_comment": "Stripe LIVE mode, account Easytag. Non committare chiavi.",
+  "mode": "live",
   "products": {
-    "price_1UciBdFVaAsOPXA76PiEj3tN": {
+    "price_1UetjCFM9KfnnbcxQDbxcVOu": {
       "slug": "tracking-click-telefono",
       "name": "Tracking Click sul Numero di Telefono",
       "type": "container",
       "folder": "tracking-click-telefono",
       "files": ["container.json", "istruzioni.html"],
       "price_eur": 150,
-      "product_id": "prod_Ve0BfFQHEHCb0R",
-      "payment_link": "https://buy.stripe.com/test_5kQbJ13KL4Ld9yT01CbV600"
+      "product_id": "prod_VgGFw6JSEfvwOV",
+      "payment_link": "https://buy.stripe.com/eVqfZh93h863cNp5M50RG00",
+      "payment_link_en": "https://buy.stripe.com/14A6oH4N15XVcNp0rL0RG0a"
     },
-    "price_1UciBeFVaAsOPXA7ssnlkCi7": {
+    "price_1UetjFFM9Kfnnbcx8gX5jNLO": {
       "slug": "tracking-social-6in1",
       "name": "Tracking Social 6-in-1",
       "type": "container",
       "folder": "tracking-social-6in1",
       "files": ["container.json", "istruzioni.html"],
       "price_eur": 450,
-      "product_id": "prod_Ve0CSCDHkunbi1",
-      "payment_link": "https://buy.stripe.com/test_dRm14ngxx6TldP929KbV601"
+      "product_id": "prod_VgGFoTy4CtJfA5",
+      "payment_link": "https://buy.stripe.com/3cI8wPfrF0DBbJl4I10RG01",
+      "payment_link_en": "https://buy.stripe.com/00w6oH0wLfyvbJl7Ud0RG0b"
     },
-    "price_1UciBfFVaAsOPXA7MKDPBnCl": {
+    "price_1UetjGFM9KfnnbcxeTiLH49j": {
       "slug": "contatti-3in1",
       "name": "Pacchetto Contatti 3-in-1",
       "type": "container",
       "folder": "contatti-3in1",
       "files": ["container.json", "istruzioni.html"],
       "price_eur": 350,
-      "product_id": "prod_Ve0C37d5iXf2Df",
-      "payment_link": "https://buy.stripe.com/test_28E6oHgxx4Ld5iDbKkbV602"
+      "product_id": "prod_VgGFlDvaqODzdZ",
+      "payment_link": "https://buy.stripe.com/dRm28r1APgCz9Bd4I10RG02",
+      "payment_link_en": "https://buy.stripe.com/00w28r5R5eur14H5M50RG0c"
     },
-    "price_1UciBgFVaAsOPXA7QW3Gfilb": {
+    "price_1UetjHFM9KfnnbcxWpTZVDdC": {
       "slug": "supporto-5-ore",
       "name": "Supporto Tecnico – 5 ore",
       "type": "hours",
       "hours": 5,
       "price_eur": 500,
-      "product_id": "prod_Ve0COeR9mMJ39K",
-      "payment_link": "https://buy.stripe.com/test_eVq6oHdll5PhaCX5lWbV603"
+      "product_id": "prod_VgGFPHvXZBNm50",
+      "payment_link": "https://buy.stripe.com/4gM00jfrFbif5kXb6p0RG03",
+      "payment_link_en": "https://buy.stripe.com/9B65kDenBcmjdRt5M50RG0d"
     },
-    "price_1UciBhFVaAsOPXA76qaSyaa7": {
+    "price_1UetjJFM9KfnnbcxmlvcZJwP": {
       "slug": "supporto-10-ore",
       "name": "Supporto Tecnico – 10 ore",
       "type": "hours",
       "hours": 10,
       "price_eur": 900,
-      "product_id": "prod_Ve0CnGg5OEVUwM",
-      "payment_link": "https://buy.stripe.com/test_9B600jftt3H99yT29KbV604"
+      "product_id": "prod_VgGF0t6Wgb85zt",
+      "payment_link": "https://buy.stripe.com/cNi9AT0wLaeb4gT4I10RG04",
+      "payment_link_en": "https://buy.stripe.com/8x23cv93h3PN28LgqJ0RG0e"
     },
-    "price_1UciBiFVaAsOPXA7JVjj8s4o": {
+    "price_1UetjKFM9KfnnbcxLM3Ml6ak": {
       "slug": "supporto-20-ore",
       "name": "Supporto Tecnico – 20 ore",
       "type": "hours",
       "hours": 20,
       "price_eur": 1600,
-      "product_id": "prod_Ve0CHJiuOpQf2F",
-      "payment_link": "https://buy.stripe.com/test_bJedR9a99dhJh1l6q0bV605"
+      "product_id": "prod_VgGFbq7L0WCvww",
+      "payment_link": "https://buy.stripe.com/9B6fZh2ET3PN7t5cat0RG05",
+      "payment_link_en": "https://buy.stripe.com/fZu00j93h4TR9Bd2zT0RG0f"
     },
-    "price_1UdVs4FVaAsOPXA7Ei2Vv1yA": {
+    "price_1UetjLFM9Kfnnbcxk7dYXWiN": {
       "slug": "tag-email",
       "name": "TAG Email",
-      "type": "container",
-      "folder": "tag-email",
-      "files": ["container.json", "istruzioni.html"],
+      "type": "manual",
       "price_eur": 150,
-      "payment_link": null
+      "product_id": "prod_VgGFpxVZisQ0KI",
+      "payment_link": "https://buy.stripe.com/dRmbJ1djxbif7t53DX0RG06",
+      "payment_link_en": "https://buy.stripe.com/bJe4gz93h0DBcNpgqJ0RG0g"
     },
-    "price_1UdVsfFVaAsOPXA7FkgKsj3N": {
+    "price_1UetjMFM9KfnnbcxGhsHFhqf": {
       "slug": "tag-facebook",
       "name": "TAG Facebook",
-      "type": "container",
-      "folder": "tag-facebook",
-      "files": ["container.json", "istruzioni.html"],
+      "type": "manual",
       "price_eur": 150,
-      "payment_link": null
+      "product_id": "prod_VgGFAhdHs87qHb",
+      "payment_link": "https://buy.stripe.com/9B69ATbbpbifbJlb6p0RG07",
+      "payment_link_en": "https://buy.stripe.com/14A9ATenB2LJ28Ldex0RG0h"
     },
-    "price_1UdVtIFVaAsOPXA7bWltM0i5": {
+    "price_1UetjNFM9KfnnbcxwTdNAD7y": {
       "slug": "tag-instagram",
       "name": "TAG Instagram",
-      "type": "container",
-      "folder": "tag-instagram",
-      "files": ["container.json", "istruzioni.html"],
+      "type": "manual",
       "price_eur": 150,
-      "payment_link": null
+      "product_id": "prod_VgGF1Jdu7kzLbN",
+      "payment_link": "https://buy.stripe.com/3cI4gzenBcmjcNp8Yh0RG08",
+      "payment_link_en": "https://buy.stripe.com/bJedR91APgCzfZBcat0RG0i"
     },
-    "price_1UdVtqFVaAsOPXA79ktKlFts": {
+    "price_1UetjOFM9KfnnbcxWF88n4u4": {
       "slug": "tag-linkedin",
       "name": "TAG LinkedIn",
-      "type": "container",
-      "folder": "tag-linkedin",
-      "files": ["container.json", "istruzioni.html"],
+      "type": "manual",
       "price_eur": 150,
-      "payment_link": null
+      "product_id": "prod_VgGFmtyYQQ8KQi",
+      "payment_link": "https://buy.stripe.com/5kQ9AT7ZdeurdRtfmF0RG09",
+      "payment_link_en": "https://buy.stripe.com/7sY28r7Zd3PN7t54I10RG0j"
     }
   }
 }

@@ -10,20 +10,20 @@ import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-const DOMAIN = process.env.DOMAIN || 'http://localhost:3000';
+const DOMAIN = process.env.DOMAIN || 'https://easytag-pro.vercel.app';
 
-/** Allowed Price IDs (test). Keep in sync with automation/product-map.json */
+/** Allowed Price IDs (live, account Easytag). */
 const ALLOWED_PRICES = new Set([
-  'price_1UciBdFVaAsOPXA76PiEj3tN', // Tracking Click Telefono €150
-  'price_1UciBeFVaAsOPXA7ssnlkCi7', // Tracking Social 6-in-1 €450
-  'price_1UciBfFVaAsOPXA7MKDPBnCl', // Contatti 3-in-1 €350
-  'price_1UciBgFVaAsOPXA7QW3Gfilb', // Supporto 5 ore €500
-  'price_1UciBhFVaAsOPXA76qaSyaa7', // Supporto 10 ore €900
-  'price_1UciBiFVaAsOPXA7JVjj8s4o', // Supporto 20 ore €1600
-  'price_1UdVs4FVaAsOPXA7Ei2Vv1yA', // TAG Email €150
-  'price_1UdVsfFVaAsOPXA7FkgKsj3N', // TAG Facebook €150
-  'price_1UdVtIFVaAsOPXA7bWltM0i5', // TAG Instagram €150
-  'price_1UdVtqFVaAsOPXA79ktKlFts', // TAG LinkedIn €150
+  'price_1UetjCFM9KfnnbcxQDbxcVOu', // Tracking Click Telefono €150
+  'price_1UetjFFM9Kfnnbcx8gX5jNLO', // Tracking Social 6-in-1 €450
+  'price_1UetjGFM9KfnnbcxeTiLH49j', // Contatti 3-in-1 €350
+  'price_1UetjHFM9KfnnbcxWpTZVDdC', // Supporto 5 ore €500
+  'price_1UetjJFM9KfnnbcxmlvcZJwP', // Supporto 10 ore €900
+  'price_1UetjKFM9KfnnbcxLM3Ml6ak', // Supporto 20 ore €1600
+  'price_1UetjLFM9Kfnnbcxk7dYXWiN', // TAG Email €150
+  'price_1UetjMFM9KfnnbcxGhsHFhqf', // TAG Facebook €150
+  'price_1UetjNFM9KfnnbcxwTdNAD7y', // TAG Instagram €150
+  'price_1UetjOFM9KfnnbcxWF88n4u4', // TAG LinkedIn €150
 ]);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {

@@ -10,7 +10,7 @@ import { Resend } from 'resend';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
-const BASE = process.env.DELIVERABLES_BASE_URL!;
+const BASE = process.env.DELIVERABLES_BASE_URL || 'https://easytag-pro.vercel.app/deliverables';
 const FROM = process.env.FROM_EMAIL || 'consegne@easytag.pro';
 const BCC = process.env.SUPPORT_BCC || 'support@easytag.com';
 
@@ -19,36 +19,53 @@ const MAP: Record<
   string,
   | { type: 'container'; name: string; folder: string }
   | { type: 'hours'; name: string; hours: number }
+  | { type: 'manual'; name: string }
 > = {
-  price_1UciBdFVaAsOPXA76PiEj3tN: {
+  price_1UetjCFM9KfnnbcxQDbxcVOu: {
     type: 'container',
     name: 'Tracking Click sul Numero di Telefono',
     folder: 'tracking-click-telefono',
   },
-  price_1UciBeFVaAsOPXA7ssnlkCi7: {
+  price_1UetjFFM9Kfnnbcx8gX5jNLO: {
     type: 'container',
     name: 'Tracking Social 6-in-1',
     folder: 'tracking-social-6in1',
   },
-  price_1UciBfFVaAsOPXA7MKDPBnCl: {
+  price_1UetjGFM9KfnnbcxeTiLH49j: {
     type: 'container',
     name: 'Pacchetto Contatti 3-in-1',
     folder: 'contatti-3in1',
   },
-  price_1UciBgFVaAsOPXA7QW3Gfilb: {
+  price_1UetjHFM9KfnnbcxWpTZVDdC: {
     type: 'hours',
     name: 'Supporto Tecnico – 5 ore',
     hours: 5,
   },
-  price_1UciBhFVaAsOPXA76qaSyaa7: {
+  price_1UetjJFM9KfnnbcxmlvcZJwP: {
     type: 'hours',
     name: 'Supporto Tecnico – 10 ore',
     hours: 10,
   },
-  price_1UciBiFVaAsOPXA7JVjj8s4o: {
+  price_1UetjKFM9KfnnbcxLM3Ml6ak: {
     type: 'hours',
     name: 'Supporto Tecnico – 20 ore',
     hours: 20,
+  },
+  price_1UetjLFM9Kfnnbcxk7dYXWiN: {
+    type: 'manual',
+    name: 'TAG Email',
+  },
+  price_1UetjMFM9KfnnbcxGhsHFhqf: {
+    type: 'manual',
+    name: 'TAG Facebook',
+  },
+  price_1UetjNFM9KfnnbcxwTdNAD7y: {
+    type: 'manual',
+    name: 'TAG Instagram',
+  },
+  price_1UetjOFM9KfnnbcxWF88n4u4: {
+    type: 'manual',
+    name: 'TAG LinkedIn',
   },
 };
 
@@ -108,6 +125,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         </ul>
         <p>1. Scarica container.json<br>2. GTM → Admin → Import Container<br>3. Sostituisci ID Conversione e Label<br>4. Testa e pubblica</p>
         <p>Supporto: support@easytag.com · Ordine ${orderId}</p>`;
+    } else if (product?.type === 'manual') {
+      subject = `Ordine ricevuto – ${product.name} | Easy Tag`;
+      html = `<p>Ciao ${name},</p>
+        <p>Grazie per l'acquisto di <strong>${product.name}</strong>.</p>
+        <p>Il file del container ti arriva da support@easytag.com entro un giorno lavorativo.</p>
+        <p>Ordine ${orderId}</p>`;
     } else if (product?.type === 'hours') {
       subject = `Pacchetto ore attivato – ${product.name} | Easy Tag`;
       html = `<p>Ciao ${name},</p>
