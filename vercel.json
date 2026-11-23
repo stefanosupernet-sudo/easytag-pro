@@ -6,6 +6,7 @@
     { "source": "/index", "destination": "/", "permanent": true },
     { "source": "/shop/index", "destination": "/shop", "permanent": true },
     { "source": "/en/index", "destination": "/en", "permanent": true },
+    { "source": "/en/shop/index", "destination": "/en/shop", "permanent": true },
     { "source": "/tracking-click-telefono", "destination": "/shop/tracking-click-telefono", "permanent": true },
     { "source": "/tracking-click-telefono.html", "destination": "/shop/tracking-click-telefono", "permanent": true },
     { "source": "/tracking-social-6in1", "destination": "/shop/tracking-social-6in1", "permanent": true },

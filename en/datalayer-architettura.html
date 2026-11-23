@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <title>DataLayer: FIFO queue, push and Tag Platform | EasyTag Pro</title>
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="dataLayer, Google Tag Manager, FIFO queue, dataLayer.push, gtag.js, Tag Platform, dataLayer variables">
+  <meta name="description" content="What window.dataLayer is, why it must be initialized before GTM, how the FIFO queue works and how to avoid pushes that drop events. Guide and FAQ.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/en/datalayer-architettura">
+  <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/datalayer-architettura">
+  <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/datalayer-architettura">
+  <link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/datalayer-architettura">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>.logo img{height:40px;width:auto;display:block}
+    :root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA;--ink:#202124}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.7;color:var(--ink)}
+    a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}
+    .header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}
+    .nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}
+    .nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}
+    .submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}
+    @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}
+    }
+    main{max-width:820px;margin:36px auto;padding:0 22px 70px}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:0 0 18px}
+    h2{font-size:24px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+    h3{font-size:18px;margin:22px 0 8px}
+    p,li{color:var(--gray)}p{margin:0 0 14px}ul,ol{margin:0 0 16px;padding-left:1.25rem}li{margin:6px 0}
+    code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13.5px}
+    code{background:var(--pale);padding:1px 5px;border-radius:4px}
+    pre{padding:16px;background:var(--pale);border:1px solid var(--line);border-radius:10px;overflow:auto;margin:14px 0 18px;line-height:1.5}
+    .breadcrumb{font-size:14px;color:var(--blue);margin-bottom:18px}
+    .summary{background:var(--light);border:1px solid #cfe6f8;border-radius:12px;padding:18px 20px;margin:0 0 28px}
+    .summary h2{margin:0 0 10px;font-size:16px;border:0;padding:0;color:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+    .summary ol{margin:0;padding-left:1.2rem}.summary li{color:var(--ink);margin:6px 0;font-size:15px}
+    .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--ink)}
+    .faq p{margin-top:10px}
+    .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
+    .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
+  
+.picks{margin:36px 0 10px}
+.picks h2{border:0;padding:0;margin-top:0}
+.picks h3{font-size:18px;margin:22px 0 10px}
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pick{border:1px solid #E8EAED;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pick-img{display:block;background:#1a1a1a;line-height:0}
+.pick-img img{width:100%;height:110px;object-fit:cover;display:block}
+.pick-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:16px;margin:0;border:0;padding:0}
+.pick-body p{font-size:13px;color:#5F6368;margin:0}
+.pick-badge{font-size:11px;font-weight:700;color:#137333;background:#E6F4EA;display:inline-block;padding:3px 8px;border-radius:99px;width:max-content}
+.pick-badge.quote{color:#0B5CAD;background:#E8F3FC}
+.pick-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;gap:8px}
+.pick-price{font-weight:700;font-size:15px}
+.pick-btn{background:#1182DE;color:#fff!important;text-decoration:none!important;font-weight:700;font-size:13px;padding:8px 12px;border-radius:8px}
+.inline{color:#1182DE;text-decoration:underline;text-underline-offset:2px}
+
+nav.breadcrumb{margin:0 0 18px}
+nav.breadcrumb ol{display:flex;flex-wrap:wrap;align-items:center;gap:0;list-style:none;margin:0;padding:0;font-size:14px;color:#5F6368}
+nav.breadcrumb li{display:flex;align-items:center}
+nav.breadcrumb li+li::before{content:"›";margin:0 8px;color:#5F6368}
+nav.breadcrumb a{color:#1182DE;text-decoration:none;font-weight:600}
+nav.breadcrumb a:hover{text-decoration:underline}
+nav.breadcrumb [aria-current="page"]{color:#202124;font-weight:600}
+
+.faq h3{font-size:17px;line-height:1.35;margin:18px 0 8px;border:0;padding:0}
+.faq-item{padding-bottom:2px}
+.faq ul{margin:8px 0 14px 1.2rem}
+.faq li{margin:5px 0}
+.faq code{font-size:.92em;background:#F8F9FA;padding:0 4px;border-radius:4px}
+.lang{display:flex;gap:4px;background:#F8F9FA;border-radius:8px;padding:3px}.lang a{padding:4px 8px;border-radius:6px;font-size:13px;font-weight:700}.lang a.active{background:#fff;color:#1182DE}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easytag-pro.vercel.app/en"}, {"@type": "ListItem", "position": 2, "name": "About", "item": "https://easytag-pro.vercel.app/en/chi-siamo"}, {"@type": "ListItem", "position": 3, "name": "DataLayer architecture", "item": "https://easytag-pro.vercel.app/en/datalayer-architettura"}]}</script>
+<meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="DataLayer: FIFO queue, push and Tag Platform | EasyTag Pro">
+  <meta property="og:description" content="What window.dataLayer is, why it must be initialized before GTM, how the FIFO queue works and how to avoid pushes that drop events. Guide and FAQ.">
+  <meta property="og:url" content="https://easytag-pro.vercel.app/en/datalayer-architettura">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the DataLayer replace Google Tag Manager?", "acceptedAnswer": {"@type": "Answer", "text": "No. The DataLayer is the data channel; Google Tag Manager is the tool that reads that data and decides which tags to fire. They work together: without GTM (or gtag) the messages stay only in the browser; without a DataLayer, GTM often has to rely on fragile selectors."}}, {"@type": "Question", "name": "Do I need a DataLayer on every page of the site?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, at least the array initialization and the container snippet. Context variables that are useful on more than one page should be published again wherever they are needed, with the same names. Interaction events are sent only when the action happens."}}, {"@type": "Question", "name": "What happens if I change the WordPress theme or the checkout template?", "acceptedAnswer": {"@type": "Answer", "text": "If the tags depend on the layout, they often break. If they depend on the DataLayer, they stay valid as long as the site keeps publishing the same events and parameters. That is one of the main reasons to invest in a data layer."}}, {"@type": "Question", "name": "Can I use a name other than dataLayer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, Google lets you rename it, but then you must update the container snippet and every push call in a consistent way. On most projects it is better to keep the default name dataLayer, so there are fewer mistakes."}}, {"@type": "Question", "name": "Who should own the DataLayer inside a company?", "acceptedAnswer": {"@type": "Answer", "text": "Ideally it is shared work: marketing defines what to measure, development implements the pushes in the right places on the site, and whoever manages GTM connects variables, triggers and tags. EasyTag Pro steps in exactly on that join, when you need a clear architecture without dedicated internal resources."}}, {"@type": "Question", "name": "What exactly is the dataLayer in Google’s Tag Platform?", "acceptedAnswer": {"@type": "Answer", "text": "The dataLayer is a global JavaScript array, by default window.dataLayer, that passes variables and events from the page to Google Tag Manager and to gtag.js. Do not read prices, ids or form states from the DOM. Containers such as Tracker E-commerce and Dynamic Remarketing depend on this layer. The operational guide is this page; the team context is in About."}}, {"@type": "Question", "name": "Why is the dataLayer initialized with window.dataLayer = window.dataLayer || [] before the snippet?", "acceptedAnswer": {"@type": "Answer", "text": "To create the array only if it does not already exist, without deleting pushes that are already there. GTM and gtag.js then find a valid instance at startup. The Google Tag Manager snippet must be loaded after this line, as described in the installation section of this guide."}}, {"@type": "Question", "name": "What happens if you overwrite window.dataLayer = [] or window.dataLayer = {} after the page has loaded?", "acceptedAnswer": {"@type": "Answer", "text": "You break the reference on which GTM and gtag.js have attached their listeners and the internal queue. Events already in the queue are lost. Tags do not fire, or they fire with inconsistent data. Do not use an object {}: the dataLayer is an array, not a map."}}, {"@type": "Question", "name": "How does the dataLayer process messages?", "acceptedAnswer": {"@type": "Answer", "text": "With a FIFO queue (First-In, First-Out): pushes are read one at a time, in the order they arrive. If the message contains event, Google Tag Manager evaluates the triggers and fires the linked tags before moving on to the next message."}}, {"@type": "Question", "name": "What does it mean that a dataLayer.push() from an external script or from a Custom HTML tag is queued?", "acceptedAnswer": {"@type": "Answer", "text": "Execution is asynchronous relative to the events already in the queue. A variable written without event may not be visible yet when the next event fires. To stay in sync, always send a dedicated event key and use a Custom Event trigger. That is how Phone click tracking and TAG Email publish the click."}}, {"@type": "Question", "name": "Why is it a bad idea to put gtag.js inside a Custom HTML tag in GTM?", "acceptedAnswer": {"@type": "Answer", "text": "Because it duplicates the tag lifecycle, it can conflict on the queue and on gtag(), and it skips GTM’s native controls, consent included. Use the native tag templates for Google Ads, Google Analytics 4 and Floodlight."}}, {"@type": "Question", "name": "How do you send an event and several variables in a single push?", "acceptedAnswer": {"@type": "Answer", "text": "With one object: dataLayer.push({event: 'customize', color: 'red', conversionValue: 50}). Every key enters the dataLayer state and can be read by the tags fired by that event. Do not split the value and the event name across two different pushes."}}, {"@type": "Question", "name": "What happens if you push a variable that has the same name as a key that already exists?", "acceptedAnswer": {"@type": "Answer", "text": "The new value overwrites the previous one in the current state, from that point in the queue onward. Messages that have already been processed are not rewritten."}}, {"@type": "Question", "name": "How long do variables placed in the dataLayer stay active?", "acceptedAnswer": {"@type": "Answer", "text": "They stay available for the whole time the user remains on that page, until you overwrite them or reset the state. Across pages they must be published again on every load, with the same name: visitorType on one page and visitor_type on another are two different keys."}}, {"@type": "Question", "name": "What is the difference between dataLayer.push(function) and gtag(...)?", "acceptedAnswer": {"@type": "Answer", "text": "If you pass a function to dataLayer.push(function(){ ... }), this points to GTM’s abstract data model (this.set, this.get, this.reset). gtag(function(){ ... }) is not a valid command: the function is ignored."}}, {"@type": "Question", "name": "What is this.reset() for inside a function passed to dataLayer.push()?", "acceptedAnswer": {"@type": "Answer", "text": "It clears the state that has accumulated in the data model. It is used on pages that stay open for a long time and in single-page applications, so you do not carry values from the previous view. The SPA page view should then be sent again as described in the Google Analytics 4 guide."}}, {"@type": "Question", "name": "How do you use this.set() and this.get() in custom dataLayer methods?", "acceptedAnswer": {"@type": "Answer", "text": "They read and write key-value pairs on the abstract data model, in a controlled way. Example: this.set('time', new Date()) and, in a later step, this.get('time'). They do not replace a dataLayer.push with event when you need to fire a tag."}}, {"@type": "Question", "name": "Can dataLayer be renamed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Change the array name in the snippet, pass l=myNewName in the GTM script URL and align every call to window.myNewName.push(...). If even one integration keeps writing to dataLayer, the events split across two queues."}}, {"@type": "Question", "name": "What are the most common syntax errors on dataLayer.push()?", "acceptedAnswer": {"@type": "Answer", "text": "datalayer.push instead of dataLayer.push (the L is uppercase). Keys with special characters, such as new-variable, written without quotes. Malformed JSON: a trailing comma, single quotes where the parser expects strict JSON, brackets left unclosed."}}, {"@type": "Question", "name": "How do you check the dataLayer state in real time?", "acceptedAnswer": {"@type": "Answer", "text": "With Google Tag Assistant on tagassistant.google.com, or with Google Tag Manager Preview mode. For each event in sequence you see the dataLayer values and the consent state. Consent is covered in more depth in the Consent Mode guide."}}, {"@type": "Question", "name": "What is the Google tag (gtag.js) and how does it connect to several destinations?", "acceptedAnswer": {"@type": "Answer", "text": "It is a single JavaScript framework that collects the data and routes it to several destinations: Google Ads, Google Analytics, Floodlight and others, through a TAG_ID or linked configurations. In a GTM container the same role is played by the native tags, not by a second copy of gtag pasted onto the page."}}, {"@type": "Question", "name": "What is the role of the ID prefix (GTM-, G-, AW-) in the script URL?", "acceptedAnswer": {"@type": "Answer", "text": "It tells the loader which kind of container it is starting and which permissions to apply. GTM- is a Google Tag Manager container. G- is a Google Analytics 4 property. AW- is a Google Ads account."}}, {"@type": "Question", "name": "Why is gtag('config', ...) marked as deprecated in the newer snippets?", "acceptedAnswer": {"@type": "Answer", "text": "Google is moving destination configuration into the Google Tag Manager interface and, on the page, toward gtag('set', ...). A gtag('config') that is already published stays backward compatible: do not remove it in the middle of a migration without a measurement plan."}}, {"@type": "Question", "name": "How do grouping and routing work in gtag.js?", "acceptedAnswer": {"@type": "Answer", "text": "You can centralize the shared parameters and send an event only to some destinations, for example a Measurement ID G- or an AW- account, instead of sending everything everywhere. It is the same principle as the send_to parameter explained in the Google Ads native tag guide."}}, {"@type": "Question", "name": "How do you check in the Network tab that the tag is transmitting?", "acceptedAnswer": {"@type": "Answer", "text": "Filter the requests by domain. googletagmanager.com loads the container. google-analytics.com or analytics.google.com carry the GA4 hits. googleadservices.com and the Google advertising domains carry Ads. doubleclick.net appears with Floodlight."}}, {"@type": "Question", "name": "How does debugging change with server-side tagging?", "acceptedAnswer": {"@type": "Answer", "text": "In the browser you see the requests to your tagging endpoint, usually a first-party subdomain. The hits toward the final Google Ads and Google Analytics servers leave from the server container, not from the user’s browser."}}, {"@type": "Question", "name": "What is the Google tag gateway for advertisers?", "acceptedAnswer": {"@type": "Answer", "text": "It is a configuration that routes the tag requests through a first-party path you control. It is meant to keep measurement more continuous when the browser limits third-party scripts, always in line with Consent Mode."}}, {"@type": "Question", "name": "How do you handle tagging on AMP pages compared with the standard web?", "acceptedAnswer": {"@type": "Answer", "text": "AMP has native components for the tags and for GTM, with limits of their own. GTM for AMP does not cover Google Analytics the way the web does: you need dedicated AMP snippets, and you should check that cid and gclid are passed through to the non-AMP pages."}}, {"@type": "Question", "name": "How do you filter traffic from CMS integrations, for example Shopify, in Google Analytics?", "acceptedAnswer": {"@type": "Answer", "text": "With data filters or dedicated exclusions, so the automatic events from the CMS and the internal traffic do not inflate sessions and conversions. The funnel you want to read in the reports is the Tracker E-commerce one, not the theme’s test funnel."}}, {"@type": "Question", "name": "Why use a single dataLayer per page even when several tags are present?", "acceptedAnswer": {"@type": "Answer", "text": "A single array keeps one timeline. Two separate queues make a tag read values that are missing or stale. The same is true when GA4, Google Ads and the Consent Mode v2 tag share the page."}}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="header"><div class="header-inner"><a class="logo" href="/en"><img src="data:image/png;base64,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" alt="Easy Tag"></a>
+<button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+<nav id="main-nav" class="nav" role="navigation" aria-label="Main navigation">
+  <a href="/en">Home</a><a href="/en/shop">Shop</a>
+  <details class="nav-group"><summary>About</summary>
+    <div class="submenu">
+      <a href="/en/chi-siamo">Overview</a>
+      <a href="/en/tag-nativo-google-ads">Google Ads native tag</a>
+      <a href="/en/tag-google-analytics-4">Google Analytics 4</a>
+      <a href="/en/datalayer-architettura" aria-current="page">DataLayer architecture</a><a href="/en/consent-mode">Consent Mode</a>
+    </div>
+  </details>
+  <a href="/en/faq">FAQ</a><a href="/en/contatti">Contact</a>
+  <div class="lang"><a href="/datalayer-architettura">IT</a><a href="/en/datalayer-architettura" class="active" aria-current="true">EN</a></div>
+</nav></div></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en">Home</a></li><li><a href="/en/chi-siamo">About</a></li><li><span aria-current="page">DataLayer architecture</span></li></ol></nav>
+
+  <article>
+    <h1>DataLayer: what it is, why it matters, and how to install it</h1>
+
+    <aside class="summary" aria-label="Page summary">
+      <h2>In 230 seconds — what you will find here</h2>
+      <ol>
+        <li>A clear definition of the DataLayer and of its role between the site, GTM and the measurement tools.</li>
+        <li>Why separating the data from the page layout makes tracking more stable over time.</li>
+        <li>Which pieces make up a typical message (event, variables, ecommerce objects).</li>
+        <li>How to build and install the data layer before Google Tag Manager, with readable examples.</li>
+        <li>Common mistakes to avoid, and five practical FAQs for marketing and technical teams.</li>
+      </ol>
+    </aside>
+
+    <section>
+      <h2>What the DataLayer is</h2>
+      <p>The <strong>DataLayer</strong> (often called the <em>data layer</em>) is a JavaScript object the site uses to pass ordered information to Google Tag Manager and, more broadly, to the Google tag platform. It is not a report, not a dashboard and not a plugin: it is a standard channel where the site “places” the data the tags need to read.</p>
+      <p>According to the official Google Tag Platform documentation, the data layer is designed so that events and variables reach the tags in an organized, predictable way, instead of being rebuilt by reading scattered pieces of the page. In practice, rather than asking a script to “guess” the price from an HTML element, the site explicitly declares the price, the currency and the order id in the DataLayer.</p>
+      <p>Technically, in the browser, the DataLayer is a global array, usually named <code>window.dataLayer</code>. It is initialized once and then enriched with later messages through <code>push()</code>. Each message is an object: it can hold an event name, context variables and richer structures, such as the data of a purchase.</p>
+    </section>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>Without a DataLayer, many setups depend on the visual structure of the site: CSS classes, button labels, the position of a form. When the theme changes, a plugin is updated or the checkout is redesigned, those references break and the tags stop working or send incomplete data.</p>
+      <p>With a well-designed DataLayer the opposite happens: the data stays tied to the meaning of the action (purchase, signup, click on the phone), not to the way that action is drawn on screen. This lowers maintenance cost, makes the work between developers and media buyers easier, and makes conversions in Google Ads and events in Google Analytics 4 more reliable.</p>
+      <p>There is also a governance benefit. Documenting “what goes into the DataLayer and when” creates a clear contract between the people who build the site and the people who manage the tags. If a campaign needs a new event, you add a standard message instead of inventing a fragile selector.</p>
+      <p>Finally, the DataLayer is useful when several tools read the same information. A single well-structured <code>purchase</code> can feed analytics, advertising conversions and, where it applies, other systems, without duplicating different logic inside every tag.</p>
+    </section>
+
+    <section>
+      <h2>The elements of a DataLayer message</h2>
+      <p>A typical message combines a few recurring building blocks. The most important is the <code>event</code> key: a string that describes the action, for example <code>login</code>, <code>generate_lead</code> or <code>purchase</code>. In Google Tag Manager you can listen for that name with a custom event trigger.</p>
+      <p>Next to the event come the <strong>variables</strong>: name-value pairs that describe the context. They can indicate the visitor type, the page category, a color chosen in a configurator, or the value of a conversion. Google stresses the importance of using the same names on every page: if the homepage uses <code>visitorType</code>, do not call it <code>visitor_type</code> at checkout.</p>
+      <p>For ecommerce a dedicated object is often used, for example <code>ecommerce</code>, with fields such as the amount, the currency, the transaction id and the product list. Before a new ecommerce push it is good practice to “clear” the previous state, so the data of one order does not mix with the next.</p>
+      <p>Here is a minimal example of initialization and of a simple event:</p>
+<pre><code>window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+  event: 'login'
+});</code></pre>
+      <p>And a push that carries several pieces of information together, as recommended when an action has both an event and attributes the tags can use:</p>
+<pre><code>dataLayer.push({
+  event: 'customize',
+  color: 'red',
+  conversionValue: 50
+});</code></pre>
+      <p>For a purchase the structure becomes richer, but it stays readable:</p>
+<pre><code>window.dataLayer = window.dataLayer || [];
+dataLayer.push({ ecommerce: null });
+dataLayer.push({
+  event: 'purchase',
+  ecommerce: {
+    transaction_id: 'ORD-2026-98451',
+    value: 249.00,
+    currency: 'EUR',
+    items: [{
+      item_id: 'SKU-7741',
+      item_name: 'Cronografo Automatico Acciaio',
+      price: 249.00,
+      quantity: 1
+    }]
+  }
+});</code></pre>
+      <p>In every case, key names go in quotes when they contain special characters, and the object name is <strong>dataLayer</strong> in camel case: lowercase <code>datalayer</code> does not work.</p>
+    </section>
+
+    <section>
+      <h2>How to build the DataLayer</h2>
+      <p>Building the DataLayer means, first of all, deciding <em>which actions matter</em> to the business and which data must accompany them. You start from a measurement plan: relevant page views, leads, signups, add-to-cart actions, purchases, clicks on the phone or on WhatsApp. For each action you define a stable event name and a list of parameters.</p>
+      <p>Then you decide <em>who writes</em> to the DataLayer. Usually it is the code of the site or of the CMS: a thank-you page template, a handler after the form is submitted, a click handler on a button. Marketing should not have to scrape the DOM if the data can be declared at the source.</p>
+      <p>A sound design separates page data (title, path, content type) from interaction data (clicks, form submits) and from transactional data (order, products, value). On every page load you can declare the context variables right after initialization, so they are available when the GTM container loads:</p>
+<pre><code><script>
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+  event: 'Pageview',
+  pagePath: '/iscrizione-evento',
+  pageTitle: 'Iscrizione Evento',
+  visitorType: 'customer'
+});
+</script></code></pre>
+      <p>The variables stay valid while the user remains on that page. If you need them on more pages (for example “customer” or “prospect” status), they must be published again on every load, with the same naming convention.</p>
+      <p>When the user takes an action, updating a variable is not enough: you should always include a dedicated <code>event</code>. Tag Manager processes the queued messages one after another; giving the message an event name makes the moment the tags should fire predictable.</p>
+    </section>
+
+    <section>
+      <h2>How to install it on the site</h2>
+      <p>A correct installation follows a precise order. If the data layer must already contain the ecommerce events, the starting point is the <a class="inline" href="/en/shop/tracker-ecommerce">Tracker E-commerce</a>; for product IDs sent to Ads, <a class="inline" href="/en/shop/dynamic-remarketing">Dynamic Remarketing</a>; for the consent signal, <a class="inline" href="/en/shop/consent-mode-v2">Consent Mode v2</a>. First you create (or reuse) the <code>dataLayer</code> array, then you push any data needed at page load, and only after that do you load the Google Tag Manager snippet. Google recommends declaring the data layer as high as possible in the page code, above the container.</p>
+      <p>The basic pattern is this:</p>
+<pre><code><script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+<!-- End Google Tag Manager --></code></pre>
+      <p>The expression <code>window.dataLayer = window.dataLayer || []</code> is essential: it avoids wiping messages that are already in the queue. Never assign a new array with a statement such as <code>dataLayer = [{...}]</code> after GTM is listening: you would risk losing data and breaking the link with the container.</p>
+      <p>For later interactions (click, submit, completed purchase) you only use <code>dataLayer.push(...)</code>. You can attach it to an event handler on the site, for example on a button click, or run it in the code that confirms the order on a server-rendered page, or in the checkout callback.</p>
+      <p>In Google Tag Manager the next step is to configure data layer variables (to read keys such as <code>ecommerce.value</code>) and triggers on the matching custom event. Only then do you connect the GA4 tags, the Google Ads tags or the other destinations.</p>
+      <p>While testing, inspect the queue in the GTM preview or in the browser console, check the capitalization of the names, and make sure numeric values (prices, quantities) stay numbers and not strings, when the reports expect numbers.</p>
+    </section>
+
+    <section>
+      <h2>Good practices in brief</h2>
+      <ul>
+        <li>Always initialize with <code>window.dataLayer = window.dataLayer || []</code> before the GTM snippet.</li>
+        <li>Use <code>push</code> to add data; do not overwrite the whole array.</li>
+        <li>Give events and variables stable, consistent names across every page.</li>
+        <li>Include an <code>event</code> when an action must fire tags.</li>
+        <li>Do not include personal data that is unnecessary, or that the consent context does not allow.</li>
+        <li>Document the measurement plan: it is the manual of your DataLayer.</li>
+      </ul>
+    </section>
+
+    <section class="faq" aria-label="Frequently asked questions">
+      <h2>DataLayer FAQ</h2>
+
+      <details>
+        <summary>Does the DataLayer replace Google Tag Manager?</summary>
+        <p>No. The DataLayer is the data channel; Google Tag Manager is the tool that reads that data and decides which tags to fire. They work together: without GTM (or gtag) the messages stay only in the browser; without a DataLayer, GTM often has to rely on fragile selectors.</p>
+      </details>
+
+      <details>
+        <summary>Do I need a DataLayer on every page of the site?</summary>
+        <p>Yes, at least the array initialization and the container snippet. Context variables that are useful on more than one page should be published again wherever they are needed, with the same names. Interaction events are sent only when the action happens.</p>
+      </details>
+
+      <details>
+        <summary>What happens if I change the WordPress theme or the checkout template?</summary>
+        <p>If the tags depend on the layout, they often break. If they depend on the DataLayer, they stay valid as long as the site keeps publishing the same events and parameters. That is one of the main reasons to invest in a data layer.</p>
+      </details>
+
+      <details>
+        <summary>Can I use a name other than dataLayer?</summary>
+        <p>Yes, Google lets you rename it, but then you must update the container snippet and every <code>push</code> call in a consistent way. On most projects it is better to keep the default name <code>dataLayer</code>, so there are fewer mistakes.</p>
+      </details>
+
+      <details>
+        <summary>Who should own the DataLayer inside a company?</summary>
+        <p>Ideally it is shared work: marketing defines what to measure, development implements the pushes in the right places on the site, and whoever manages GTM connects variables, triggers and tags. EasyTag Pro steps in exactly on that join, when you need a clear architecture without dedicated internal resources.</p>
+      </details>
+    <h2>Initialization and dataLayer integrity</h2>
+<article class="faq-item"><h3>What exactly is the dataLayer in Google’s Tag Platform?</h3><p>The <code>dataLayer</code> is a global JavaScript array, by default <code>window.dataLayer</code>, that passes variables and events from the page to Google Tag Manager and to <code>gtag.js</code>.</p><ul><li>Do not read prices, ids or form states from the DOM.</li><li>Containers such as <a class="inline" href="/en/shop/tracker-ecommerce">Tracker E-commerce</a> and <a class="inline" href="/en/shop/dynamic-remarketing">Dynamic Remarketing</a> depend on this layer.</li><li>The operational guide is this page; the team context is in <a class="inline" href="/en/chi-siamo">About</a>.</li></ul></article>
+<article class="faq-item"><h3>Why is the dataLayer initialized with window.dataLayer = window.dataLayer || [] before the snippet?</h3><p>To create the array only if it does not already exist, without deleting pushes that are already there. GTM and <code>gtag.js</code> then find a valid instance at startup. The Google Tag Manager snippet must be loaded after this line, as described in the installation section of this guide.</p></article>
+<article class="faq-item"><h3>What happens if you overwrite window.dataLayer = [] or window.dataLayer = {} after the page has loaded?</h3><p>You break the reference on which GTM and <code>gtag.js</code> have attached their listeners and the internal queue.</p><ul><li>Events already in the queue are lost.</li><li>Tags do not fire, or they fire with inconsistent data.</li><li>Do not use an object <code>{}</code>: the dataLayer is an array, not a map.</li></ul></article>
+<h2>FIFO queue and dataLayer.push</h2>
+<article class="faq-item"><h3>How does the dataLayer process messages?</h3><p>With a FIFO queue (First-In, First-Out): pushes are read one at a time, in the order they arrive. If the message contains <code>event</code>, Google Tag Manager evaluates the triggers and fires the linked tags before moving on to the next message.</p></article>
+<article class="faq-item"><h3>What does it mean that a dataLayer.push() from an external script or from a Custom HTML tag is queued?</h3><p>Execution is asynchronous relative to the events already in the queue. A variable written without <code>event</code> may not be visible yet when the next event fires. To stay in sync, always send a dedicated <code>event</code> key and use a Custom Event trigger. That is how <a class="inline" href="/en/shop/tracking-click-telefono">Phone click tracking</a> and <a class="inline" href="/en/shop/tag-email">TAG Email</a> publish the click.</p></article>
+<article class="faq-item"><h3>Why is it a bad idea to put gtag.js inside a Custom HTML tag in GTM?</h3><p>Because it duplicates the tag lifecycle, it can conflict on the queue and on <code>gtag()</code>, and it skips GTM’s native controls, consent included. Use the native tag templates for <a class="inline" href="/en/tag-nativo-google-ads">Google Ads</a>, <a class="inline" href="/en/tag-google-analytics-4">Google Analytics 4</a> and Floodlight.</p></article>
+<article class="faq-item"><h3>How do you send an event and several variables in a single push?</h3><p>With one object: <code>dataLayer.push({event: 'customize', color: 'red', conversionValue: 50})</code>. Every key enters the dataLayer state and can be read by the tags fired by that event. Do not split the value and the event name across two different pushes.</p></article>
+<article class="faq-item"><h3>What happens if you push a variable that has the same name as a key that already exists?</h3><p>The new value overwrites the previous one in the current state, from that point in the queue onward. Messages that have already been processed are not rewritten.</p></article>
+<article class="faq-item"><h3>How long do variables placed in the dataLayer stay active?</h3><p>They stay available for the whole time the user remains on that page, until you overwrite them or reset the state. Across pages they must be published again on every load, with the same name: <code>visitorType</code> on one page and <code>visitor_type</code> on another are two different keys.</p></article>
+<article class="faq-item"><h3>What is the difference between dataLayer.push(function) and gtag(...)?</h3><p>If you pass a function to <code>dataLayer.push(function(){ ... })</code>, <code>this</code> points to GTM’s abstract data model (<code>this.set</code>, <code>this.get</code>, <code>this.reset</code>). <code>gtag(function(){ ... })</code> is not a valid command: the function is ignored.</p></article>
+<h2>Data model, custom name and syntax</h2>
+<article class="faq-item"><h3>What is this.reset() for inside a function passed to dataLayer.push()?</h3><p>It clears the state that has accumulated in the data model. It is used on pages that stay open for a long time and in single-page applications, so you do not carry values from the previous view. The SPA page view should then be sent again as described in the <a class="inline" href="/en/tag-google-analytics-4">Google Analytics 4</a> guide.</p></article>
+<article class="faq-item"><h3>How do you use this.set() and this.get() in custom dataLayer methods?</h3><p>They read and write key-value pairs on the abstract data model, in a controlled way. Example: <code>this.set('time', new Date())</code> and, in a later step, <code>this.get('time')</code>. They do not replace a <code>dataLayer.push</code> with <code>event</code> when you need to fire a tag.</p></article>
+<article class="faq-item"><h3>Can dataLayer be renamed?</h3><p>Yes. Change the array name in the snippet, pass <code>l=myNewName</code> in the GTM script URL and align every call to <code>window.myNewName.push(...)</code>. If even one integration keeps writing to <code>dataLayer</code>, the events split across two queues.</p></article>
+<article class="faq-item"><h3>What are the most common syntax errors on dataLayer.push()?</h3><ul><li><code>datalayer.push</code> instead of <code>dataLayer.push</code> (the L is uppercase).</li><li>Keys with special characters, such as <code>new-variable</code>, written without quotes.</li><li>Malformed JSON: a trailing comma, single quotes where the parser expects strict JSON, brackets left unclosed.</li></ul></article>
+<h2>Google tag, checks, and a single dataLayer</h2>
+<article class="faq-item"><h3>How do you check the dataLayer state in real time?</h3><p>With Google Tag Assistant on tagassistant.google.com, or with Google Tag Manager Preview mode. For each event in sequence you see the dataLayer values and the consent state. Consent is covered in more depth in the <a class="inline" href="/en/consent-mode">Consent Mode</a> guide.</p></article>
+<article class="faq-item"><h3>What is the Google tag (gtag.js) and how does it connect to several destinations?</h3><p>It is a single JavaScript framework that collects the data and routes it to several destinations: Google Ads, Google Analytics, Floodlight and others, through a <code>TAG_ID</code> or linked configurations. In a GTM container the same role is played by the native tags, not by a second copy of gtag pasted onto the page.</p></article>
+<article class="faq-item"><h3>What is the role of the ID prefix (GTM-, G-, AW-) in the script URL?</h3><p>It tells the loader which kind of container it is starting and which permissions to apply.</p><ul><li><code>GTM-</code> is a Google Tag Manager container.</li><li><code>G-</code> is a Google Analytics 4 property.</li><li><code>AW-</code> is a Google Ads account.</li></ul></article>
+<article class="faq-item"><h3>Why is gtag('config', ...) marked as deprecated in the newer snippets?</h3><p>Google is moving destination configuration into the Google Tag Manager interface and, on the page, toward <code>gtag('set', ...)</code>. A <code>gtag('config')</code> that is already published stays backward compatible: do not remove it in the middle of a migration without a measurement plan.</p></article>
+<article class="faq-item"><h3>How do grouping and routing work in gtag.js?</h3><p>You can centralize the shared parameters and send an event only to some destinations, for example a Measurement ID <code>G-</code> or an <code>AW-</code> account, instead of sending everything everywhere. It is the same principle as the <code>send_to</code> parameter explained in the <a class="inline" href="/en/tag-nativo-google-ads">Google Ads native tag</a> guide.</p></article>
+<article class="faq-item"><h3>How do you check in the Network tab that the tag is transmitting?</h3><p>Filter the requests by domain.</p><ul><li><code>googletagmanager.com</code> loads the container.</li><li><code>google-analytics.com</code> or <code>analytics.google.com</code> carry the GA4 hits.</li><li><code>googleadservices.com</code> and the Google advertising domains carry Ads.</li><li><code>doubleclick.net</code> appears with Floodlight.</li></ul></article>
+<article class="faq-item"><h3>How does debugging change with server-side tagging?</h3><p>In the browser you see the requests to your tagging endpoint, usually a first-party subdomain. The hits toward the final Google Ads and Google Analytics servers leave from the server container, not from the user’s browser.</p></article>
+<article class="faq-item"><h3>What is the Google tag gateway for advertisers?</h3><p>It is a configuration that routes the tag requests through a first-party path you control. It is meant to keep measurement more continuous when the browser limits third-party scripts, always in line with <a class="inline" href="/en/consent-mode">Consent Mode</a>.</p></article>
+<article class="faq-item"><h3>How do you handle tagging on AMP pages compared with the standard web?</h3><p>AMP has native components for the tags and for GTM, with limits of their own. GTM for AMP does not cover Google Analytics the way the web does: you need dedicated AMP snippets, and you should check that <code>cid</code> and <code>gclid</code> are passed through to the non-AMP pages.</p></article>
+<article class="faq-item"><h3>How do you filter traffic from CMS integrations, for example Shopify, in Google Analytics?</h3><p>With data filters or dedicated exclusions, so the automatic events from the CMS and the internal traffic do not inflate sessions and conversions. The funnel you want to read in the reports is the <a class="inline" href="/en/shop/tracker-ecommerce">Tracker E-commerce</a> one, not the theme’s test funnel.</p></article>
+<article class="faq-item"><h3>Why use a single dataLayer per page even when several tags are present?</h3><p>A single array keeps one timeline. Two separate queues make a tag read values that are missing or stale. The same is true when GA4, Google Ads and the <a class="inline" href="/en/shop/consent-mode-v2">Consent Mode v2</a> tag share the page.</p></article>
+    </section>
+
+    <section class="picks"><h2>Products that rely on the DataLayer</h2><p>Without this data layer the containers below have no reliable events. If it has to be built on your CMS, that work is done as hourly support.</p><div class="pick-grid"><article class="pick"><a class="pick-img" href="/en/shop/tracker-ecommerce"><img src="/assets/products/tracker-ecommerce.webp" alt="Tracker E-commerce" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Tracker E-commerce</h3><p>Data layer and view_item, cart, checkout and purchase events.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/tracker-ecommerce">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/dynamic-remarketing"><img src="/assets/products/dynamic-remarketing.webp" alt="Dynamic Remarketing" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Dynamic Remarketing</h3><p>Product events and feed alignment for Google Ads.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/dynamic-remarketing">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/consent-mode-v2"><img src="/assets/products/consent-mode-v2.webp" alt="Consent Mode v2" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Consent Mode v2</h3><p>Cookie banner connected to the Google tags.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/consent-mode-v2">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/supporto-10-ore"><img src="/assets/products/supporto-10-ore.webp" alt="10-hour support" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Technical hours</span><h3>10-hour support</h3><p>Mid-size projects, or several clients of the same agency.</p><div class="pick-foot"><span class="pick-price">€900</span><a class="pick-btn" href="/en/shop/supporto-10-ore">View and buy</a></div></div></article></div></section>
+<p class="nav-links"><a href="/en/faq">All FAQs</a> · <a href="/en/chi-siamo">← Back to About</a> · <a href="/en/tag-google-analytics-4">GA4 guide →</a> · <a href="/en/tag-nativo-google-ads">Google Ads tag →</a></p>
+  </article>
+</main>
+
+<footer class="footer">EasyTag Pro · <a href="/en/chi-siamo">About</a> · <a href="/en/tag-nativo-google-ads">Google Ads</a> · <a href="/en/tag-google-analytics-4">GA4</a></footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+  if(!btn||!nav)return;
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile())nav.setAttribute('aria-hidden','true');
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+  document.addEventListener('keydown',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open navigation menu');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+  });
+})();
+</script>
+<script src="/chatbot-en.js" defer></script>
+</body>
+</html>

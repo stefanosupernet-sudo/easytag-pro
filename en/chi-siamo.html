@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <title>About Us | EasyTag Pro – Spin-off of the Google tag team in Krakow</title>
+  <meta name="description" content="EasyTag Pro is the spin-off of the Italian team active since 2019 at the Google offices in Krakow. Support for native tags, GA4, Consent Mode, Merchant Center and DataLayer for business owners and agencies.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/en/chi-siamo">
+  <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/chi-siamo">
+  <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/chi-siamo">
+  <link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/chi-siamo">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"AboutPage","name":"About Us - EasyTag Pro","url":"https://easytag-pro.vercel.app/en/chi-siamo","mainEntity":{"@type":"Organization","name":"EasyTag Pro","description":"Spin-off of the Italian team from the Google offices in Krakow, active since 2019 on the Italian market for Google tags, GA4, Consent Mode and Merchant Center.","knowsAbout":["Google Tag Manager","Google Analytics 4","Google Ads","Consent Mode","Merchant Center","DataLayer"]}}
+  </script>
+  <style>
+    :root{--blue:#1182DE;--dark:#0B5CAD;--light:#E8F3FC;--ink:#202124;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA;--radius:12px}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.7}
+    a{color:inherit;text-decoration:none}a.ext,a.inline{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+    .header{position:sticky;top:0;z-index:5;background:#fffffff5;border-bottom:1px solid var(--line);padding:0 20px}
+    .header-inner{max-width:1120px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-size:20px;font-weight:700;display:flex;align-items:center;gap:8px}
+    .logo img{height:36px;width:auto;display:block}
+    .nav{display:flex;align-items:center;gap:18px}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}
+    .nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:5px}
+    .submenu{position:absolute;top:calc(100% + 10px);left:-10px;min-width:220px;padding:8px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px #0002}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;border-radius:6px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}@media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}
+    }
+    main{max-width:820px;margin:36px auto;padding:0 22px 70px}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:0 0 18px}
+    h2{font-size:24px;margin:34px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+    p,li{color:var(--gray)}p{margin:0 0 14px}ul{margin:0 0 16px;padding-left:1.25rem}li{margin:6px 0}
+    .summary{background:var(--light);border:1px solid #cfe6f8;border-radius:12px;padding:18px 20px;margin:0 0 28px}
+    .summary h2{margin:0 0 10px;font-size:16px;border:0;padding:0;color:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+    .summary ol{margin:0;padding-left:1.2rem}.summary li{color:var(--ink);margin:6px 0;font-size:15px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0 8px}
+    .card{padding:18px;background:var(--pale);border:1px solid var(--line);border-radius:var(--radius)}.card:hover{border-color:var(--blue)}
+    .card strong{display:block;color:var(--dark);margin-bottom:5px}.card span{font-size:14px;color:var(--gray)}
+    .faq details{border-bottom:1px solid var(--line);padding:14px 0}.faq summary{font-weight:600;cursor:pointer;color:var(--ink)}.faq p{margin-top:10px}
+    .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
+    .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
+  
+.picks{margin:36px 0 10px}
+.picks h2{border:0;padding:0;margin-top:0}
+.picks h3{font-size:18px;margin:22px 0 10px}
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pick{border:1px solid #E8EAED;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pick-img{display:block;background:#1a1a1a;line-height:0}
+.pick-img img{width:100%;height:110px;object-fit:cover;display:block}
+.pick-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:16px;margin:0;border:0;padding:0}
+.pick-body p{font-size:13px;color:#5F6368;margin:0}
+.pick-badge{font-size:11px;font-weight:700;color:#137333;background:#E6F4EA;display:inline-block;padding:3px 8px;border-radius:99px;width:max-content}
+.pick-badge.quote{color:#0B5CAD;background:#E8F3FC}
+.pick-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;gap:8px}
+.pick-price{font-weight:700;font-size:15px}
+.pick-btn{background:#1182DE;color:#fff!important;text-decoration:none!important;font-weight:700;font-size:13px;padding:8px 12px;border-radius:8px}
+.inline{color:#1182DE;text-decoration:underline;text-underline-offset:2px}
+
+nav.breadcrumb{margin:0 0 18px}
+nav.breadcrumb ol{display:flex;flex-wrap:wrap;align-items:center;gap:0;list-style:none;margin:0;padding:0;font-size:14px;color:#5F6368}
+nav.breadcrumb li{display:flex;align-items:center}
+nav.breadcrumb li+li::before{content:"›";margin:0 8px;color:#5F6368}
+nav.breadcrumb a{color:#1182DE;text-decoration:none;font-weight:600}
+nav.breadcrumb a:hover{text-decoration:underline}
+nav.breadcrumb [aria-current="page"]{color:#202124;font-weight:600}
+.lang{display:flex;gap:4px;background:#F8F9FA;border-radius:8px;padding:3px}.lang a{padding:4px 8px;border-radius:6px;font-size:13px;font-weight:700}.lang a.active{background:#fff;color:#1182DE}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easytag-pro.vercel.app/en"}, {"@type": "ListItem", "position": 2, "name": "About", "item": "https://easytag-pro.vercel.app/en/chi-siamo"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="header"><div class="header-inner"><a class="logo" href="/en"><img src="data:image/png;base64,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" alt="Easy Tag"></a>
+    <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+    <nav id="main-nav" class="nav" role="navigation" aria-label="Main navigation">
+      <a href="/en">Home</a><a href="/en/shop">Shop</a>
+      <details class="nav-group"><summary>About</summary><div class="submenu"><a href="/en/chi-siamo" aria-current="page">Overview</a><a href="/en/tag-nativo-google-ads">Google Ads native tag</a><a href="/en/tag-google-analytics-4">Google Analytics 4</a><a href="/en/datalayer-architettura">DataLayer architecture</a><a href="/en/consent-mode">Consent Mode</a></div></details>
+      <a href="/en/faq">FAQ</a><a href="/en/contatti">Contact</a>
+      <div class="lang"><a href="/chi-siamo">IT</a><a href="/en/chi-siamo" class="active" aria-current="true">EN</a></div>
+    </nav></div></header>
+
+  <main id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en">Home</a></li><li><span aria-current="page">About</span></li></ol></nav>
+    <article>
+      <h1>About Us: from the Krakow tag team to Italian businesses</h1>
+
+      <aside class="summary" aria-label="Page summary">
+        <h2>In 230 seconds — what you will find here</h2>
+        <ol>
+          <li>Where we come from: the tag team active since 2019 at the Google offices in Krakow, focused on the Italian market.</li>
+          <li>What we handled for years: native tags, Analytics, Consent Mode, Merchant Center and related issues.</li>
+          <li>What we are today: a spin-off that brings that expertise directly to business owners and agencies in Italy.</li>
+          <li>How we work on measurement, privacy and data infrastructure without mandatory in-house hiring.</li>
+          <li>The three technical pillars (Ads, GA4, DataLayer) and five operational FAQs.</li>
+        </ol>
+      </aside>
+
+      <section>
+        <h2>The starting point: Krakow, since 2019</h2>
+        <p>EasyTag Pro comes from the experience of an Italian team that, starting in <strong>2019</strong>, worked at the Google offices in Krakow on tags and digital measurement. This is not a generic marketing specialization, but day-to-day work on the implementations that get the right data into Google tools: conversions, analytics, feeds and consent signals.</p>
+        <p>In those years the Italian market kept asking for support on concrete cases: sites with duplicate tags, e-commerce stores with untracked purchases, Ads campaigns that were not receiving reliable conversions, Analytics properties that were hard to read, incomplete Merchant Center feeds, cookie banners not correctly connected to the tags. The team handled those requests by building a method based on verification, documentation and repeatable solutions.</p>
+        <p>Today EasyTag Pro is the <strong>spin-off</strong> of that path: the same technical expertise, made directly available to business owners, technical offices and web agencies that do not want to (or cannot) build an in-house team dedicated only to tagging.</p>
+      </section>
+
+      <section>
+        <h2>What we handled for the Italian market</h2>
+        <p>The scope of the work has always been broad, because in the field measurement problems rarely stay isolated. We have worked on:</p>
+        <ul>
+          <li><strong>Google Ads native tags</strong> — conversions, Conversion Linker, dynamic values and alignment between conversion actions and business goals. Deep dive: <a class="inline" href="/en/tag-nativo-google-ads">Google Ads native tag</a>.</li>
+          <li><strong>Google Analytics 4</strong> — events, parameters, e-commerce and flow validation. Deep dive: <a class="inline" href="/en/tag-google-analytics-4">Google Analytics 4</a>.</li>
+          <li><strong>Consent Mode and operational privacy</strong> — the connection between user choices, the CMP and Google tag behavior. Deep dive: <a class="inline" href="/en/consent-mode">Consent Mode</a>. Product page: <a class="inline" href="/en/shop/consent-mode-v2">Consent Mode v2</a>.</li>
+          <li><strong>Merchant Center</strong> — consistency between product data, tracking and the signals used by Shopping and Performance Max campaigns. Product page: <a class="inline" href="/en/shop/dynamic-remarketing">Dynamic Remarketing</a>.</li>
+          <li><strong>DataLayer and Google Tag Manager</strong> — a stable data infrastructure, not tied to page layout alone. Deep dive: <a class="inline" href="/en/datalayer-architettura">DataLayer architecture</a>.</li>
+        </ul>
+        <p>This overall view matters: an Ads tag that is “correct” on a page with poorly managed consent, or a GA4 event without a consistent DataLayer, produces fragile reports. The value of the Krakow team was precisely keeping these pieces together.</p>
+      </section>
+
+      <section>
+        <h2>Cookies, scripts and CMP: the context we work in</h2>
+        <p>Measuring today also means respecting the privacy framework and the way the browser runs code. <a class="ext" href="https://www.agendadigitale.eu/sicurezza/tutto-quello-che-dobbiamo-sapere-sui-cookie-per-la-privacy-da-utenti-o-gestori/" target="_blank" rel="noopener noreferrer">Cookies</a> are not a technical detail to leave only to the banner: they influence what tags can read, for how long and on what basis. Anyone who runs a site needs to know what they install and why.</p>
+        <p>In the same way, much of the tracking goes through <a class="ext" href="https://www.html.it/pag/15240/cosa-javascript/" target="_blank" rel="noopener noreferrer">JavaScript</a>: GTM snippets, DataLayer pushes, form and checkout callbacks. If the script is loaded poorly, late or in conflict with other modules, the data arrives incomplete even when “the tag seems to be on the page”.</p>
+        <p>That is where the <strong>CMP</strong> (Consent Management Platform) and Google <a class="ext" href="https://support.google.com/adsense/answer/16918505?hl=it" target="_blank" rel="noopener noreferrer">Consent Mode</a> come in: consent signals must talk to the tags, not live in a separate silo. A serious implementation connects the user’s choices to tag state, avoids inconsistent firing and keeps tracking when consent is granted.</p>
+        <p>EasyTag Pro steps in exactly at that junction: not only “adding a snippet”, but making cookies, scripts and the CMP work together with the measurement the business needs.</p>
+      </section>
+
+      <section>
+        <h2>A spin-off built for business owners and agencies</h2>
+        <p>Many Italian companies need reliable tracking, but not a permanent headcount on GTM. Web agencies, for their part, often prefer to focus on creativity, media and the client relationship, and to delegate the more technical tagging work to a specialist.</p>
+        <p>EasyTag Pro fills that space: ready-made containers where it makes sense to standardize, custom projects where the site or the funnel requires them, and language that is clear both to people who buy media and to people who develop. We stay focused on Google Tag Manager, GA4, Ads tags, Consent Mode and related topics such as Merchant Center: we are not a generic full-service agency.</p>
+        <p>The result we aim for is operational: verifiable conversions, readable events, less dependence on fragile selectors, and documentation that is still useful after go-live.</p>
+      </section>
+
+      <section>
+        <h2>The three technical pillars</h2>
+        <p>A quick map of the core themes of our method:</p>
+        <div class="cards">
+          <a class="card" href="/en/tag-nativo-google-ads"><strong>Google Ads native tag</strong><span>Conversions, Conversion Linker and measurement oriented to campaigns.</span></a>
+          <a class="card" href="/en/tag-google-analytics-4"><strong>Google Analytics 4</strong><span>Events, parameters and a readable e-commerce or lead journey.</span></a>
+          <a class="card" href="/en/datalayer-architettura"><strong>DataLayer architecture</strong><span>Stable structured data for GTM, not dependent on the DOM alone.</span></a>
+          <a class="card" href="/en/consent-mode"><strong>Consent Mode</strong><span>Default, update and the link between the CMP and Google tags.</span></a>
+        </div>
+      </section>
+
+      <section>
+        <section class="picks"><h2>The products behind each pillar</h2><p>The guides explain the method. From here you open the product page and, where there is a price, continue to purchase.</p><h3>Google Ads native tag</h3><div class="pick-grid"><article class="pick"><a class="pick-img" href="/en/shop/tracking-click-telefono"><img src="/assets/products/tracking-click-telefono.webp" alt="Phone Click Tracking" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ready-made container</span><h3>Phone Click Tracking</h3><p>Clicks on tel: links to Google Ads and GA4.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="/en/shop/tracking-click-telefono">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/tag-email"><img src="/assets/products/tag-email.webp" alt="TAG Email" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ready-made container</span><h3>TAG Email</h3><p>Clicks on mailto: and related conversions.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="/en/shop/tag-email">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/contatti-3in1"><img src="/assets/products/contatti-3in1.webp" alt="Contacts 3-in-1" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ready-made container</span><h3>Contacts 3-in-1</h3><p>Phone, email and WhatsApp in a single container.</p><div class="pick-foot"><span class="pick-price">€350</span><a class="pick-btn" href="/en/shop/contatti-3in1">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/dynamic-remarketing"><img src="/assets/products/dynamic-remarketing.webp" alt="Dynamic Remarketing" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Dynamic Remarketing</h3><p>Product events and feed alignment for Google Ads.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/dynamic-remarketing">Request a quote</a></div></div></article></div><h3>Google Analytics 4</h3><div class="pick-grid"><article class="pick"><a class="pick-img" href="/en/shop/tag-facebook"><img src="/assets/products/tag-facebook.webp" alt="TAG Facebook" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ready-made container</span><h3>TAG Facebook</h3><p>Outbound clicks to Facebook / Meta for conversions and analytics.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="/en/shop/tag-facebook">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/tag-instagram"><img src="/assets/products/tag-instagram.webp" alt="TAG Instagram" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ready-made container</span><h3>TAG Instagram</h3><p>Clicks to Instagram from CTAs and on-page links.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="/en/shop/tag-instagram">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/tag-linkedin"><img src="/assets/products/tag-linkedin.webp" alt="TAG LinkedIn" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ready-made container</span><h3>TAG LinkedIn</h3><p>Clicks to LinkedIn for B2B leads.</p><div class="pick-foot"><span class="pick-price">€150</span><a class="pick-btn" href="/en/shop/tag-linkedin">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/tracking-social-6in1"><img src="/assets/products/tracking-social-6in1.webp" alt="Social Tracking 6-in-1" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Ready-made container</span><h3>Social Tracking 6-in-1</h3><p>Facebook, Instagram, LinkedIn, X, YouTube and Telegram.</p><div class="pick-foot"><span class="pick-price">€450</span><a class="pick-btn" href="/en/shop/tracking-social-6in1">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/tracker-ecommerce"><img src="/assets/products/tracker-ecommerce.webp" alt="E-commerce Tracker" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>E-commerce Tracker</h3><p>Data layer and view_item, cart, checkout and purchase events.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/tracker-ecommerce">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/consent-mode-v2"><img src="/assets/products/consent-mode-v2.webp" alt="Consent Mode v2" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Consent Mode v2</h3><p>Cookie banner connected to Google tags.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/consent-mode-v2">Request a quote</a></div></div></article></div><h3>DataLayer architecture</h3><div class="pick-grid"><article class="pick"><a class="pick-img" href="/en/shop/tracker-ecommerce"><img src="/assets/products/tracker-ecommerce.webp" alt="E-commerce Tracker" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>E-commerce Tracker</h3><p>Data layer and view_item, cart, checkout and purchase events.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/tracker-ecommerce">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/dynamic-remarketing"><img src="/assets/products/dynamic-remarketing.webp" alt="Dynamic Remarketing" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Dynamic Remarketing</h3><p>Product events and feed alignment for Google Ads.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/dynamic-remarketing">Request a quote</a></div></div></article></div></section>
+        <h2>How we work, in brief</h2>
+        <ul>
+          <li>We start from the measurement plan and the real goals (lead, purchase, call, signup).</li>
+          <li>We review the current stack: tags, DataLayer, consent and any duplicates.</li>
+          <li>We implement or fix with priority on stability over time.</li>
+          <li>We validate in preview and document what was released.</li>
+          <li>We stay available for hourly support or ongoing work with agencies.</li>
+        </ul>
+      </section>
+
+<section class="picks"><h2>Hourly support</h2><p>When a ready-made container is not enough: audits, fixes and implementations on your site.</p><div class="pick-grid"><article class="pick"><a class="pick-img" href="/en/shop/supporto-5-ore"><img src="/assets/products/supporto-5-ore.webp" alt="5-hour support" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Technical hours</span><h3>5-hour support</h3><p>GTM fixes, audits and targeted optimizations.</p><div class="pick-foot"><span class="pick-price">€500</span><a class="pick-btn" href="/en/shop/supporto-5-ore">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/supporto-10-ore"><img src="/assets/products/supporto-10-ore.webp" alt="10-hour support" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Technical hours</span><h3>10-hour support</h3><p>Medium projects or several clients of the same agency.</p><div class="pick-foot"><span class="pick-price">€900</span><a class="pick-btn" href="/en/shop/supporto-10-ore">View and buy</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/supporto-20-ore"><img src="/assets/products/supporto-20-ore.webp" alt="20-hour support" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Technical hours</span><h3>20-hour support</h3><p>Ongoing collaboration with the team.</p><div class="pick-foot"><span class="pick-price">€1.600</span><a class="pick-btn" href="/en/shop/supporto-20-ore">View and buy</a></div></div></article></div></section>
+
+
+      <section class="faq" aria-label="Frequently asked questions">
+        <h2>FAQ about EasyTag Pro</h2>
+
+        <details>
+          <summary>Are you really connected to the Google Krakow experience?</summary>
+          <p>Yes. EasyTag Pro is the spin-off of the Italian team active since 2019 at the Google offices in Krakow on tags and measurement, with a long-standing focus on the needs of the Italian market.</p>
+        </details>
+
+        <details>
+          <summary>Which Google products do you work on?</summary>
+          <p>In particular Google Ads native tags, Google Analytics 4, Google Tag Manager, Consent Mode, topics linked to Merchant Center, and DataLayer architecture. We do not replace creative campaign management: we make the measurement that feeds it reliable.</p>
+        </details>
+
+        <details>
+          <summary>Do you work only with large companies?</summary>
+          <p>No. We work with SMEs, e-commerce businesses and web agencies that want specialist expertise without building an in-house team right away. Ready-made containers cover standard cases; custom projects cover sites with particular logic.</p>
+        </details>
+
+        <details>
+          <summary>Do you also handle cookie banners and CMPs?</summary>
+          <p>We handle the connection between the CMP, consent and Google tags (Consent Mode and consistent firing). Legal privacy advice stays with the client and their advisors; we make what the tags do technically consistent with the user’s choices.</p>
+        </details>
+
+        <details>
+          <summary>How can I get started?</summary>
+          <p>You can start from the <a class="inline" href="/en/shop">shop</a> for a ready-made container, or write to us from the <a class="inline" href="/en/contatti">Contact</a> page for an audit or a custom collaboration.</p>
+        </details>
+      </section>
+
+      <p class="nav-links"><a href="/en/faq">All FAQs</a> ·
+        <a href="/en/tag-nativo-google-ads">Google Ads tag →</a> ·
+        <a href="/en/tag-google-analytics-4">GA4 →</a> ·
+        <a href="/en/datalayer-architettura">DataLayer →</a> ·
+        <a href="/en/contatti">Contact →</a>
+      </p>
+    </article>
+  </main>
+
+  <footer class="footer">EasyTag Pro · <a href="/en/tag-nativo-google-ads">Google Ads</a> · <a href="/en/tag-google-analytics-4">GA4</a> · <a href="/en/datalayer-architettura">DataLayer</a> · <a href="/en/contatti">Contact</a></footer>
+<script>
+  (function(){
+    var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+    if(!btn||!nav)return;
+    function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+    function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+    function setOpen(open){
+      nav.classList.toggle('is-open',open);
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      btn.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+      if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+      else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+      if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+      else if(!open) btn.focus();
+    }
+    function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+    if(isMobile())nav.setAttribute('aria-hidden','true');
+    btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+    document.addEventListener('keydown',function(e){
+      if(!nav.classList.contains('is-open')||!isMobile())return;
+      if(e.key==='Escape'){e.preventDefault();close();return;}
+      if(e.key!=='Tab')return;
+      var items=focusable();if(!items.length)return;
+      var first=items[0],last=items[items.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    });
+    document.addEventListener('click',function(e){
+      if(!nav.classList.contains('is-open')||!isMobile())return;
+      if(nav.contains(e.target)||btn.contains(e.target))return;close();
+    });
+    window.addEventListener('resize',function(){
+      if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open navigation menu');document.body.classList.remove('nav-open');}
+      else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+    });
+  })();
+  </script>
+<script src="/chatbot-en.js" defer></script>
+</body>
+</html>

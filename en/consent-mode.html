@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAHkklEQVR42u2cf2gTZxjHpYQiMsQ5ESdjjG4wJ1KKiPiHyHBuE+lEiri6leK6rlbnuvxqmsbarpbYxjbTIWUMkeKKrXPUImEMHftjbEXEDam1G6VNYy1SQqlVq0it9d3zxjf1crm73L13Sa7x+cIXJD3v3vf53N3743nfW7AAhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVCoF1EvHx5eCF4N3pBkrwOvBGepLZvVarWA14DzwVvAy5IUgyzwKnAxuBn8M/gP8FXwP+Ae8AXwCXA5eC3YYnQhaAHOgKfAJIUeAFeAsxVALLQ+UwhMBJ4BB8BrDYJAb5RW8AhHPcLgU+BNWm4yucIUgR+mGITYl+kTIwEjB3xVBELsabALnMVRdwt4F7v7jaoLfYp2cIGB/7QdPJNmGFFfAy8WwFgFvp0AhtB+LVDgWu+y4CWrPvQ1l6cFxmLwbZPAiNqnAsasHiis3j+k6EZ8BK5R1cbAQWUmg0E9udvZvF4GBv1tD3gFOBd8WisUOP8acH8a6vUbeHkiID+ZEAj5uPLbhxJBDtP2RKKN8amFAufeAp5IY91oB+YtJSBXzAjko6qTUgG2KvTAwnJQBHXdZoKOC/Uo7dFmApD1Ct3igFKbsvRwcKNJYERNu9Wvz5tX1u5Kv1RgdygAuaLU+/rQ3QYNa9Bs9ewV9iijQErMBuPV+n/JAVulVGB/lWqo4bd1CXpdEb/vPk2Wmg/K92IgL7F3mmkK+V51p1Jgj4EXCWDkgYNqxykmhDINzhFD2cr+kPYCvl17mXwl/XQIPQbuZq+pGQ2DRgblR7NBcUq1JYVpmMOK8Tu1f5Fyu4doDTCPTQbljNLkYmeqwbxZ9zfJrzpFKqyOlMCIesPBC1pH23SKpZvN/F42ME4XEg0WF7HR7EY2cxn1BzoK0RU9z0ZPl323s4UUOX1kr/0Q+dpqSymIqIsdXrUDuVLwEpnplzIDpp5O6smTTHJe9DtBQ1yaDgBilzi+USrvLNirlBIQxGWJzuFDES+QbIOAHDADkD2Ow3JlpROOxRzxcTGQWuIyHjcWSRGQYwIg+80A5DNHvVxZPTrySvs1QinTk8TK1jEx5xcAKTcxkCt6U7Fsqj0RFPp3v67Mok4gzQIgZSZuQ7YalA7fCQ4qzGMVGZHmtegA4psHjfqgkQsV2A1Me5ZOcCNrYzbTzpFRF7CwRigjgHzuqBOXsXW+LQ/K0gGkUQCkxBRA7BRI0JgGFoHIOxQKkSdPnsR4YGBAAkitePqkYD4uogtzAvEKgOxJJpD29nYyOztLhJqeno47rjQeSKHGm5Mu8svldI4h7ZVBQIqTCeTIkSNkamqKB4hLZQxKWAdA7xxWUPdTCScY47x4vQBIUbJgNDU1kbt37xKxpIB8YT8kBhJQUf98jtG4kumsQP68A+L3+0lvby/p6OiQPebo0aPk3r17MSDGxsYiry+VQB4mWqbD1nIlI5WbxQuEd2azVgDkEy0wWlpayIMHDyIBfvr0KQkEAsRmi50hbm5uJvfv34+BMTg4SKqqqsjZs2fJrVu34s5bZq+Ryol4E9S/LUlpiCW8QHjTvTUCIIVqYfh8vrj2gEK5dOnSHBQKTHzM0NAQcbvdc+cRA1QAQp+SXIX6VyQJyIpUA/FoBdLY2Bj3ChKqp6eHnDt3bu7piSoYDJLq6uqE5y+zHwQgQ3I5kJUy9V+uY4I1KUBGDACyK1GwvF4vmZycJFo1PDwc82Qoea88kCiUNTIxKDcTkBDnBd1qgTQ0NJA7d+7EBPrGjRuktbWVXLx4MfLKkhIdEKp5Mp4D8SgBib6+aqTyFfCb1eBUNzeQIOcFXQIgO+WCVF9fT8bHx2MCff36deJ0OueOOX/+fByUmzdvaoJBTRdUvKIMZG7xN2vMS9ja4M0srftLpgApkApQXV0dCYfDMYHu6+uLgRF1d3f3HJSRkRHi8WhfraIBSCrMDWRA79ojKSAOh4OMjo7GvaYqK+XXaB0/fpy0tbVFurY8g8h9tuoXGohdAGSHODgulysyeIuqv79fEYYRzhQg/3Fe0KoEhLqzs5M8fvw48mRQQMmeft9ncyMQBiRfLkj09WO321OSD9lvq8oIIH2cF6xQAySVfgZkEIFAMLaZAciXNldGALnGecFyAZCtZgBSbs+MRp13MLRdAGStGYB86mwy05YEbiAezk0pK1Ru0kyZN1d3TGUCkDc4Nk92SWxDa0gzkIkC1wma125I8mZQmhH8XcVxfOt7GZRaDQWaiNuy9QzIokQbNZNouuuqUHSTnTQYzAz7WtA6tmBuMEFuXdeSUgv76o2aSblNCjtnl4J7UgzjEV31IlMvuorEzVKqvHnzEPuc02rRufMUsq2uBXrFlsGUyuRHaGUCil8seA4lm21P6E8BiC66SVRl3XLY7C7Nof/J6jklAPWIrS+gu6ra2XR8ntLSHvjbMgYrxM4zwRZcG/edLfa0rGcf+qKJmwLwa1rPQ7c7s++X0C3OGwx2rnDnro4b0MJeP9ns31k6zpVt+AfPUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFMrP+Bx+tDr/w5WdaAAAAAElFTkSuQmCC">
+  <title>Consent Mode v2: GTM, dataLayer and verification | EasyTag Pro</title>
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Consent Mode v2, Google Consent Mode, ad_storage, analytics_storage, ad_user_data, ad_personalization, gcs G100, CMP, dataLayer, Google Tag Manager, cookieless pings, Enhanced Conversions">
+  <meta name="description" content="Guide to Consent Mode v2: default denied before GTM, update from the CMP, Basic and Advanced, cookieless pings and checking gcs in Tag Assistant.">
+  <link rel="canonical" href="https://easytag-pro.vercel.app/en/consent-mode">
+  <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/consent-mode">
+  <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/consent-mode">
+  <link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/consent-mode">
+  <meta name="author" content="EasyTag Pro">
+  <meta name="theme-color" content="#1182DE">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="EasyTag Pro">
+  <meta property="og:title" content="Consent Mode v2: GTM, dataLayer and verification | EasyTag Pro">
+  <meta property="og:description" content="Guide to Consent Mode v2: default denied before GTM, update from the CMP, Basic and Advanced, cookieless pings and checking gcs in Tag Assistant.">
+  <meta property="og:url" content="https://easytag-pro.vercel.app/en/consent-mode">
+  <meta property="og:image" content="https://easytag-pro.vercel.app/assets/products/consent-mode-v2.webp">
+  <meta property="og:image:alt" content="Consent Mode v2 with Google Tag Manager">
+  <meta property="article:modified_time" content="2026-11-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Consent Mode v2: GTM, dataLayer and verification | EasyTag Pro">
+  <meta name="twitter:description" content="Guide to Consent Mode v2: default denied before GTM, update from the CMP, Basic and Advanced, cookieless pings and checking gcs in Tag Assistant.">
+  <meta name="twitter:image" content="https://easytag-pro.vercel.app/assets/products/consent-mode-v2.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>.logo img{height:40px;width:auto;display:block}
+    :root{--blue:#1182DE;--light:#E8F3FC;--gray:#5F6368;--line:#E8EAED;--pale:#F8F9FA;--ink:#202124}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;line-height:1.7;color:var(--ink)}
+    a{color:inherit;text-decoration:none}.header{position:sticky;top:0;background:#fffffff5;border-bottom:1px solid var(--line);z-index:5;padding:0 20px}
+    .header-inner{max-width:1180px;min-height:64px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-size:20px;font-weight:700}.mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;margin-right:8px}
+    .nav{display:flex;gap:18px;align-items:center}.nav>a,.nav summary{font-size:14px;font-weight:600;color:var(--gray);cursor:pointer}
+    .lang{display:flex;background:var(--pale);border-radius:8px;padding:3px;font-size:13px;font-weight:600}.lang a{padding:5px 12px;border-radius:6px}.lang a.active{background:#fff;color:var(--blue)}
+    .nav-group{position:relative}.nav-group summary{list-style:none}.nav-group summary:after{content:'⌄';margin-left:6px}
+    .submenu{position:absolute;top:calc(100% + 10px);left:-10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px}
+    .nav-group:not([open]) .submenu{display:none}.submenu a{display:block;padding:9px;color:var(--gray);font-size:14px}.submenu a:hover{background:var(--light);color:var(--blue)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .menu-toggle span{display:block;width:22px;height:2px;background:#202124;border-radius:2px;transition:transform .2s,opacity .2s}
+    .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+    .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu-toggle:focus-visible,.nav a:focus-visible,.nav summary:focus-visible,.lang a:focus-visible{outline:3px solid #1182DE;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;overflow:hidden}.skip-link:focus{position:fixed;left:12px;top:12px;padding:12px 16px;background:#1182DE;color:#fff;border-radius:8px;font-weight:600;z-index:200;text-decoration:none}
+    body.nav-open{overflow:hidden}
+    @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+    @media(max-width:860px){
+      .menu-toggle{display:inline-flex}.header-inner{position:relative}
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:4px;padding:12px 16px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);z-index:50}
+      .nav.is-open{display:flex}.nav>a,.nav summary{display:block;padding:12px 10px;font-size:16px;border-radius:8px}
+      .nav-group{width:100%}.nav-group .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0}
+      .nav .lang{margin:8px 10px;align-self:flex-start}
+    }
+    main{max-width:820px;margin:36px auto;padding:0 22px 70px}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:0 0 18px}
+    h2{font-size:24px;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+    h3{font-size:18px;margin:22px 0 8px}
+    p,li{color:var(--gray)}p{margin:0 0 14px}ul,ol{margin:0 0 16px;padding-left:1.25rem}li{margin:6px 0}
+    code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13.5px}
+    code{background:var(--pale);padding:1px 5px;border-radius:4px}
+    pre{padding:16px;background:var(--pale);border:1px solid var(--line);border-radius:10px;overflow:auto;margin:14px 0 18px;line-height:1.5}
+    .breadcrumb{font-size:14px;color:var(--blue);margin-bottom:18px}
+    .summary{background:var(--light);border:1px solid #cfe6f8;border-radius:12px;padding:18px 20px;margin:0 0 28px}
+    .summary h2{margin:0 0 10px;font-size:16px;border:0;padding:0;color:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+    .summary ol{margin:0;padding-left:1.2rem}.summary li{color:var(--ink);margin:6px 0;font-size:15px}
+    .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--ink)}
+    .faq p{margin-top:10px}
+    .footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--gray);font-size:13px}.footer a{color:var(--blue)}
+    .nav-links{margin-top:28px;font-size:15px}.nav-links a{color:var(--blue);font-weight:600}
+  
+.picks{margin:36px 0 10px}
+.picks h2{border:0;padding:0;margin-top:0}
+.picks h3{font-size:18px;margin:22px 0 10px}
+.pick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pick{border:1px solid #E8EAED;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pick-img{display:block;background:#1a1a1a;line-height:0}
+.pick-img img{width:100%;height:110px;object-fit:cover;display:block}
+.pick-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick-body h3{font-size:16px;margin:0;border:0;padding:0}
+.pick-body p{font-size:13px;color:#5F6368;margin:0}
+.pick-badge{font-size:11px;font-weight:700;color:#137333;background:#E6F4EA;display:inline-block;padding:3px 8px;border-radius:99px;width:max-content}
+.pick-badge.quote{color:#0B5CAD;background:#E8F3FC}
+.pick-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;gap:8px}
+.pick-price{font-weight:700;font-size:15px}
+.pick-btn{background:#1182DE;color:#fff!important;text-decoration:none!important;font-weight:700;font-size:13px;padding:8px 12px;border-radius:8px}
+.inline{color:#1182DE;text-decoration:underline;text-underline-offset:2px}
+
+nav.breadcrumb{margin:0 0 18px}
+nav.breadcrumb ol{display:flex;flex-wrap:wrap;align-items:center;gap:0;list-style:none;margin:0;padding:0;font-size:14px;color:#5F6368}
+nav.breadcrumb li{display:flex;align-items:center}
+nav.breadcrumb li+li::before{content:"›";margin:0 8px;color:#5F6368}
+nav.breadcrumb a{color:#1182DE;text-decoration:none;font-weight:600}
+nav.breadcrumb a:hover{text-decoration:underline}
+nav.breadcrumb [aria-current="page"]{color:#202124;font-weight:600}
+
+.faq h3{font-size:17px;line-height:1.35;margin:18px 0 8px;border:0;padding:0}
+.faq-item{padding-bottom:2px}
+.faq ul{margin:8px 0 14px 1.2rem}
+.faq li{margin:5px 0}
+.faq code{font-size:.92em;background:#F8F9FA;padding:0 4px;border-radius:4px}
+
+table.params{width:100%;border-collapse:collapse;font-size:14.5px;margin:8px 0 18px}
+table.params th,table.params td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.params th{background:var(--light);font-weight:600}
+table.params caption{text-align:left;font-weight:600;margin-bottom:6px}
+pre{background:#1a1a1a;color:#f5f5f5;padding:14px 16px;border-radius:10px;overflow:auto;font-size:13px;line-height:1.55;margin:10px 0 16px}
+pre code{background:transparent;color:inherit;padding:0;font-size:inherit}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://easytag-pro.vercel.app/en"}, {"@type": "ListItem", "position": 2, "name": "About", "item": "https://easytag-pro.vercel.app/en/chi-siamo"}, {"@type": "ListItem", "position": 3, "name": "Consent Mode", "item": "https://easytag-pro.vercel.app/en/consent-mode"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Consent Mode in Google's Tag Platform?", "acceptedAnswer": {"@type": "Answer", "text": "It is the way Google tags receive the consent state and adapt cookies, identifiers and pings. It does not replace the banner: it reads the choice the banner collected. The implementation package is Consent Mode v2."}}, {"@type": "Question", "name": "Which consent parameters does Consent Mode handle?", "acceptedAnswer": {"@type": "Answer", "text": "ad_storage: advertising storage. analytics_storage: analytics storage. ad_user_data: user data for advertising purposes. ad_personalization: ad personalization and remarketing. Where needed: functionality_storage, personalization_storage, security_storage."}}, {"@type": "Question", "name": "What is the difference between default and update?", "acceptedAnswer": {"@type": "Answer", "text": "default is the initial state, before tags fire. In regions that require prior consent it is often denied. update arrives when the person accepts or refuses in the CMP and replaces that state."}}, {"@type": "Question", "name": "Why must default be set before tags fire?", "acceptedAnswer": {"@type": "Answer", "text": "Because a tag that fired before default can write cookies that conflict with the initial choice. Tags on the same event must read a single, consistent state. The order relative to the queue is the one in the DataLayer guide."}}, {"@type": "Question", "name": "Why is Consent Mode not configured with a custom HTML tag?", "acceptedAnswer": {"@type": "Answer", "text": "Custom HTML fires at a moment that is not aligned with the queue and with tag evaluation. You use GTM's consent APIs or gtag('consent', ...) and the CMP integration."}}, {"@type": "Question", "name": "How does GTM show the same update to every tag?", "acceptedAnswer": {"@type": "Answer", "text": "With the consent APIs and with the checks already present in native tag templates. The update is processed in the correct order relative to queued messages, not whenever it happens."}}, {"@type": "Question", "name": "What happens if analytics_storage is denied?", "acceptedAnswer": {"@type": "Answer", "text": "Google Analytics 4 tags cannot read or write the analytics cookies used to recognize user and session. Cookieless pings can remain, depending on the Consent Mode configuration."}}, {"@type": "Question", "name": "What happens if ad_storage, ad_user_data or ad_personalization are denied?", "acceptedAnswer": {"@type": "Answer", "text": "Advertising storage, the sending of user data for ads purposes, or personalization, including remarketing, is limited. Google Ads tags stay compliant with the choice. Modeling, where provided, is not the same as ignoring a refusal."}}, {"@type": "Question", "name": "What is a CMP and how does it connect to the Tag Platform?", "acceptedAnswer": {"@type": "Answer", "text": "It is the system that collects and stores the choice. It integrates with GTM or gtag.js by emitting default and update, and possibly TCF v2.2. Without this bridge, the banner and the tags do not talk to each other: that is the problem Consent Mode v2 closes."}}, {"@type": "Question", "name": "What problems happen with IAB TCF implementations?", "acceptedAnswer": {"@type": "Answer", "text": "Strings or purposes that do not match, a CMP that arrives after the tags, TCF support turned on only halfway in the Google tags. Tag Assistant shows the state that was actually read, not the one the plugin promised."}}, {"@type": "Question", "name": "How do you check Consent Mode in Tag Assistant?", "acceptedAnswer": {"@type": "Answer", "text": "In the timeline, for every event, you read Default and Update for each parameter. A tag must not fire with a state different from the rules set for that moment."}}, {"@type": "Question", "name": "What role does Consent Mode play in server-side tagging?", "acceptedAnswer": {"@type": "Answer", "text": "The state also travels to the server container. Tags that fire from the server must respect the same choice, not a second policy."}}, {"@type": "Question", "name": "What does the gcs parameter mean in GA4 requests?", "acceptedAnswer": {"@type": "Answer", "text": "gcs is the compact consent state. G100: ad_storage and analytics_storage denied. G111: both granted. G101: ads denied and analytics granted. gcd carries the state of the four v2 parameters."}}, {"@type": "Question", "name": "Why does Consent Mode v2 not fix Meta Ads or TikTok?", "acceptedAnswer": {"@type": "Answer", "text": "gtag consent belongs to Google. Meta requires that you do not launch fbq init before consent, or that you use fbq consent revoke aligned with the CMP."}}, {"@type": "Question", "name": "When should the Consent Mode audit be redone?", "acceptedAnswer": {"@type": "Answer", "text": "On every CMP or theme change, and when CMS orders and Google Ads conversions diverge by about 25-30%."}}], "dateModified": "2026-11-20"}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="header"><div class="header-inner"><a class="logo" href="/en"><img src="data:image/png;base64,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" alt="Easy Tag"></a>
+<button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav" aria-haspopup="true"><span></span><span></span><span></span></button>
+<nav id="main-nav" class="nav" role="navigation" aria-label="Main navigation">
+  <a href="/en">Home</a><a href="/en/shop">Shop</a>
+  <details class="nav-group"><summary>About</summary>
+    <div class="submenu">
+      <a href="/en/chi-siamo">Overview</a>
+      <a href="/en/tag-nativo-google-ads">Google Ads native tag</a>
+      <a href="/en/tag-google-analytics-4">Google Analytics 4</a>
+      <a href="/en/datalayer-architettura">DataLayer architecture</a><a href="/en/consent-mode" aria-current="page">Consent Mode</a>
+    </div>
+  </details>
+  <a href="/en/faq">FAQ</a><a href="/en/contatti">Contact</a>
+  <div class="lang"><a href="/consent-mode">IT</a><a href="/en/consent-mode" class="active" aria-current="true">EN</a></div>
+</nav></div></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en">Home</a></li><li><a href="/en/chi-siamo">About</a></li><li><span aria-current="page">Consent Mode</span></li></ol></nav>
+
+  <article>
+    <h1>Google Consent Mode v2: setup with GTM and dataLayer</h1>
+    <aside class="summary" aria-label="Page summary">
+      <h2>In short</h2>
+      <ol>
+        <li>Consent Mode tells Google tags the consent state. It does not replace the banner.</li>
+        <li><code>default</code> must be set before the tags; <code>update</code> comes from the choice in the CMP.</li>
+        <li>The parameters that matter in the EU are ad_storage, analytics_storage, ad_user_data and ad_personalization.</li>
+      </ol>
+    </aside>
+    <section>
+      <h2>What Google Consent Mode v2 is</h2>
+      <p>Google Consent Mode v2 is the framework with which Google tags — <a class="inline" href="/en/tag-google-analytics-4">GA4</a>, <a class="inline" href="/en/tag-nativo-google-ads">Google Ads</a> and Floodlight — adapt cookie reads and writes to the state chosen on the CMP banner. Since March 2024, in the European Economic Area, it is the step required so you do not lose remarketing, Enhanced Conversions and Smart Bidding quality.</p>
+      <p>It does not replace the banner. It translates the user’s legal choice to the measurement scripts. Without this bridge, the banner and the tags do not talk to each other: that is the case covered by the <a class="inline" href="/en/shop/consent-mode-v2">Consent Mode v2</a> product page.</p>
+      <p><strong>In short.</strong> If after the banner Ads conversions collapse and CPA rises, the problem is usually not the campaign. The tags were blocked entirely before consent, instead of starting in Advanced mode with <code>denied</code> parameters. In that state Google can model a share of the conversions of people who refuse cookies, up to about 70% in the cases Google documents for modeling, without treating them as consents.</p>
+    </section>
+
+    <section>
+      <h2>The four Consent Mode v2 parameters</h2>
+      <p>Compared with the first version, v2 adds two signals about profiling. These are the four values the <a class="inline" href="/en/datalayer-architettura">dataLayer</a> must communicate to Google. Each accepts only <code>denied</code> or <code>granted</code>.</p>
+      <table class="params">
+        <caption>Consent Mode v2 parameters</caption>
+        <thead><tr><th>Parameter</th><th>Scope</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td><code>ad_storage</code></td><td>Advertising storage</td><td>Read and write of ads cookies, for example <code>_gcl_aw</code>, to attribute the click.</td></tr>
+          <tr><td><code>analytics_storage</code></td><td>Analytics storage</td><td>Statistics cookies (<code>_ga</code>, <code>_ga_*</code>) for sessions and duration in GA4.</td></tr>
+          <tr><td><code>ad_user_data</code></td><td>User data sent to Google</td><td>Sending of data used in advertising, including click identifiers and hashed Enhanced Conversions data.</td></tr>
+          <tr><td><code>ad_personalization</code></td><td>Personalized ads</td><td>Use of data for remarketing, audiences and dynamic retargeting. See <a class="inline" href="/en/shop/dynamic-remarketing">Dynamic Remarketing</a>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Basic and Advanced: the prior block</h2>
+      <p>The most common mistake is to stop the Google Tag Manager container, or the individual GA4 and Google Ads tags, with a script until the person clicks “Accept”. That equals Basic mode, or a blind block, and takes away the signal Google models on.</p>
+      <ul>
+        <li><strong>Basic.</strong> Tags stay off until the click on the banner. If the person refuses or ignores the banner, Google receives nothing: no modeling.</li>
+        <li><strong>Advanced, the one we use.</strong> Tags fire immediately, with the four parameters set to <code>denied</code>. They neither read nor write identifying cookies. They send cookieless pings: timestamp, user agent, referring URL, any GCLID or GBRAID and the consent state.</li>
+      </ul>
+      <p>With those pings, behavioral modeling in GA4 and conversion modeling in Google Ads estimate the conversions of people who did not consent, starting from people who accepted, without treating a refusal as a yes.</p>
+    </section>
+
+    <section>
+      <h2>Order in the dataLayer and in GTM</h2>
+      <p>The <code>default</code> command must run before the Google Tag Manager snippet (<code>gtm.js</code>) or <code>gtag.js</code>. If the CMP already has a template that emits consent on Consent Initialization, do not duplicate it by hand.</p>
+      <h3>1. Default state, consent default</h3>
+      <p>In the <code><head></code>, before the container:</p>
+<pre><code><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+
+  gtag('set', 'ads_data_redaction', true);
+</script></code></pre>
+      <p><code>wait_for_update</code> holds the first hits for 500 milliseconds, so the CMP can read a consent already saved and you do not get a <code>denied</code> immediately followed by <code>granted</code>.</p>
+      <h3>2. Update, consent update</h3>
+      <p>On the click on “Accept” or on the custom choice, the CMP must update the state. The <code>cookie_consent_update</code> event is for tags that do not understand Consent Mode, for example Meta:</p>
+<pre><code>function onUserConsentAccepted(preferences) {
+  gtag('consent', 'update', {
+    'ad_storage': preferences.marketing ? 'granted' : 'denied',
+    'analytics_storage': preferences.statistics ? 'granted' : 'denied',
+    'ad_user_data': preferences.marketing ? 'granted' : 'denied',
+    'ad_personalization': preferences.marketing ? 'granted' : 'denied'
+  });
+  window.dataLayer.push({ event: 'cookie_consent_update' });
+}</code></pre>
+      <h3>3. Triggers in GTM</h3>
+      <ul>
+        <li><strong>Google tags</strong> (GA4, Ads conversion, remarketing): normal triggers, Initialization, All Pages or the conversion event. They must not be blocked with a consent condition. The tag adapts the request on its own: <code>gcs=G100</code> if denied, <code>gcs=G111</code> if granted.</li>
+        <li><strong>Third-party tags</strong> (Meta, LinkedIn, Hotjar): they do not read Consent Mode. In GTM you need Additional Consent, for example on <code>ad_storage</code>, and a trigger on <code>cookie_consent_update</code>. The shop’s <a class="inline" href="/en/shop/tag-facebook">TAG Facebook</a> and <a class="inline" href="/en/shop/tag-linkedin">TAG LinkedIn</a> must fire only after that event.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Checks in Preview and Tag Assistant</h2>
+      <p>Do not take the CMP as good, neither Iubenda nor Cookiebot nor OneTrust, just because the plugin is installed. In an incognito window, GTM Preview, Consent tab.</p>
+      <ol>
+        <li><strong>Consent Initialization before Container Loaded.</strong> On-page Default must be <code>Denied</code> on the four parameters. If it is <code>Granted</code> before the click, the page does not respect prior consent.</li>
+        <li><strong>Google tags fire even if the state is denied.</strong> On Container Loaded, GA4 and Google Ads are in Tags Fired. In the request to <code>google-analytics.com/g/collect</code>, <code>gcs</code> is <code>G100</code>.</li>
+        <li><strong>A second Consent event after the click.</strong> On-page Update and Current State switch to <code>Granted</code>.</li>
+      </ol>
+      <p>Repeat the audit when you change CMP or theme, or when backend orders (Shopify, WooCommerce, PrestaShop) and Ads conversions diverge by about 25–30%. In that case start from <a class="inline" href="/en/shop/supporto-5-ore">Supporto 5 ore</a> or from the <a class="inline" href="/en/shop/consent-mode-v2">Consent Mode v2</a> quote.</p>
+    </section>
+
+    <section class="faq" aria-label="Frequently asked questions">
+      <h2>FAQ about Consent Mode</h2>
+      <h2>default and update commands</h2>
+<article class="faq-item"><h3>What is Consent Mode in Google’s Tag Platform?</h3><p>It is the way Google tags receive the consent state and adapt cookies, identifiers and pings. It does not replace the banner: it reads the choice the banner collected. The implementation package is <a class="inline" href="/en/shop/consent-mode-v2">Consent Mode v2</a>.</p></article>
+<article class="faq-item"><h3>Which consent parameters does Consent Mode handle?</h3><ul><li><code>ad_storage</code>: advertising storage.</li><li><code>analytics_storage</code>: analytics storage.</li><li><code>ad_user_data</code>: user data for advertising purposes.</li><li><code>ad_personalization</code>: ad personalization and remarketing.</li><li>Where needed: <code>functionality_storage</code>, <code>personalization_storage</code>, <code>security_storage</code>.</li></ul></article>
+<article class="faq-item"><h3>What is the difference between default and update?</h3><p><code>default</code> is the initial state, before tags fire. In regions that require prior consent it is often <code>denied</code>. <code>update</code> arrives when the person accepts or refuses in the CMP and replaces that state.</p></article>
+<article class="faq-item"><h3>Why must default be set before tags fire?</h3><p>Because a tag that fired before default can write cookies that conflict with the initial choice. Tags on the same event must read a single, consistent state. The order relative to the queue is the one in the <a class="inline" href="/en/datalayer-architettura">DataLayer</a> guide.</p></article>
+<article class="faq-item"><h3>Why is Consent Mode not configured with a custom HTML tag?</h3><p>Custom HTML fires at a moment that is not aligned with the queue and with tag evaluation. You use GTM’s consent APIs or <code>gtag('consent', ...)</code> and the CMP integration.</p></article>
+<article class="faq-item"><h3>How does GTM show the same update to every tag?</h3><p>With the consent APIs and with the checks already present in native tag templates. The update is processed in the correct order relative to queued messages, not “whenever it happens”.</p></article>
+<h2>Effects of a refusal, the CMP and checks</h2>
+<article class="faq-item"><h3>What happens if analytics_storage is denied?</h3><p><a class="inline" href="/en/tag-google-analytics-4">Google Analytics 4</a> tags cannot read or write the analytics cookies used to recognize user and session. Cookieless pings can remain, depending on the Consent Mode configuration.</p></article>
+<article class="faq-item"><h3>What happens if ad_storage, ad_user_data or ad_personalization are denied?</h3><p>Advertising storage, the sending of user data for ads purposes, or personalization, including remarketing, is limited. <a class="inline" href="/en/tag-nativo-google-ads">Google Ads</a> tags stay compliant with the choice. Modeling, where provided, is not the same as ignoring a refusal.</p></article>
+<article class="faq-item"><h3>What is a CMP and how does it connect to the Tag Platform?</h3><p>It is the system that collects and stores the choice. It integrates with GTM or <code>gtag.js</code> by emitting <code>default</code> and <code>update</code>, and possibly TCF v2.2. Without this bridge, the banner and the tags do not talk to each other: that is the problem <a class="inline" href="/en/shop/consent-mode-v2">Consent Mode v2</a> closes.</p></article>
+<article class="faq-item"><h3>What problems happen with IAB TCF implementations?</h3><p>Strings or purposes that do not match, a CMP that arrives after the tags, TCF support turned on only halfway in the Google tags. Tag Assistant shows the state that was actually read, not the one the plugin promised.</p></article>
+<article class="faq-item"><h3>How do you check Consent Mode in Tag Assistant?</h3><p>In the timeline, for every event, you read Default and Update for each parameter. A tag must not fire with a state different from the rules set for that moment.</p></article>
+<article class="faq-item"><h3>What role does Consent Mode play in server-side tagging?</h3><p>The state also travels to the server container. Tags that fire from the server must respect the same choice, not a second policy.</p></article>
+
+<article class="faq-item"><h3>What does the gcs parameter mean in GA4 requests?</h3><p><code>gcs</code> is the compact consent state (<code>G1xy</code>). <code>G100</code>: <code>ad_storage</code> and <code>analytics_storage</code> denied. <code>G111</code>: both granted. <code>G101</code>: ads denied and analytics granted. <code>gcd</code> carries the encoded state of all four v2 parameters.</p></article>
+<article class="faq-item"><h3>Why does Consent Mode v2 not fix Meta Ads or TikTok?</h3><p><code>gtag('consent')</code> belongs to Google. In GTM the state can block a third-party tag, but Meta asks you not to launch <code>fbq('init')</code> before consent, or to use <code>fbq('consent', 'revoke')</code> aligned with the CMP. <a class="inline" href="/en/shop/tag-facebook">TAG Facebook</a> must not sit on All Pages if ads consent is denied.</p></article>
+<article class="faq-item"><h3>When should the Consent Mode audit be redone?</h3><p>On every CMP or theme change, and when CMS orders (Shopify, WooCommerce, PrestaShop) and Google Ads conversions diverge by about 25–30%.</p></article>
+    </section>
+    <section class="picks"><h2>From this guide to the product</h2><p>If the banner does not talk to the tags, start from a product page. If the site needs hands-on work, start from the hours.</p><div class="pick-grid"><article class="pick"><a class="pick-img" href="/en/shop/consent-mode-v2"><img src="/assets/products/consent-mode-v2.webp" alt="Consent Mode v2" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Consent Mode v2</h3><p>Cookie banner connected to Google tags.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/consent-mode-v2">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/supporto-5-ore"><img src="/assets/products/supporto-5-ore.webp" alt="Supporto 5 ore" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Technical hours</span><h3>Supporto 5 ore</h3><p>A check of default, update and tags that fire too early.</p><div class="pick-foot"><span class="pick-price">€500</span><a class="pick-btn" href="/en/shop/supporto-5-ore">View and buy</a></div></div></article></div></section>
+    <p class="nav-links"><a href="/en/faq">All FAQs</a> · <a href="/en/chi-siamo">← Back to About</a> · <a href="/en/tag-google-analytics-4">GA4 guide →</a> · <a href="/en/tag-nativo-google-ads">Google Ads guide →</a> · <a href="/en/datalayer-architettura">DataLayer guide →</a></p>
+  </article><article class="pick"><a class="pick-img" href="/en/shop/dynamic-remarketing"><img src="/assets/products/dynamic-remarketing.webp" alt="Dynamic Remarketing" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Dynamic Remarketing</h3><p>Product events and feed alignment for Google Ads.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/dynamic-remarketing">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/consent-mode-v2"><img src="/assets/products/consent-mode-v2.webp" alt="Consent Mode v2" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge quote">Quote</span><h3>Consent Mode v2</h3><p>Cookie banner connected to Google tags.</p><div class="pick-foot"><span class="pick-price">Quote</span><a class="pick-btn" href="/en/shop/consent-mode-v2">Request a quote</a></div></div></article><article class="pick"><a class="pick-img" href="/en/shop/supporto-10-ore"><img src="/assets/products/supporto-10-ore.webp" alt="Supporto 10 ore" width="400" height="110" loading="lazy"></a><div class="pick-body"><span class="pick-badge">Technical hours</span><h3>Supporto 10 ore</h3><p>Medium-sized projects or several clients of the same agency.</p><div class="pick-foot"><span class="pick-price">€900</span><a class="pick-btn" href="/en/shop/supporto-10-ore">View and buy</a></div></div></article></div></section>
+<p class="nav-links"><a href="/en/chi-siamo">← Back to About</a> · <a href="/en/tag-google-analytics-4">GA4 guide →</a> · <a href="/en/tag-nativo-google-ads">Google Ads tag →</a></p>
+  </article>
+</main>
+
+<footer class="footer">EasyTag Pro · <a href="/en/chi-siamo">About</a> · <a href="/en/tag-nativo-google-ads">Google Ads</a> · <a href="/en/tag-google-analytics-4">GA4</a></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+  if(!btn||!nav)return;
+  function isMobile(){return window.matchMedia('(max-width:860px)').matches;}
+  function focusable(){return Array.prototype.slice.call(nav.querySelectorAll('a[href],summary')).filter(function(el){return el.offsetParent!==null||el===document.activeElement;});}
+  function setOpen(open){
+    nav.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+    if(isMobile()){nav.setAttribute('aria-hidden',open?'false':'true');document.body.classList.toggle('nav-open',open);}
+    else{nav.removeAttribute('aria-hidden');document.body.classList.remove('nav-open');}
+    if(open&&isMobile()){var items=focusable();if(items.length)setTimeout(function(){items[0].focus();},10);}
+    else if(!open) btn.focus();
+  }
+  function close(){if(nav.classList.contains('is-open'))setOpen(false);}
+  if(isMobile())nav.setAttribute('aria-hidden','true');
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('is-open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(isMobile())close();});});
+  document.addEventListener('keydown',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(e.key==='Escape'){e.preventDefault();close();return;}
+    if(e.key!=='Tab')return;
+    var items=focusable();if(!items.length)return;
+    var first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(!nav.classList.contains('is-open')||!isMobile())return;
+    if(nav.contains(e.target)||btn.contains(e.target))return;close();
+  });
+  window.addEventListener('resize',function(){
+    if(!isMobile()){nav.classList.remove('is-open');nav.removeAttribute('aria-hidden');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open navigation menu');document.body.classList.remove('nav-open');}
+    else if(!nav.classList.contains('is-open'))nav.setAttribute('aria-hidden','true');
+  });
+})();
+</script>
+<script src="/chatbot-en.js" defer></script>
+</body>
+</html>

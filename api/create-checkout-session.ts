@@ -50,6 +50,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // One-time products only → mode "payment"
   // payment_method_collection is only for subscription mode (omitted here)
+  const locale = req.body?.locale === 'en' ? 'en' : 'it';
+  const successPath = locale === 'en' ? '/en/success.html' : '/success.html';
+  const cancelPath = locale === 'en' ? '/en/shop/' : '/shop/';
+
   const session = await stripe.checkout.sessions.create({
     // fixed_by_ui (Checkout Studio)
     ui_mode: 'hosted',
@@ -62,8 +66,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // sample_only – replace DOMAIN before production
     mode: 'payment',
-    success_url: `${DOMAIN}/success.html?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${DOMAIN}/shop/`,
+    success_url: `${DOMAIN}${successPath}?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${DOMAIN}${cancelPath}`,
     line_items: [{ price: priceId, quantity: 1 }],
   });
 
