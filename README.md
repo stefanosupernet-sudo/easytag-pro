@@ -49,7 +49,7 @@ Seconda lingua: **English** (`/en`)
 - [ ] Integrazione Stripe (fase successiva)
 
 ## Contatti
-support@easytag.com  
+info@easytag.pro  
 +39 02 1234 5678
 
 ---

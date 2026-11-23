@@ -12,7 +12,7 @@ const resend = new Resend(process.env.RESEND_API_KEY!);
 
 const BASE = process.env.DELIVERABLES_BASE_URL || 'https://easytag-pro.vercel.app/deliverables';
 const FROM = process.env.FROM_EMAIL || 'consegne@easytag.pro';
-const BCC = process.env.SUPPORT_BCC || 'support@easytag.com';
+const BCC = 'info@easytag.pro';
 
 /** price ID → consegna (allineato a automation/product-map.json) */
 const MAP: Record<
@@ -124,18 +124,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           <li><a href="${linkI}">istruzioni.html</a></li>
         </ul>
         <p>1. Scarica container.json<br>2. GTM → Admin → Import Container<br>3. Sostituisci ID Conversione e Label<br>4. Testa e pubblica</p>
-        <p>Supporto: support@easytag.com · Ordine ${orderId}</p>`;
+        <p>Supporto: info@easytag.pro · Ordine ${orderId}</p>`;
     } else if (product?.type === 'manual') {
       subject = `Ordine ricevuto – ${product.name} | Easy Tag`;
       html = `<p>Ciao ${name},</p>
         <p>Grazie per l'acquisto di <strong>${product.name}</strong>.</p>
-        <p>Il file del container ti arriva da support@easytag.com entro un giorno lavorativo.</p>
+        <p>Il file del container ti arriva da info@easytag.pro entro un giorno lavorativo.</p>
         <p>Ordine ${orderId}</p>`;
     } else if (product?.type === 'hours') {
       subject = `Pacchetto ore attivato – ${product.name} | Easy Tag`;
       html = `<p>Ciao ${name},</p>
         <p>Grazie per l'acquisto di <strong>${product.name}</strong> (${product.hours} ore).</p>
-        <p>Scrivi a <a href="mailto:support@easytag.com">support@easytag.com</a> con priorità e accessi (GTM, GA4, Ads). Partiamo entro 1 giorno lavorativo.</p>
+        <p>Scrivi a <a href="mailto:info@easytag.pro">info@easytag.pro</a> con priorità e accessi (GTM, GA4, Ads). Partiamo entro 1 giorno lavorativo.</p>
         <p>Ordine ${orderId}</p>`;
     } else {
       subject = `Conferma ordine Easy Tag – ${orderId}`;

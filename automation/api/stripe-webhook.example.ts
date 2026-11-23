@@ -9,7 +9,7 @@
  *   STRIPE_WEBHOOK_SECRET
  *   RESEND_API_KEY
  *   FROM_EMAIL=consegne@easytag.pro
- *   SUPPORT_BCC=support@easytag.com
+ *   SUPPORT_BCC=info@easytag.pro
  *   DELIVERABLES_BASE_URL=https://raw.githubusercontent.com/stefanosupernet-sudo/easytag-pro/main/deliverables
  */
 
@@ -23,7 +23,7 @@ const resend = new Resend(process.env.RESEND_API_KEY!);
 
 const BASE = process.env.DELIVERABLES_BASE_URL!;
 const FROM = process.env.FROM_EMAIL || 'consegne@easytag.pro';
-const BCC = process.env.SUPPORT_BCC || 'support@easytag.com';
+const BCC = 'info@easytag.pro';
 
 type ProductConfig = {
   slug: string;
@@ -61,7 +61,7 @@ function buildContainerEmail(opts: {
     2. GTM → Admin → Import Container<br>
     3. Sostituisci ID Conversione e Label<br>
     4. Testa e pubblica</p>
-    <p>Supporto: support@easytag.com · Ordine ${opts.orderId}</p>
+    <p>Supporto: info@easytag.pro · Ordine ${opts.orderId}</p>
   `;
 }
 
@@ -74,7 +74,7 @@ function buildHoursEmail(opts: {
   return `
     <p>Ciao ${opts.customerName},</p>
     <p>Grazie per l'acquisto di <strong>${opts.productName}</strong> (${opts.hours} ore).</p>
-    <p><strong>Prossimo passo:</strong> scrivi a support@easytag.com indicando priorità e accessi (GTM, GA4, Ads). Partiamo entro 1 giorno lavorativo.</p>
+    <p><strong>Prossimo passo:</strong> scrivi a info@easytag.pro indicando priorità e accessi (GTM, GA4, Ads). Partiamo entro 1 giorno lavorativo.</p>
     <p>Ordine ${opts.orderId} · Team Easy Tag</p>
   `;
 }
@@ -136,7 +136,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         to: email,
         bcc: BCC,
         subject: `Conferma ordine Easy Tag – ${orderId}`,
-        html: `<p>Ciao ${name}, grazie per l'acquisto. Ti contatteremo a breve a support@easytag.com.</p><p>Ordine: ${orderId}</p>`,
+        html: `<p>Ciao ${name}, grazie per l'acquisto. Ti contatteremo a breve a info@easytag.pro.</p><p>Ordine: ${orderId}</p>`,
       });
       return res.status(200).json({ received: true, fallback: true });
     }

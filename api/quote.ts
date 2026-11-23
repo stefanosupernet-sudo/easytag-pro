@@ -7,7 +7,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 const FROM = process.env.FROM_EMAIL || 'consegne@easytag.pro';
-const TO = process.env.SUPPORT_BCC || 'support@easytag.com';
+const TO = 'info@easytag.pro';
 
 const PRODUCTS: Record<string, string> = {
   'tracker-ecommerce': 'Tracker E-commerce',

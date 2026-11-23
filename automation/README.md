@@ -7,7 +7,7 @@
 3. La funzione serverless (Vercel / Netlify) riceve l’evento.
 4. In base al **price ID** o **product ID** Stripe, seleziona i file da consegnare.
 5. Invia un’email al cliente con i **link diretti** ai file nel repo (o su CDN).
-6. Copia nascosta (BCC) a `support@easytag.com` per tracciamento.
+6. Copia nascosta (BCC) a `info@easytag.pro` per tracciamento.
 
 ## Cosa non fa (ancora)
 
@@ -40,7 +40,7 @@ STRIPE_SECRET_KEY=
 STRIPE_WEBHOOK_SECRET=
 RESEND_API_KEY=
 FROM_EMAIL=consegne@easytag.pro
-SUPPORT_BCC=support@easytag.com
+SUPPORT_BCC=info@easytag.pro
 DELIVERABLES_BASE_URL=https://raw.githubusercontent.com/stefanosupernet-sudo/easytag-pro/main/deliverables
 ```
 

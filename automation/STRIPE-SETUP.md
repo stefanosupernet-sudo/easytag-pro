@@ -41,7 +41,7 @@ Esempio:
    - `STRIPE_WEBHOOK_SECRET` = (dopo step 5)
    - `RESEND_API_KEY`
    - `FROM_EMAIL` = consegne@easytag.pro (o onboarding@resend.dev in test)
-   - `SUPPORT_BCC` = support@easytag.com
+   - `SUPPORT_BCC` = info@easytag.pro
    - `DELIVERABLES_BASE_URL` = https://raw.githubusercontent.com/stefanosupernet-sudo/easytag-pro/main/deliverables
 5. Stripe Dashboard → Developers → Webhooks → Add endpoint:
    - URL: `https://TUO-DOMINIO.vercel.app/api/stripe-webhook`
