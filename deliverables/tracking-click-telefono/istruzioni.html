@@ -4,311 +4,358 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Istruzioni installazione – Tracking Click Telefono | Easy Tag</title>
+  <title>Manuale — Tracking click telefono | Easy Tag</title>
   <style>
     :root {
-      --blue: #1182DE;
-      --blue-dark: #0B5CAD;
-      --blue-soft: #E8F3FC;
-      --green: #137333;
-      --green-bg: #E6F4EA;
-      --amber: #B06000;
-      --amber-bg: #FEF7E0;
-      --text: #202124;
-      --muted: #5F6368;
-      --line: #E8EAED;
-      --bg: #F8F9FA;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --paper: #fffdf8;
+      --desk: #efeae2;
+      --blue: #0f62a8;
+      --blue-dark: #0b4c82;
+      --blue-soft: #e7f2fb;
+      --green: #166534;
+      --green-bg: #ecfdf3;
+      --amber: #92400e;
+      --amber-bg: #fff7e8;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--text);
-      line-height: 1.65;
-      background: var(--bg);
-      padding: 24px 16px 64px;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, #fff 0 18%, transparent 19%),
+        linear-gradient(180deg, #f7f3ec 0%, var(--desk) 100%);
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+      line-height: 1.55;
     }
-    .wrap { max-width: 720px; margin: 0 auto; }
-    .card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 28px 28px 32px;
-      box-shadow: 0 4px 24px rgba(17, 130, 222, 0.06);
+    .sheet {
+      max-width: 820px;
+      margin: 28px auto 48px;
+      background: var(--paper);
+      border: 1px solid #e4dccf;
+      border-radius: 18px;
+      box-shadow: 0 18px 50px rgba(80, 60, 30, 0.12);
+      overflow: hidden;
     }
-    .brand {
+    header.cover {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      min-height: 210px;
+      background: linear-gradient(145deg, #0b4c82, #1182de 70%);
+      color: #fff;
+    }
+    .spine {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
-      margin-bottom: 20px;
-    }
-    .logo {
-      width: 36px; height: 36px;
-      background: var(--blue);
-      color: #fff;
-      border-radius: 9px;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 13px;
-    }
-    .brand-name { font-weight: 700; font-size: 18px; }
-    .brand-name span { color: var(--blue); }
-    .badge {
-      display: inline-block;
-      background: var(--green-bg);
-      color: var(--green);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-family: Inter, "Segoe UI", sans-serif;
       font-size: 12px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 20px;
-      margin-bottom: 14px;
+      font-weight: 700;
+      background: rgba(0,0,0,.15);
     }
-    h1 { font-size: 26px; letter-spacing: -0.3px; margin-bottom: 8px; line-height: 1.25; }
-    .subtitle { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
-    .toc {
-      background: var(--blue-soft);
-      border-radius: 12px;
+    .cover-body { padding: 28px 32px 26px; }
+    .kicker {
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: .85;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.15;
+      margin: 10px 0 8px;
+      font-weight: 700;
+    }
+    .lead { margin: 0; max-width: 46ch; font-size: 17px; color: #e8f3fc; }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .pill {
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    main { padding: 8px 36px 36px; }
+    nav.toc {
+      margin: 22px 0 8px;
       padding: 16px 18px;
-      margin-bottom: 32px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
     }
-    .toc strong { display: block; font-size: 13px; color: var(--blue-dark); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px; }
-    .toc ol { margin: 0 0 0 18px; font-size: 14.5px; }
-    .toc li { margin-bottom: 4px; }
-    .toc a { color: var(--blue-dark); text-decoration: none; }
-    .toc a:hover { text-decoration: underline; }
+    nav.toc strong {
+      display: block;
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    nav.toc ol { margin: 0; padding-left: 18px; }
+    nav.toc a { color: var(--blue-dark); text-decoration: none; }
+    nav.toc a:hover { text-decoration: underline; }
+    section { margin-top: 34px; }
     h2 {
-      font-size: 18px;
-      margin: 36px 0 14px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--blue-soft);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      font-size: 24px;
+      margin: 0 0 14px;
     }
-    .step-num {
-      width: 28px; height: 28px;
+    .n {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
       background: var(--blue);
       color: #fff;
-      border-radius: 50%;
-      font-size: 14px;
-      font-weight: 700;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 16px;
+      flex: none;
     }
-    p { margin-bottom: 12px; color: var(--muted); }
-    p strong { color: var(--text); }
-    ol.steps, ul.check { margin: 12px 0 12px 0; padding: 0; list-style: none; }
-    ol.steps li {
-      position: relative;
-      padding: 12px 14px 12px 48px;
-      margin-bottom: 10px;
-      background: var(--bg);
-      border-radius: 10px;
+    p { margin: 0 0 12px; color: var(--muted); }
+    p strong, li strong { color: var(--ink); }
+    .files { display: grid; gap: 10px; }
+    .file {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 12px;
+      align-items: center;
       border: 1px solid var(--line);
-      color: var(--text);
-      font-size: 15px;
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #fff;
     }
-    ol.steps li::before {
-      content: attr(data-n);
-      position: absolute;
-      left: 12px; top: 12px;
-      width: 26px; height: 26px;
-      background: var(--blue);
-      color: #fff;
-      border-radius: 50%;
-      font-size: 13px;
-      font-weight: 700;
+    .mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-weight: 800;
+      font-size: 12px;
     }
-    ul.check li {
-      padding: 10px 12px 10px 40px;
+    .file h3 { margin: 0 0 2px; font-size: 17px; }
+    .file p { margin: 0; font-size: 15px; }
+    ol.steps { list-style: none; margin: 0; padding: 0; }
+    ol.steps li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-top: 1px dashed var(--line);
+      color: var(--ink);
+    }
+    ol.steps b {
+      font-family: Inter, "Segoe UI", sans-serif;
+      color: var(--blue);
+    }
+    .path {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .path span {
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+    .path i { color: var(--muted); font-style: normal; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+      background: #f3efe7;
+      padding: 1px 6px;
+      border-radius: 5px;
+      color: #0b4c82;
+    }
+    .note, .warn {
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .note { background: var(--blue-soft); }
+    .warn { background: var(--amber-bg); color: var(--amber); }
+    .note strong, .warn strong { display: block; margin-bottom: 4px; }
+    ul.checks { list-style: none; margin: 0; padding: 0; }
+    ul.checks li {
+      position: relative;
+      padding: 12px 12px 12px 42px;
       margin-bottom: 8px;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 10px;
-      position: relative;
-      font-size: 15px;
+      border-radius: 12px;
     }
-    ul.check li::before {
-      content: "✓";
+    ul.checks li:before {
+      content: "";
       position: absolute;
-      left: 12px; top: 10px;
-      color: var(--green);
-      font-weight: 700;
+      left: 14px;
+      top: 14px;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 2px solid var(--green);
+      background:
+        linear-gradient(var(--green), var(--green)) center 8px / 8px 2px no-repeat,
+        linear-gradient(var(--green), var(--green)) 5px 7px / 2px 6px no-repeat;
+      transform: rotate(-40deg);
     }
-    code, .file {
-      background: #F1F3F4;
-      padding: 2px 7px;
-      border-radius: 5px;
-      font-size: 13.5px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      color: #174ea6;
-    }
-    .path {
-      display: inline-block;
-      background: #fff;
-      border: 1px dashed var(--blue);
-      color: var(--blue-dark);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 13.5px;
-      font-weight: 600;
-      margin: 4px 0;
-    }
-    .callout {
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 20px 0;
-      font-size: 14.5px;
-    }
-    .callout.info { background: var(--blue-soft); border-left: 4px solid var(--blue); }
-    .callout.warn { background: var(--amber-bg); border-left: 4px solid #F9AB00; color: #5F4B00; }
-    .callout strong { display: block; margin-bottom: 4px; color: inherit; }
-    .files {
-      display: grid;
-      gap: 10px;
-      margin: 16px 0;
-    }
-    .file-card {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 14px 16px;
-      background: var(--bg);
-    }
-    .file-icon {
-      width: 40px; height: 40px;
-      background: var(--blue-soft);
-      color: var(--blue);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-    .file-card h3 { font-size: 15px; margin-bottom: 2px; }
-    .file-card p { font-size: 13.5px; margin: 0; }
     a.btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      display: inline-block;
       margin-top: 8px;
       background: var(--blue);
-      color: #fff !important;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      padding: 10px 16px;
-      border-radius: 8px;
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-radius: 10px;
     }
     a.btn:hover { background: var(--blue-dark); }
-    .footer {
+    footer {
       margin-top: 28px;
-      text-align: center;
-      font-size: 13px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
+      font-size: 14px;
     }
-    .footer a { color: var(--blue); }
-    @media (max-width: 520px) {
-      .card { padding: 20px 16px 24px; }
-      h1 { font-size: 22px; }
-      ol.steps li { padding-left: 44px; }
+    footer a { color: var(--blue); }
+    @media (max-width: 640px) {
+      header.cover { grid-template-columns: 1fr; }
+      .spine { writing-mode: horizontal-tb; transform: none; padding: 10px 16px; justify-content: flex-start; }
+      main, .cover-body { padding-left: 18px; padding-right: 18px; }
+      h1 { font-size: 28px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; border: 0; }
+      a.btn { border: 1px solid var(--blue); }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="brand">
-        <div class="logo">ET</div>
-        <div class="brand-name">Easy<span>Tag</span></div>
+  <article class="sheet">
+    <header class="cover">
+      <div class="spine">Easy Tag · Manuale 01</div>
+      <div class="cover-body">
+        <div class="kicker">Guida di installazione</div>
+        <h1>Tracking click sul numero di telefono</h1>
+        <p class="lead">Importi il container, controlli tre valori e pubblichi. Nessun codice da scrivere.</p>
+        <div class="meta">
+          <span class="pill">10–15 minuti</span>
+          <span class="pill">Google Tag Manager</span>
+          <span class="pill">GA4 e Google Ads</span>
+        </div>
       </div>
-
-      <span class="badge">Guida di installazione</span>
-      <h1>Tracking click sul numero di telefono</h1>
-      <p class="subtitle">Segui i passaggi in ordine. Tempo stimato: 10–15 minuti.</p>
-
-      <div class="toc">
-        <strong>Indice</strong>
+    </header>
+    <main>
+      <nav class="toc">
+        <strong>In questo manuale</strong>
         <ol>
           <li><a href="#ricevuto">Cosa hai ricevuto</a></li>
-          <li><a href="#import">Importare il container in GTM</a></li>
+          <li><a href="#import">Importare il container</a></li>
           <li><a href="#personalizza">Cosa personalizzare</a></li>
           <li><a href="#test">Test e pubblicazione</a></li>
-          <li><a href="#aiuto">Serve aiuto?</a></li>
+          <li><a href="#aiuto">Se qualcosa non parte</a></li>
         </ol>
-      </div>
+      </nav>
 
-      <h2 id="ricevuto"><span class="step-num">1</span> Cosa hai ricevuto</h2>
-      <div class="files">
-        <div class="file-card">
-          <div class="file-icon">{ }</div>
-          <div>
-            <h3><span class="file">container.json</span></h3>
-            <p>Il contenitore Google Tag Manager già configurato per i click sui link <code>tel:</code>.</p>
+      <section id="ricevuto">
+        <h2><span class="n">1</span> Cosa hai ricevuto</h2>
+        <div class="files">
+          <div class="file">
+            <div class="mark">JSON</div>
+            <div>
+              <h3>container.json</h3>
+              <p>Il contenitore già pronto per i click sui link <code>tel:</code>.</p>
+            </div>
+          </div>
+          <div class="file">
+            <div class="mark">PDF</div>
+            <div>
+              <h3>Questa guida</h3>
+              <p>I passaggi, nell’ordine in cui vanno fatti.</p>
+            </div>
           </div>
         </div>
-        <div class="file-card">
-          <div class="file-icon">📄</div>
-          <div>
-            <h3>Questa guida</h3>
-            <p>Istruzioni passo-passo per importare, personalizzare e pubblicare.</p>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <h2 id="import"><span class="step-num">2</span> Importare il container in GTM</h2>
-      <p>Apri <a href="https://tagmanager.google.com" target="_blank" rel="noopener">tagmanager.google.com</a> e accedi con l’account che gestisce il sito.</p>
-      <ol class="steps">
-        <li data-n="1">Seleziona (o crea) il <strong>container</strong> del sito su cui vuoi attivare il tracking.</li>
-        <li data-n="2">Vai in <span class="path">Admin → Container → Import Container</span></li>
-        <li data-n="3">Carica il file <code>container.json</code> ricevuto via email.</li>
-        <li data-n="4">Scegli l’area di lavoro (Workspace) in cui importare.</li>
-        <li data-n="5">Opzione di import:
-          <br>• <strong>Merge</strong> — se hai già tag attivi (consigliato nella maggior parte dei casi)
-          <br>• <strong>Overwrite</strong> — solo se il container è nuovo o vuoto</li>
-        <li data-n="6">Controlla l’anteprima delle modifiche e conferma l’importazione.</li>
-      </ol>
+      <section id="import">
+        <h2><span class="n">2</span> Importare il container</h2>
+        <p>Apri <a href="https://tagmanager.google.com">tagmanager.google.com</a> con l’account del sito.</p>
+        <ol class="steps">
+          <li><b>01</b><div>Apri il container del sito. Se non esiste, creane uno nuovo di tipo Web.</div></li>
+          <li><b>02</b><div>Vai in questo menu:
+            <div class="path"><span>Admin</span><i>→</i><span>Container</span><i>→</i><span>Importa container</span></div>
+          </div></li>
+          <li><b>03</b><div>Scegli il file <code>container.json</code> arrivato con questa email.</div></li>
+          <li><b>04</b><div>Seleziona l’area di lavoro in cui importare.</div></li>
+          <li><b>05</b><div><strong>Unisci</strong> se nel container ci sono già dei tag. <strong>Sovrascrivi</strong> solo se il container è vuoto.</div></li>
+          <li><b>06</b><div>Leggi l’anteprima e conferma.</div></li>
+        </ol>
+        <div class="note"><strong>Se hai un dubbio</strong> Scegli sempre Unisci. Così non cancelli i tag già presenti.</div>
+      </section>
 
-      <div class="callout info">
-        <strong>Suggerimento</strong>
-        Se non sei sicuro, usa sempre <strong>Merge</strong>. Eviti di cancellare tag già presenti nel container.
-      </div>
+      <section id="personalizza">
+        <h2><span class="n">3</span> Cosa personalizzare</h2>
+        <p>Il file è un modello. Prima di pubblicare controlla solo questi tre punti.</p>
+        <ul class="checks">
+          <li><strong>Conversion ID e Label di Google Ads.</strong> Se tracci una conversione Ads, inserisci i tuoi valori nelle variabili già presenti.</li>
+          <li><strong>Evento GA4.</strong> Il nome previsto è <code>phone_click</code>. Cambialo solo se nel tuo account usi un altro nome.</li>
+          <li><strong>Trigger sul telefono.</strong> Parte sui link <code>tel:</code>. Se il numero è un bottone senza quel link, il trigger va adattato.</li>
+        </ul>
+        <div class="warn"><strong>Se il numero non è cliccabile</strong> Un testo tipo 02 1234567, senza <code>href="tel:+39..."</code>, non genera il click. Prima rendi il numero un link, poi ripeti il test.</div>
+      </section>
 
-      <h2 id="personalizza"><span class="step-num">3</span> Cosa personalizzare dopo l’import</h2>
-      <p>Il container è un modello pronto. Prima di pubblicare verifica questi punti:</p>
-      <ul class="check">
-        <li><strong>Conversion ID / Label Google Ads</strong> — se usi conversioni Ads, inserisci i tuoi valori nelle variabili dedicate.</li>
-        <li><strong>Evento GA4</strong> — controlla nome evento e parametri (es. <code>phone_click</code>).</li>
-        <li><strong>Trigger sui link telefono</strong> — devono intercettare i link <code>tel:</code> del tuo sito. Se usi bottoni custom senza <code>tel:</code>, va adattato il trigger.</li>
-      </ul>
+      <section id="test">
+        <h2><span class="n">4</span> Test e pubblicazione</h2>
+        <ol class="steps">
+          <li><b>01</b><div>In GTM clicca <strong>Anteprima</strong> e collega il sito.</div></li>
+          <li><b>02</b><div>Nella pagina, clicca un numero di telefono.</div></li>
+          <li><b>03</b><div>Nel riquadro di debug controlla che il tag si attivi.</div></li>
+          <li><b>04</b><div>Apri anche <strong>GA4 → DebugView</strong>. Se usi Ads, controlla lo stato del tag in Tag Assistant.</div></li>
+          <li><b>05</b><div>Quando il click compare, clicca <strong>Invia</strong> e poi <strong>Pubblica</strong>.</div></li>
+        </ol>
+      </section>
 
-      <div class="callout warn">
-        <strong>Attenzione</strong>
-        Se i numeri di telefono non sono link cliccabili (<code><a href="tel:+39..."></code>), il tracking non partirà finché non allinei HTML o trigger.
-      </div>
-
-      <h2 id="test"><span class="step-num">4</span> Test e pubblicazione</h2>
-      <ol class="steps">
-        <li data-n="1">In GTM clicca <strong>Anteprima</strong> (Preview) e collega il tuo sito.</li>
-        <li data-n="2">Clicca un numero di telefono sulla pagina.</li>
-        <li data-n="3">Nella console di debug GTM verifica che tag e trigger si attivino.</li>
-        <li data-n="4">Controlla anche <strong>GA4 → DebugView</strong> (e Google Ads, se configurato).</li>
-        <li data-n="5">Quando tutto è ok, clicca <strong>Invia → Pubblica</strong> sul container.</li>
-      </ol>
-
-      <h2 id="aiuto"><span class="step-num">5</span> Serve aiuto?</h2>
-      <p>Se il sito ha una struttura particolare dei link telefono, potrebbe servire un piccolo adattamento dei trigger.</p>
-      <a class="btn" href="mailto:info@easytag.pro?subject=Supporto%20Tracking%20Click%20Telefono">Scrivi a info@easytag.pro</a>
-
-      <div class="footer">
-        Easy Tag Solutions · Spin-off del team italiano di Google Cracovia<br>
-        <a href="https://easytag.pro">easytag.pro</a> · <a href="mailto:info@easytag.pro">info@easytag.pro</a>
-      </div>
-    </div>
-  </div>
+      <section id="aiuto">
+        <h2><span class="n">5</span> Se qualcosa non parte</h2>
+        <p>Di solito è il trigger: il sito non usa un link <code>tel:</code>, oppure il numero è dentro un bottone disegnato a mano. Scrivici e lo adattiamo.</p>
+        <a class="btn" href="mailto:info@easytag.pro?subject=Supporto%20Tracking%20Click%20Telefono">Scrivi a info@easytag.pro</a>
+        <footer>
+          Easy Tag · team proveniente da Google Cracovia<br>
+          <a href="https://easytag.pro">easytag.pro</a> · <a href="mailto:info@easytag.pro">info@easytag.pro</a>
+        </footer>
+      </section>
+    </main>
+  </article>
 </body>
 </html>

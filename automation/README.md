@@ -41,7 +41,7 @@ STRIPE_WEBHOOK_SECRET=
 RESEND_API_KEY=
 FROM_EMAIL=consegne@easytag.pro
 SUPPORT_BCC=info@easytag.pro
-DELIVERABLES_BASE_URL=https://raw.githubusercontent.com/stefanosupernet-sudo/easytag-pro/main/deliverables
+DELIVERABLES_BASE_URL=https://easytag-pro.vercel.app/deliverables
 ```
 
 ## Prossimi file in questa cartella
