@@ -10,7 +10,12 @@ import { Resend } from 'resend';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
-const BASE = process.env.DELIVERABLES_BASE_URL || 'https://easytag-pro.vercel.app/deliverables';
+const SITE_DELIVERABLES = 'https://easytag-pro.vercel.app/deliverables';
+const configured = process.env.DELIVERABLES_BASE_URL || '';
+const BASE =
+  !configured || configured.includes('raw.githubusercontent.com')
+    ? SITE_DELIVERABLES
+    : configured.replace(/\/$/, '');
 const FROM = process.env.FROM_EMAIL || 'consegne@easytag.pro';
 const BCC = 'info@easytag.pro';
 
