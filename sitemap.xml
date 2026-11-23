@@ -1,49 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://easytag-pro.vercel.app/chi-siamo</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/chi-siamo</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/tag-nativo-google-ads</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/tag-nativo-google-ads</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/faq</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/faq</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/contatti</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/contatti</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/success</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/success</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/consent-mode</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/consent-mode</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/datalayer-architettura</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/datalayer-architettura</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/tag-google-analytics-4</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/tag-google-analytics-4</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/tag-facebook</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/tag-facebook</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/tag-linkedin</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/tag-linkedin</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/tracking-social-6in1</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/tracking-social-6in1</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/supporto-10-ore</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/supporto-10-ore</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/consent-mode-v2</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/consent-mode-v2</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/supporto-5-ore</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/supporto-5-ore</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/tracker-ecommerce</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/tracker-ecommerce</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/dynamic-remarketing</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/dynamic-remarketing</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/tag-email</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/tag-email</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/tag-instagram</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/tag-instagram</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/contatti-3in1</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/contatti-3in1</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/tracking-click-telefono</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/tracking-click-telefono</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/shop/supporto-20-ore</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://easytag-pro.vercel.app/en/shop/supporto-20-ore</loc><lastmod>2026-11-23</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://easytag-pro.vercel.app/chi-siamo</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/chi-siamo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/chi-siamo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/chi-siamo"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/consent-mode</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/consent-mode"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/consent-mode"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/consent-mode"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/contatti</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/contatti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/contatti"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/contatti"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/datalayer-architettura</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/datalayer-architettura"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/datalayer-architettura"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/datalayer-architettura"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/chi-siamo</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/chi-siamo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/chi-siamo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/chi-siamo"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/consent-mode</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/consent-mode"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/consent-mode"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/consent-mode"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/contatti</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/contatti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/contatti"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/contatti"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/datalayer-architettura</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/datalayer-architettura"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/datalayer-architettura"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/datalayer-architettura"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/faq</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/faq"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/consent-mode-v2</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/consent-mode-v2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/consent-mode-v2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/consent-mode-v2"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/contatti-3in1</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/contatti-3in1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/contatti-3in1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/contatti-3in1"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/dynamic-remarketing</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/dynamic-remarketing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/dynamic-remarketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/dynamic-remarketing"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/supporto-10-ore</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/supporto-10-ore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/supporto-10-ore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/supporto-10-ore"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/supporto-20-ore</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/supporto-20-ore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/supporto-20-ore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/supporto-20-ore"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/supporto-5-ore</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/supporto-5-ore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/supporto-5-ore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/supporto-5-ore"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/tag-email</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-email"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-email"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-email"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/tag-facebook</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-facebook"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-facebook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-facebook"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/tag-instagram</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-instagram"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-instagram"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-instagram"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/tag-linkedin</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-linkedin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-linkedin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-linkedin"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/tracker-ecommerce</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tracker-ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tracker-ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tracker-ecommerce"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/tracking-click-telefono</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tracking-click-telefono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tracking-click-telefono"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tracking-click-telefono"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/shop/tracking-social-6in1</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tracking-social-6in1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tracking-social-6in1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tracking-social-6in1"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/tag-google-analytics-4</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/tag-google-analytics-4"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/tag-google-analytics-4"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/tag-google-analytics-4"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/tag-nativo-google-ads</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/tag-nativo-google-ads"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/tag-nativo-google-ads"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/tag-nativo-google-ads"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/faq</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/faq"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/consent-mode-v2</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/consent-mode-v2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/consent-mode-v2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/consent-mode-v2"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/contatti-3in1</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/contatti-3in1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/contatti-3in1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/contatti-3in1"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/dynamic-remarketing</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/dynamic-remarketing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/dynamic-remarketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/dynamic-remarketing"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/supporto-10-ore</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/supporto-10-ore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/supporto-10-ore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/supporto-10-ore"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/supporto-20-ore</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/supporto-20-ore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/supporto-20-ore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/supporto-20-ore"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/supporto-5-ore</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/supporto-5-ore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/supporto-5-ore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/supporto-5-ore"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/tag-email</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-email"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-email"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-email"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/tag-facebook</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-facebook"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-facebook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-facebook"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/tag-instagram</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-instagram"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-instagram"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-instagram"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/tag-linkedin</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tag-linkedin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tag-linkedin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tag-linkedin"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/tracker-ecommerce</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tracker-ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tracker-ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tracker-ecommerce"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/tracking-click-telefono</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tracking-click-telefono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tracking-click-telefono"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tracking-click-telefono"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/shop/tracking-social-6in1</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/shop/tracking-social-6in1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/shop/tracking-social-6in1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/shop/tracking-social-6in1"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/tag-google-analytics-4</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/tag-google-analytics-4"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/tag-google-analytics-4"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/tag-google-analytics-4"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/tag-nativo-google-ads</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/tag-nativo-google-ads"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/tag-nativo-google-ads"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/tag-nativo-google-ads"/>
+  </url>
 </urlset>
