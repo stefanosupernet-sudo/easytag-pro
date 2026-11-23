@@ -3,35 +3,315 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/index", "destination": "/", "permanent": true },
-    { "source": "/shop/index", "destination": "/shop", "permanent": true },
-    { "source": "/en/index", "destination": "/en", "permanent": true },
-    { "source": "/en/shop/index", "destination": "/en/shop", "permanent": true },
-    { "source": "/tracking-click-telefono", "destination": "/shop/tracking-click-telefono", "permanent": true },
-    { "source": "/tracking-click-telefono.html", "destination": "/shop/tracking-click-telefono", "permanent": true },
-    { "source": "/tracking-social-6in1", "destination": "/shop/tracking-social-6in1", "permanent": true },
-    { "source": "/tracking-social-6in1.html", "destination": "/shop/tracking-social-6in1", "permanent": true },
-    { "source": "/contatti-3in1", "destination": "/shop/contatti-3in1", "permanent": true },
-    { "source": "/contatti-3in1.html", "destination": "/shop/contatti-3in1", "permanent": true },
-    { "source": "/supporto-5-ore", "destination": "/shop/supporto-5-ore", "permanent": true },
-    { "source": "/supporto-5-ore.html", "destination": "/shop/supporto-5-ore", "permanent": true },
-    { "source": "/supporto-10-ore", "destination": "/shop/supporto-10-ore", "permanent": true },
-    { "source": "/supporto-10-ore.html", "destination": "/shop/supporto-10-ore", "permanent": true },
-    { "source": "/supporto-20-ore", "destination": "/shop/supporto-20-ore", "permanent": true },
-    { "source": "/supporto-20-ore.html", "destination": "/shop/supporto-20-ore", "permanent": true },
-    { "source": "/tracker-ecommerce", "destination": "/shop/tracker-ecommerce", "permanent": true },
-    { "source": "/tracker-ecommerce.html", "destination": "/shop/tracker-ecommerce", "permanent": true },
-    { "source": "/dynamic-remarketing", "destination": "/shop/dynamic-remarketing", "permanent": true },
-    { "source": "/dynamic-remarketing.html", "destination": "/shop/dynamic-remarketing", "permanent": true },
-    { "source": "/tag-email", "destination": "/shop/tag-email", "permanent": true },
-    { "source": "/tag-email.html", "destination": "/shop/tag-email", "permanent": true },
-    { "source": "/tag-facebook", "destination": "/shop/tag-facebook", "permanent": true },
-    { "source": "/tag-facebook.html", "destination": "/shop/tag-facebook", "permanent": true },
-    { "source": "/tag-instagram", "destination": "/shop/tag-instagram", "permanent": true },
-    { "source": "/tag-instagram.html", "destination": "/shop/tag-instagram", "permanent": true },
-    { "source": "/tag-linkedin", "destination": "/shop/tag-linkedin", "permanent": true },
-    { "source": "/tag-linkedin.html", "destination": "/shop/tag-linkedin", "permanent": true },
-    { "source": "/consent-mode-v2", "destination": "/shop/consent-mode-v2", "permanent": true },
-    { "source": "/consent-mode-v2.html", "destination": "/shop/consent-mode-v2", "permanent": true }
+    {
+      "source": "/en/chi-siamo",
+      "destination": "/en/about",
+      "permanent": true
+    },
+    {
+      "source": "/en/chi-siamo.html",
+      "destination": "/en/about",
+      "permanent": true
+    },
+    {
+      "source": "/en/contatti",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/en/contatti.html",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/en/datalayer-architettura",
+      "destination": "/en/datalayer-architecture",
+      "permanent": true
+    },
+    {
+      "source": "/en/datalayer-architettura.html",
+      "destination": "/en/datalayer-architecture",
+      "permanent": true
+    },
+    {
+      "source": "/en/tag-google-analytics-4",
+      "destination": "/en/google-analytics-4",
+      "permanent": true
+    },
+    {
+      "source": "/en/tag-google-analytics-4.html",
+      "destination": "/en/google-analytics-4",
+      "permanent": true
+    },
+    {
+      "source": "/en/tag-nativo-google-ads",
+      "destination": "/en/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/en/tag-nativo-google-ads.html",
+      "destination": "/en/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tracking-click-telefono",
+      "destination": "/en/shop/phone-click-tracking",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tracking-click-telefono.html",
+      "destination": "/en/shop/phone-click-tracking",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tracking-social-6in1",
+      "destination": "/en/shop/social-tracking",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tracking-social-6in1.html",
+      "destination": "/en/shop/social-tracking",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/contatti-3in1",
+      "destination": "/en/shop/contact-links",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/contatti-3in1.html",
+      "destination": "/en/shop/contact-links",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/supporto-5-ore",
+      "destination": "/en/shop/support-5-hours",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/supporto-5-ore.html",
+      "destination": "/en/shop/support-5-hours",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/supporto-10-ore",
+      "destination": "/en/shop/support-10-hours",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/supporto-10-ore.html",
+      "destination": "/en/shop/support-10-hours",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/supporto-20-ore",
+      "destination": "/en/shop/support-20-hours",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/supporto-20-ore.html",
+      "destination": "/en/shop/support-20-hours",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tracker-ecommerce",
+      "destination": "/en/shop/ecommerce-tracker",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tracker-ecommerce.html",
+      "destination": "/en/shop/ecommerce-tracker",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-email",
+      "destination": "/en/shop/email-tag",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-email.html",
+      "destination": "/en/shop/email-tag",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-facebook",
+      "destination": "/en/shop/facebook-tag",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-facebook.html",
+      "destination": "/en/shop/facebook-tag",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-instagram",
+      "destination": "/en/shop/instagram-tag",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-instagram.html",
+      "destination": "/en/shop/instagram-tag",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-linkedin",
+      "destination": "/en/shop/linkedin-tag",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/tag-linkedin.html",
+      "destination": "/en/shop/linkedin-tag",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/shop/index",
+      "destination": "/shop",
+      "permanent": true
+    },
+    {
+      "source": "/en/index",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop/index",
+      "destination": "/en/shop",
+      "permanent": true
+    },
+    {
+      "source": "/tracking-click-telefono",
+      "destination": "/shop/tracking-click-telefono",
+      "permanent": true
+    },
+    {
+      "source": "/tracking-click-telefono.html",
+      "destination": "/shop/tracking-click-telefono",
+      "permanent": true
+    },
+    {
+      "source": "/tracking-social-6in1",
+      "destination": "/shop/tracking-social-6in1",
+      "permanent": true
+    },
+    {
+      "source": "/tracking-social-6in1.html",
+      "destination": "/shop/tracking-social-6in1",
+      "permanent": true
+    },
+    {
+      "source": "/contatti-3in1",
+      "destination": "/shop/contatti-3in1",
+      "permanent": true
+    },
+    {
+      "source": "/contatti-3in1.html",
+      "destination": "/shop/contatti-3in1",
+      "permanent": true
+    },
+    {
+      "source": "/supporto-5-ore",
+      "destination": "/shop/supporto-5-ore",
+      "permanent": true
+    },
+    {
+      "source": "/supporto-5-ore.html",
+      "destination": "/shop/supporto-5-ore",
+      "permanent": true
+    },
+    {
+      "source": "/supporto-10-ore",
+      "destination": "/shop/supporto-10-ore",
+      "permanent": true
+    },
+    {
+      "source": "/supporto-10-ore.html",
+      "destination": "/shop/supporto-10-ore",
+      "permanent": true
+    },
+    {
+      "source": "/supporto-20-ore",
+      "destination": "/shop/supporto-20-ore",
+      "permanent": true
+    },
+    {
+      "source": "/supporto-20-ore.html",
+      "destination": "/shop/supporto-20-ore",
+      "permanent": true
+    },
+    {
+      "source": "/tracker-ecommerce",
+      "destination": "/shop/tracker-ecommerce",
+      "permanent": true
+    },
+    {
+      "source": "/tracker-ecommerce.html",
+      "destination": "/shop/tracker-ecommerce",
+      "permanent": true
+    },
+    {
+      "source": "/dynamic-remarketing",
+      "destination": "/shop/dynamic-remarketing",
+      "permanent": true
+    },
+    {
+      "source": "/dynamic-remarketing.html",
+      "destination": "/shop/dynamic-remarketing",
+      "permanent": true
+    },
+    {
+      "source": "/tag-email",
+      "destination": "/shop/tag-email",
+      "permanent": true
+    },
+    {
+      "source": "/tag-email.html",
+      "destination": "/shop/tag-email",
+      "permanent": true
+    },
+    {
+      "source": "/tag-facebook",
+      "destination": "/shop/tag-facebook",
+      "permanent": true
+    },
+    {
+      "source": "/tag-facebook.html",
+      "destination": "/shop/tag-facebook",
+      "permanent": true
+    },
+    {
+      "source": "/tag-instagram",
+      "destination": "/shop/tag-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/tag-instagram.html",
+      "destination": "/shop/tag-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/tag-linkedin",
+      "destination": "/shop/tag-linkedin",
+      "permanent": true
+    },
+    {
+      "source": "/tag-linkedin.html",
+      "destination": "/shop/tag-linkedin",
+      "permanent": true
+    },
+    {
+      "source": "/consent-mode-v2",
+      "destination": "/shop/consent-mode-v2",
+      "permanent": true
+    },
+    {
+      "source": "/consent-mode-v2.html",
+      "destination": "/shop/consent-mode-v2",
+      "permanent": true
+    }
   ]
 }

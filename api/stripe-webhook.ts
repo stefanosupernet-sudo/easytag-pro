@@ -22,23 +22,26 @@ const BCC = 'info@easytag.pro';
 /** price ID → consegna (allineato a automation/product-map.json) */
 const MAP: Record<
   string,
-  | { type: 'container'; name: string; folder: string }
+  | { type: 'container'; name: string; enName: string; folder: string }
   | { type: 'hours'; name: string; hours: number }
-  | { type: 'manual'; name: string }
+  | { type: 'manual'; name: string; enName: string; folder: string }
 > = {
   price_1UetjCFM9KfnnbcxQDbxcVOu: {
     type: 'container',
     name: 'Tracking Click sul Numero di Telefono',
+    enName: 'Phone click tracking',
     folder: 'tracking-click-telefono',
   },
   price_1UetjFFM9Kfnnbcx8gX5jNLO: {
     type: 'container',
     name: 'Tracking Social 6-in-1',
+    enName: 'Social tracking 6-in-1',
     folder: 'tracking-social-6in1',
   },
   price_1UetjGFM9KfnnbcxeTiLH49j: {
     type: 'container',
     name: 'Pacchetto Contatti 3-in-1',
+    enName: 'Contact links 3-in-1',
     folder: 'contatti-3in1',
   },
   price_1UetjHFM9KfnnbcxWpTZVDdC: {
@@ -59,18 +62,26 @@ const MAP: Record<
   price_1UetjLFM9Kfnnbcxk7dYXWiN: {
     type: 'manual',
     name: 'TAG Email',
+    enName: 'Email tag',
+    folder: 'tag-email',
   },
   price_1UetjMFM9KfnnbcxGhsHFhqf: {
     type: 'manual',
     name: 'TAG Facebook',
+    enName: 'Facebook tag',
+    folder: 'tag-facebook',
   },
   price_1UetjNFM9KfnnbcxwTdNAD7y: {
     type: 'manual',
     name: 'TAG Instagram',
+    enName: 'Instagram tag',
+    folder: 'tag-instagram',
   },
   price_1UetjOFM9KfnnbcxWF88n4u4: {
     type: 'manual',
     name: 'TAG LinkedIn',
+    enName: 'LinkedIn tag',
+    folder: 'tag-linkedin',
   },
 };
 
@@ -117,28 +128,62 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     let subject: string;
     let html: string;
 
+    const english = (session.success_url || '').includes('/en/');
+    const guideFile = english ? 'instructions.html' : 'istruzioni.html';
+    const hello = english ? `Hi ${name},` : `Ciao ${name},`;
+
     if (product?.type === 'container') {
       const linkC = `${BASE}/${product.folder}/container.json`;
-      const linkI = `${BASE}/${product.folder}/istruzioni.html`;
-      subject = `I tuoi file GTM – ${product.name} | Easy Tag`;
-      html = `<p>Ciao ${name},</p>
-        <p>Grazie per l'acquisto di <strong>${product.name}</strong>.</p>
+      const linkI = `${BASE}/${product.folder}/${guideFile}`;
+      const title = english ? product.enName : product.name;
+      subject = english
+        ? `Your GTM files – ${title} | Easy Tag`
+        : `I tuoi file GTM – ${title} | Easy Tag`;
+      html = english
+        ? `<p>${hello}</p>
+        <p>Thanks for buying <strong>${title}</strong>.</p>
+        <p><strong>Your files:</strong></p>
+        <ul>
+          <li><a href="${linkC}">container.json</a></li>
+          <li><a href="${linkI}">Installation manual</a></li>
+        </ul>
+        <p>1. Download container.json<br>2. GTM → Admin → Import container<br>3. Replace the Conversion ID and Label<br>4. Test, then publish</p>
+        <p>Support: info@easytag.pro · Order ${orderId}</p>`
+        : `<p>${hello}</p>
+        <p>Grazie per l'acquisto di <strong>${title}</strong>.</p>
         <p><strong>I tuoi file:</strong></p>
         <ul>
           <li><a href="${linkC}">container.json</a></li>
-          <li><a href="${linkI}">istruzioni.html</a></li>
+          <li><a href="${linkI}">Manuale di installazione</a></li>
         </ul>
-        <p>1. Scarica container.json<br>2. GTM → Admin → Import Container<br>3. Sostituisci ID Conversione e Label<br>4. Testa e pubblica</p>
+        <p>1. Scarica container.json<br>2. GTM → Admin → Importa container<br>3. Sostituisci ID Conversione e Label<br>4. Testa e pubblica</p>
         <p>Supporto: info@easytag.pro · Ordine ${orderId}</p>`;
     } else if (product?.type === 'manual') {
-      subject = `Ordine ricevuto – ${product.name} | Easy Tag`;
-      html = `<p>Ciao ${name},</p>
-        <p>Grazie per l'acquisto di <strong>${product.name}</strong>.</p>
+      const title = english ? product.enName : product.name;
+      const linkI = `${BASE}/${product.folder}/${guideFile}`;
+      subject = english
+        ? `Order received – ${title} | Easy Tag`
+        : `Ordine ricevuto – ${title} | Easy Tag`;
+      html = english
+        ? `<p>${hello}</p>
+        <p>Thanks for buying <strong>${title}</strong>.</p>
+        <p>The container file arrives from info@easytag.pro within one working day.</p>
+        <p>The manual is already available: <a href="${linkI}">Installation manual</a>.</p>
+        <p>Order ${orderId}</p>`
+        : `<p>${hello}</p>
+        <p>Grazie per l'acquisto di <strong>${title}</strong>.</p>
         <p>Il file del container ti arriva da info@easytag.pro entro un giorno lavorativo.</p>
         <p>Ordine ${orderId}</p>`;
     } else if (product?.type === 'hours') {
-      subject = `Pacchetto ore attivato – ${product.name} | Easy Tag`;
-      html = `<p>Ciao ${name},</p>
+      subject = english
+        ? `Hour pack active – ${product.hours} hours | Easy Tag`
+        : `Pacchetto ore attivato – ${product.name} | Easy Tag`;
+      html = english
+        ? `<p>${hello}</p>
+        <p>Thanks for buying <strong>${product.hours} hours</strong> of technical support.</p>
+        <p>Write to <a href="mailto:info@easytag.pro">info@easytag.pro</a> with priority and access (GTM, GA4, Ads). We start within one working day.</p>
+        <p>Order ${orderId}</p>`
+        : `<p>${hello}</p>
         <p>Grazie per l'acquisto di <strong>${product.name}</strong> (${product.hours} ore).</p>
         <p>Scrivi a <a href="mailto:info@easytag.pro">info@easytag.pro</a> con priorità e accessi (GTM, GA4, Ads). Partiamo entro 1 giorno lavorativo.</p>
         <p>Ordine ${orderId}</p>`;
