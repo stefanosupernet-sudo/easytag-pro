@@ -308,4 +308,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/google-ads"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/tag-nativo-google-ads"/>
   </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/cookie</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/cookie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/cookie"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/cookies</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/cookie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/cookie"/>
+  </url>
 </urlset>
