@@ -8,7 +8,7 @@
   var copy = en
     ? {
         title: "Cookies",
-        body: "This site uses necessary cookies so the page and the chat memory work. Measurement cookies run only if you accept. Controller: Easy Tag Solutions, info@easytag.pro.",
+        body: "Controller: Analytics 4 Sp. z o.o., Kraków. We store one necessary cookie to remember your choice. Measurement cookies run only if you accept.",
         note: "You can refuse and keep browsing: the catalogue, quotes and contact page stay available.",
         policy: "Cookie notice",
         accept: "Accept",
@@ -17,7 +17,7 @@
       }
     : {
         title: "Cookie",
-        body: "Questo sito usa cookie tecnici necessari al funzionamento della pagina e alla memoria della chat. I cookie di misura partono solo se accetti. Titolare: Easy Tag Solutions, info@easytag.pro.",
+        body: "Titolare: Analytics 4 Sp. z o.o., Cracovia. Usiamo un solo cookie tecnico per ricordare la scelta. I cookie di misura partono solo se accetti.",
         note: "Puoi rifiutare e navigare comunque: catalogo, preventivi e contatti restano disponibili.",
         policy: "Informativa cookie",
         accept: "Accetta",

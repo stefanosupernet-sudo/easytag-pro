@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Informativa cookie | Easy Tag</title>
-  <meta name="description" content="Cookie tecnici e scelta di misura su Easy Tag. Titolare Easy Tag Solutions, info@easytag.pro.">
+  <title>Informativa privacy e cookie | Easy Tag</title>
+  <meta name="description" content="Informativa sul trattamento dei dati di Analytics 4 Sp. z o.o.: ordini, preventivi, cookie e diritti GDPR.">
   <link rel="canonical" href="https://easytag-pro.vercel.app/cookie">
   <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/cookie">
   <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/cookies">
@@ -16,6 +16,7 @@
     header{display:flex;justify-content:space-between;align-items:center}
     a{color:#0B5CAD}
     h1{font-size:32px;line-height:1.2;margin:12px 0}
+    .updated{color:#5F6368;margin-top:0}
     h2{font-size:20px;margin:28px 0 8px}
     table{width:100%;border-collapse:collapse;font-size:14px}
     th,td{border-bottom:1px solid #E8EAED;text-align:left;padding:8px 6px;vertical-align:top}
@@ -28,23 +29,56 @@
     <a href="/en/cookies">English</a>
   </header>
   <main>
-    <h1>Informativa cookie</h1>
-    <p>Titolare: Easy Tag Solutions. Contatto: <a href="mailto:info@easytag.pro">info@easytag.pro</a>. Questa pagina è leggibile senza accettare cookie di misura.</p>
-    <h2>Cosa usiamo</h2>
+    <h1>Informativa privacy e cookie</h1>
+    <p class="updated">Ultimo aggiornamento: 24 novembre 2026. Questa pagina si legge senza accettare cookie di misura. È l’informativa resa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (GDPR).</p>
+
+    <h2>1. Titolare</h2>
+    <p>Analytics 4 Sp. z o.o.<br>
+    Sede: ul. Kordiana 54, 30-653 Cracovia, Polonia<br>
+    Partita IVA / NIP: 5252601575<br>
+    Email: <a href="mailto:info@easytag.pro">info@easytag.pro</a></p>
+    <p>Il marchio del sito è Easy Tag. Il titolare del trattamento è la società sopra indicata. Non è stato designato un responsabile della protezione dei dati: non ricorrono i casi dell’art. 37 GDPR. Le richieste si inviano all’email indicata.</p>
+
+    <h2>2. Quali dati, per quale scopo, su quale base</h2>
     <table>
-      <thead><tr><th>Cookie</th><th>Tipo</th><th>Durata</th><th>A cosa serve</th></tr></thead>
+      <thead><tr><th>Dati</th><th>Scopo</th><th>Base giuridica</th><th>Conservazione</th></tr></thead>
       <tbody>
-        <tr><td><code>et_consent</code></td><td>Tecnico</td><td>6 mesi</td><td>Ricorda se hai accettato o rifiutato. Non richiede consenso.</td></tr>
-        <tr><td>Memoria chat</td><td>Tecnico, sessionStorage</td><td>Sessione del browser</td><td>Tiene i messaggi della chat su questa scheda. Non è un cookie di profilazione.</td></tr>
+        <tr><td>Nome, email e dati dell’ordine che Stripe ci comunica dopo il pagamento. I dati della carta restano da Stripe: noi non li vediamo e non li salviamo.</td><td>Consegnare il file, rispondere sull’ordine, emettere il documento fiscale.</td><td>Esecuzione del contratto (art. 6.1.b) e obbligo di legge fiscale (art. 6.1.c).</td><td>Per la durata del contratto e poi per il tempo previsto dalla legge contabile polacca, in genere 5 anni dalla fine dell’anno del documento.</td></tr>
+        <tr><td>Preventivo: nome, cognome, email, telefono, CMS, presenza di un data layer, URL del sito, note e prodotto richiesto.</td><td>Rispondere alla richiesta di preventivo.</td><td>Misure precontrattuali su tua richiesta (art. 6.1.b). Se poi non c’è un ordine, il contatto successivo di cortesia si limita alla risposta già avviata.</td><td>24 mesi dall’ultimo messaggio, salvo che la richiesta diventi un ordine.</td></tr>
+        <tr><td>Messaggio inviato dal modulo contatti. Parte dal tuo programma di posta verso info@easytag.pro: non passa da un database del sito.</td><td>Rispondere al messaggio.</td><td>Misure precontrattuali o legittimo interesse a evadere una richiesta che ci hai scritto (art. 6.1.b o 6.1.f).</td><td>24 mesi dall’ultimo messaggio, salvo ordine.</td></tr>
+        <tr><td>Cookie <code>et_consent</code> (valore accettato o rifiutato).</td><td>Ricordare la scelta e non riproporre il banner.</td><td>Legittimo interesse e obbligo di poter provare la scelta (art. 6.1.f). Non è un cookie di profilazione.</td><td>6 mesi.</td></tr>
+        <tr><td>Testo della chat, solo in <code>sessionStorage</code> del browser, su questa scheda. Non viene inviato a un server.</td><td>Non farti ripartire da zero se chiudi e riapri il riquadro.</td><td>Legittimo interesse, limitato alla funzione che hai aperto (art. 6.1.f).</td><td>Fino alla chiusura della scheda.</td></tr>
+        <tr><td>Log tecnici dell’hosting: indirizzo IP, data, pagina richiesta, user agent.</td><td>Sicurezza e funzionamento del sito. Non creiamo profili e non usiamo l’IP per pubblicità.</td><td>Legittimo interesse alla sicurezza del sito (art. 6.1.f).</td><td>Per il periodo applicato dal fornitore di hosting, poi cancellazione o anonimizzazione.</td></tr>
       </tbody>
     </table>
-    <h2>Cosa non parte prima della scelta</h2>
-    <p>Non carichiamo Google Analytics, Google Ads o altri tag di misura prima che tu scelga. Se premi Accetta, registriamo il permesso. Se premi Rifiuta, registriamo il rifiuto e non abilitiamo la misura. Il pagamento, quando lo avvii tu, avviene su Stripe, che ha una sua informativa.</p>
-    <h2>Come cambiare idea</h2>
-    <p>Il pulsante Cookie in basso a sinistra riapre la scelta. Puoi anche cancellare il cookie <code>et_consent</code> dal browser. Rifiutare non chiude il sito: catalogo, preventivi e contatti restano disponibili.</p>
-    <p><a href="/">Torna alla home</a></p>
+    <p>Non usiamo i dati per marketing, newsletter o decisioni automatizzate, compresa la profilazione. Se in futuro attiviamo una misura di visita, parte solo dopo Accetta e puoi ritirare il consenso dal pulsante Cookie.</p>
+
+    <h2>3. A chi li comunichiamo</h2>
+    <p>I dati non sono venduti. Li trattano, per nostro conto, solo i fornitori strettamente necessari:</p>
+    <ul>
+      <li>Stripe, per il pagamento e la conferma dell’ordine;</li>
+      <li>Resend, per inviare l’email del file acquistato e per inoltrarci le richieste di preventivo;</li>
+      <li>Vercel, per ospitare il sito e i log tecnici.</li>
+    </ul>
+    <p>Stripe, Resend e Vercel possono trattare dati negli Stati Uniti. Il trasferimento fuori dallo Spazio economico europeo avviene con le clausole contrattuali tipo della Commissione europea oppure, se il fornitore risulta aderente, con il Data Privacy Framework UE–USA. Puoi chiederci copia delle garanzie scrivendo a info@easytag.pro.</p>
+    <p>Possiamo comunicare i dati all’autorità fiscale o giudiziaria quando la legge lo impone.</p>
+
+    <h2>4. Cookie</h2>
+    <p>Prima della scelta non carichiamo Google Analytics, Google Ads o altri tag di misura. Accetta registra il permesso nel cookie <code>et_consent</code>. Rifiuta registra il rifiuto: il sito resta navigabile e la misura resta spenta. Il rifiuto è facile quanto l’accettazione. Il pulsante Cookie, in basso a sinistra, riapre la scelta; puoi anche cancellare <code>et_consent</code> dal browser.</p>
+    <p>Il cookie di scelta è tecnico. Un’eventuale misura di statistica avrebbe base nel consenso (art. 6.1.a GDPR e normativa ePrivacy). Oggi quel tag non è installato: accettare non fa partire, da solo, un cookie di Google.</p>
+
+    <h2>5. I tuoi diritti</h2>
+    <p>Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità e opporti al trattamento fondato sul legittimo interesse. Se un trattamento si basa sul consenso, puoi ritirarlo in qualsiasi momento, senza effetto su ciò che è stato fatto prima. Scrivi a <a href="mailto:info@easytag.pro">info@easytag.pro</a>. Rispondiamo entro un mese, salvo proroga motivata di due mesi nei casi complessi.</p>
+    <p>Puoi proporre reclamo all’autorità del Paese in cui vivi. Per l’Italia è il Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>). L’autorità capofila del titolare, che ha sede in Polonia, è il Presidente dell’Ufficio per la protezione dei dati personali (UODO), ul. Stawki 2, 00-193 Varsavia, <a href="https://uodo.gov.pl">uodo.gov.pl</a>.</p>
+
+    <h2>6. Obbligo di fornire i dati</h2>
+    <p>Email e nome in checkout sono necessari per consegnare il file e il documento fiscale: senza, l’ordine non si può eseguire. Nel preventivo, i campi segnati con l’asterisco sono necessari per risponderti. La chat e i cookie di misura sono facoltativi.</p>
+
+    <h2>7. Minori</h2>
+    <p>Il sito non è rivolto a minori di 16 anni e non raccogliamo dati sapendo che appartengono a un minore.</p>
+    <p>Condizioni di vendita: <a href="/termini">Termini</a>.</p>
   </main>
-  <footer>© 2026 Easy Tag Solutions · <a href="/termini">Termini</a></footer>
+  <footer>© 2026 Analytics 4 Sp. z o.o. · <a href="/cookie">Privacy</a> · <a href="/termini">Termini</a></footer>
   <script src="/cookie-banner.js"></script>
 </body>
 </html>

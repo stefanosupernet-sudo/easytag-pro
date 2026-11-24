@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookie notice | Easy Tag</title>
-  <meta name="description" content="Necessary cookies and the measurement choice on Easy Tag. Controller: Easy Tag Solutions, info@easytag.pro.">
+  <title>Privacy and cookie notice | Easy Tag</title>
+  <meta name="description" content="How Analytics 4 Sp. z o.o. processes orders, quotes and cookies, and which GDPR rights you have.">
   <link rel="canonical" href="https://easytag-pro.vercel.app/en/cookies">
   <link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/cookie">
   <link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/cookies">
@@ -16,6 +16,7 @@
     header{display:flex;justify-content:space-between;align-items:center}
     a{color:#0B5CAD}
     h1{font-size:32px;line-height:1.2;margin:12px 0}
+    .updated{color:#5F6368;margin-top:0}
     h2{font-size:20px;margin:28px 0 8px}
     table{width:100%;border-collapse:collapse;font-size:14px}
     th,td{border-bottom:1px solid #E8EAED;text-align:left;padding:8px 6px;vertical-align:top}
@@ -28,23 +29,56 @@
     <a href="/cookie">Italiano</a>
   </header>
   <main>
-    <h1>Cookie notice</h1>
-    <p>Controller: Easy Tag Solutions. Contact: <a href="mailto:info@easytag.pro">info@easytag.pro</a>. You can read this page without accepting measurement cookies.</p>
-    <h2>What we use</h2>
+    <h1>Privacy and cookie notice</h1>
+    <p class="updated">Last updated: 24 November 2026. English translation of the <a href="/cookie">Italian notice</a>. If the two texts differ, the Italian text prevails. You can read this page without accepting measurement cookies. It is the notice under Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR).</p>
+
+    <h2>1. Controller</h2>
+    <p>Analytics 4 Sp. z o.o.<br>
+    Office: ul. Kordiana 54, 30-653 Kraków, Poland<br>
+    VAT / NIP: 5252601575<br>
+    Email: <a href="mailto:info@easytag.pro">info@easytag.pro</a></p>
+    <p>The site brand is Easy Tag. The controller is the company named above. No data protection officer has been appointed, because Article 37 GDPR does not require one here. Send requests to the email above.</p>
+
+    <h2>2. Which data, for what purpose, on what basis</h2>
     <table>
-      <thead><tr><th>Cookie</th><th>Type</th><th>Duration</th><th>Purpose</th></tr></thead>
+      <thead><tr><th>Data</th><th>Purpose</th><th>Legal basis</th><th>Retention</th></tr></thead>
       <tbody>
-        <tr><td><code>et_consent</code></td><td>Necessary</td><td>6 months</td><td>Remembers whether you accepted or refused. It does not need consent.</td></tr>
-        <tr><td>Chat memory</td><td>Necessary, sessionStorage</td><td>Browser session</td><td>Keeps the chat messages in this tab. It is not a profiling cookie.</td></tr>
+        <tr><td>Name, email and order details that Stripe sends us after payment. Card details stay with Stripe: we never see or store them.</td><td>Deliver the file, answer questions about the order, and issue the tax document.</td><td>Contract (Art. 6(1)(b)) and a legal tax obligation (Art. 6(1)(c)).</td><td>For the life of the contract, then for the period required by Polish accounting law, generally 5 years from the end of the year of the document.</td></tr>
+        <tr><td>Quote: first name, last name, email, phone, CMS, whether a data layer exists, site URL, notes and the product requested.</td><td>Reply to the quote request.</td><td>Steps before a contract, at your request (Art. 6(1)(b)).</td><td>24 months from the last message, unless the request becomes an order.</td></tr>
+        <tr><td>A message sent from the contact form. It leaves your own mail program for info@easytag.pro. It does not pass through a database on this site.</td><td>Reply to the message.</td><td>Steps before a contract, or our legitimate interest in answering a message you sent (Art. 6(1)(b) or 6(1)(f)).</td><td>24 months from the last message, unless there is an order.</td></tr>
+        <tr><td>Cookie <code>et_consent</code> (accepted or refused).</td><td>Remember the choice and not show the banner again.</td><td>Legitimate interest and the need to be able to show what you chose (Art. 6(1)(f)). It is not a profiling cookie.</td><td>6 months.</td></tr>
+        <tr><td>Chat text, only in this tab’s <code>sessionStorage</code>. It is not sent to a server.</td><td>Keep the conversation if you close and reopen the panel.</td><td>Legitimate interest, limited to the feature you opened (Art. 6(1)(f)).</td><td>Until you close the tab.</td></tr>
+        <tr><td>Hosting logs: IP address, date, page requested, user agent.</td><td>Security and operation of the site. We do not build profiles and we do not use the IP for advertising.</td><td>Legitimate interest in securing the site (Art. 6(1)(f)).</td><td>For the period applied by the hosting provider, then deletion or anonymisation.</td></tr>
       </tbody>
     </table>
-    <h2>What does not run before a choice</h2>
-    <p>We do not load Google Analytics, Google Ads or other measurement tags before you choose. Accept stores the permission. Reject stores the refusal and measurement stays off. Payment, when you start it, happens on Stripe, which has its own notice.</p>
-    <h2>How to change your mind</h2>
-    <p>The Cookie button at the bottom left opens the choice again. You can also delete the <code>et_consent</code> cookie in the browser. Refusing does not close the site: the catalogue, quotes and contact page stay available.</p>
-    <p><a href="/en">Back to the homepage</a></p>
+    <p>We do not use the data for marketing, newsletters or automated decisions, including profiling. If we later turn on visit measurement, it runs only after you press Accept, and you can withdraw that consent from the Cookie button.</p>
+
+    <h2>3. Who receives the data</h2>
+    <p>We do not sell the data. Only the providers we need process it for us:</p>
+    <ul>
+      <li>Stripe, for payment and order confirmation;</li>
+      <li>Resend, to send the email with the purchased file and to forward quote requests to us;</li>
+      <li>Vercel, to host the site and the technical logs.</li>
+    </ul>
+    <p>Stripe, Resend and Vercel may process data in the United States. A transfer outside the European Economic Area is made under the European Commission’s standard contractual clauses or, where the provider is listed, under the EU–US Data Privacy Framework. You can ask us for a copy of the safeguards by writing to info@easytag.pro.</p>
+    <p>We may disclose data to a tax or judicial authority when the law requires it.</p>
+
+    <h2>4. Cookies</h2>
+    <p>Before you choose, we do not load Google Analytics, Google Ads or any other measurement tag. Accept stores the permission in the <code>et_consent</code> cookie. Reject stores the refusal: the site stays usable and measurement stays off. Refusing is as easy as accepting. The Cookie button at the bottom left opens the choice again. You can also delete <code>et_consent</code> in the browser.</p>
+    <p>The choice cookie is necessary. Any visit statistics would rely on consent (Art. 6(1)(a) GDPR and the ePrivacy rules). That tag is not installed today: pressing Accept does not, by itself, set a Google cookie.</p>
+
+    <h2>5. Your rights</h2>
+    <p>You may request access, rectification, erasure, restriction and portability, and you may object to processing based on legitimate interest. Where processing is based on consent, you may withdraw it at any time. Withdrawal does not affect processing that was lawful before then. Write to <a href="mailto:info@easytag.pro">info@easytag.pro</a>. We reply within one month, unless a reasoned extension of two further months is needed in a complex case.</p>
+    <p>You may lodge a complaint with the authority in the country where you live. In Italy that is the Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>). The lead authority for the controller, which is established in Poland, is the President of the Personal Data Protection Office (UODO), ul. Stawki 2, 00-193 Warsaw, <a href="https://uodo.gov.pl">uodo.gov.pl</a>.</p>
+
+    <h2>6. Whether you must provide the data</h2>
+    <p>The email and name at checkout are required to deliver the file and the tax document. Without them the order cannot be carried out. On a quote, the fields marked with an asterisk are required for us to reply. The chat and any measurement cookies are optional.</p>
+
+    <h2>7. Children</h2>
+    <p>The site is not directed at anyone under 16, and we do not knowingly collect a child’s data.</p>
+    <p>Terms of sale: <a href="/en/terms">Terms</a>.</p>
   </main>
-  <footer>© 2026 Easy Tag Solutions · <a href="/en/terms">Terms</a></footer>
+  <footer>© 2026 Analytics 4 Sp. z o.o. · <a href="/en/cookies">Privacy</a> · <a href="/en/terms">Terms</a></footer>
   <script src="/cookie-banner.js"></script>
 </body>
 </html>
