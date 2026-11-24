@@ -2,7 +2,6 @@
   var CHOICE = "et_consent";
   var path = location.pathname;
   var en = path === "/en" || path.indexOf("/en/") === 0;
-  var home = en ? "/en" : "/";
   var policy = en ? "/en/cookies" : "/cookie";
   var onPolicy = path === "/cookie" || path === "/en/cookies";
 
@@ -14,10 +13,6 @@
         policy: "Cookie notice",
         accept: "Accept",
         reject: "Reject",
-        afterTitle: "You refused cookies",
-        after: "You refused non-essential cookies. The catalogue, quotes and contact page stay available.",
-        goHome: "Go to the homepage",
-        stay: "Stay on this page",
         reopen: "Cookies"
       }
     : {
@@ -27,10 +22,6 @@
         policy: "Informativa cookie",
         accept: "Accetta",
         reject: "Rifiuta",
-        afterTitle: "Hai rifiutato i cookie",
-        after: "Hai rifiutato i cookie non necessari. Catalogo, preventivi e contatti restano disponibili.",
-        goHome: "Vai alla home",
-        stay: "Resta su questa pagina",
         reopen: "Cookie"
       };
 
@@ -98,27 +89,7 @@
     var actions = document.createElement("div");
     actions.className = "et-cookie-actions";
 
-    if (mode === "after") {
-      title.textContent = copy.afterTitle;
-      var after = document.createElement("p");
-      after.textContent = copy.after;
-      var homeLink = document.createElement("a");
-      homeLink.className = "et-cookie-btn et-cookie-home";
-      homeLink.href = home;
-      homeLink.textContent = copy.goHome;
-      var stay = field("et-cookie-stay", copy.stay);
-      stay.addEventListener("click", function () {
-        wall.remove();
-        lock(false);
-        showReopen();
-      });
-      actions.appendChild(stay);
-      actions.appendChild(homeLink);
-      dialog.appendChild(title);
-      dialog.appendChild(after);
-      dialog.appendChild(actions);
-    } else {
-      title.textContent = copy.title;
+    title.textContent = copy.title;
       var body = document.createElement("p");
       body.textContent = copy.body;
       var note = document.createElement("p");
@@ -133,7 +104,9 @@
       var accept = field("et-cookie-accept", copy.accept);
       reject.addEventListener("click", function () {
         write("necessary");
-        open("after");
+        wall.remove();
+        lock(false);
+        showReopen();
       });
       accept.addEventListener("click", function () {
         write("all");
@@ -148,7 +121,6 @@
       dialog.appendChild(note);
       dialog.appendChild(policyLink);
       dialog.appendChild(actions);
-    }
 
     wall.appendChild(dialog);
     document.body.appendChild(wall);
