@@ -255,6 +255,12 @@
     btn.setAttribute("aria-expanded", open ? "true" : "false");
     btn.setAttribute("aria-label", open ? "Chiudi la chat" : "Apri la chat");
     if (open) {
+      try {
+        if (!sessionStorage.getItem("et_chat_started")) {
+          sessionStorage.setItem("et_chat_started", "1");
+          if (window.etGaEvent) window.etGaEvent("chatbot_start", { method: "widget" });
+        }
+      } catch (e) {}
       if (!history.length) {
         var first = reply("ciao");
         history.push({ role: "bot", html: paint(first) });
