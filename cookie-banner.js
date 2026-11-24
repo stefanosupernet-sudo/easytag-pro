@@ -66,8 +66,9 @@
   function write(value) {
     var secure = location.protocol === "https:" ? "; Secure" : "";
     document.cookie = CHOICE + "=" + value + "; Path=/; Max-Age=15552000; SameSite=Lax" + secure;
-    var choice = prefs(value);
+    if (window.etConsentUpdate) window.etConsentUpdate(value);
     window.dataLayer = window.dataLayer || [];
+    var choice = prefs(value);
     window.dataLayer.push({
       event: "cookie_consent_update",
       analytics_storage: choice.a ? "granted" : "denied",

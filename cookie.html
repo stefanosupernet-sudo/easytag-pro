@@ -79,7 +79,7 @@
 
     <h2>4. Cookie</h2>
     <p>Prima della scelta non carichiamo Google Analytics, Google Ads o altri tag di misura. Accetta registra il permesso per misura e marketing. Rifiuta li lascia spenti: il sito resta navigabile. Personalizza elenca tre gruppi, con misura e marketing spenti finché non li attivi: i necessari (cookie <code>et_consent</code>, 6 mesi, e la memoria della chat in questa scheda), la misura di visita, il marketing. Il rifiuto e la personalizzazione hanno la stessa evidenza dell’accettazione. Il pulsante Cookie, in basso a sinistra, riapre la scelta; puoi anche cancellare <code>et_consent</code> dal browser.</p>
-    <p>Il cookie di scelta è tecnico. Un’eventuale misura di statistica avrebbe base nel consenso (art. 6.1.a GDPR e normativa ePrivacy). Oggi quel tag non è installato: accettare non fa partire, da solo, un cookie di Google.</p>
+    <p>Il cookie di scelta è tecnico. Consent Mode v2 è già nel codice della pagina: misura e marketing partono negati e diventano concessi solo per i gruppi che attivi. Il tag di Google non viene caricato finché l’identificativo GA4 (<code>G-</code>) o Google Ads (<code>AW-</code>) non è inserito in <code>consent.js</code>. Fino a quel momento accettare non invia alcun hit a Google.</p>
 
     <h2>5. I tuoi diritti</h2>
     <p>Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità e opporti al trattamento fondato sul legittimo interesse. Se un trattamento si basa sul consenso, puoi ritirarlo in qualsiasi momento, senza effetto su ciò che è stato fatto prima. Scrivi a <a href="mailto:info@easytag.pro">info@easytag.pro</a>. Rispondiamo entro un mese, salvo proroga motivata di due mesi nei casi complessi.</p>
