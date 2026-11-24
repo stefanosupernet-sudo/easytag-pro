@@ -10,7 +10,7 @@
  *   RESEND_API_KEY
  *   FROM_EMAIL=consegne@easytag.pro
  *   SUPPORT_BCC=info@easytag.pro
- *   DELIVERABLES_BASE_URL=https://easytag-pro.vercel.app/deliverables
+ *   DELIVERABLES_BASE_URL=https://www.easytag.pro/deliverables
  */
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';

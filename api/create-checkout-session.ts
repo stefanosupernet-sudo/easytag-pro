@@ -10,7 +10,7 @@ import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-const DOMAIN = process.env.DOMAIN || 'https://easytag-pro.vercel.app';
+const DOMAIN = process.env.DOMAIN || 'https://www.easytag.pro';
 
 /** Allowed Price IDs (live, account Easytag). */
 const ALLOWED_PRICES = new Set([

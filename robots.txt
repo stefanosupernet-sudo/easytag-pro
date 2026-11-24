@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /deliverables/
 
-Sitemap: https://easytag-pro.vercel.app/sitemap.xml
+Sitemap: https://www.easytag.pro/sitemap.xml
