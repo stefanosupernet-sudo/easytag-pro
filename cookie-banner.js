@@ -3,7 +3,7 @@
   var path = location.pathname;
   var en = path === "/en" || path.indexOf("/en/") === 0;
   var policy = en ? "/en/cookies" : "/cookie";
-  var onPolicy = path === "/cookie" || path === "/en/cookies";
+  var onPolicy = path === "/cookie" || path === "/en/cookies" || path === "/termini" || path === "/en/terms";
 
   var copy = en
     ? {

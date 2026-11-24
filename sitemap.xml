@@ -322,4 +322,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/cookies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/cookie"/>
   </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/termini</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/termini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/termini"/>
+  </url>
+  <url>
+    <loc>https://easytag-pro.vercel.app/en/terms</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://easytag-pro.vercel.app/termini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://easytag-pro.vercel.app/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://easytag-pro.vercel.app/termini"/>
+  </url>
 </urlset>
